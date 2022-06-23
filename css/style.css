@@ -1,0 +1,82 @@
+html {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-purple: #6D31EE;
+    --color-wite: #fff;
+    --color-black: #121723;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+@font-face {
+    font-family: "Muller";
+    src: local("MullerRegular"),
+        url(../fonts/MullerRegular.woff2) format("woff2"),
+        url(../fonts/MullerRegular.woff) format("wooff");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Muller";
+    src: local("MullerRegularItalic"),
+        url(../fonts/MullerRegularItalic.woff2) format("woff2"),
+        url(../fonts/MullerRegularItalic.woff) format("wooff");
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Muller";
+    src: local("MullerMedium"),
+        url(../fonts/MullerMedium.woff2) format("woff2"),
+        url(../fonts/MullerMedium.woff) format("wooff");
+    font-style: normal;    
+    font-weight: 500;
+    font-display: swap;
+}    
+
+@font-face {
+    font-family: "Muller";
+    src: local("MullerBold"),
+        url(../fonts/MullerBold.woff2) format("woff2"),
+        url(../fonts/MullerBold.woff) format("wooff");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Muller";
+    src: local("MullerLightItalic"),
+        url(../fonts/MullerLightItalic.woff2) format("woff2"),
+        url(../fonts/MullerLightItalic.woff) format("wooff");
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+}
+
+body {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: var(--color-wite);
+    color: var(--color-black);
+}
