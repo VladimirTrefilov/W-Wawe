@@ -1,11 +1,12 @@
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
-    --color-purple: #6D31EE;
-    --color-wite: #fff;
-    --color-black: #121723;
+  --color-purple: #6D31EE;
+  --color-white: #fff;
+  --color-black: #121723;
+  --color-dark-white: #E6E8EC;
 }
 
 *,
@@ -24,59 +25,165 @@ img {
 }
 
 @font-face {
-    font-family: "Muller";
-    src: local("MullerRegular"),
-        url(../fonts/MullerRegular.woff2) format("woff2"),
-        url(../fonts/MullerRegular.woff) format("wooff");
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
+  font-family: "Muller";
+  src: local("MullerRegular"),
+      url(../fonts/MullerRegular.woff2) format("woff2"),
+      url(../fonts/MullerRegular.woff) format("wooff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Muller";
-    src: local("MullerRegularItalic"),
-        url(../fonts/MullerRegularItalic.woff2) format("woff2"),
-        url(../fonts/MullerRegularItalic.woff) format("wooff");
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
+  font-family: "Muller";
+  src: local("MullerRegularItalic"),
+      url(../fonts/MullerRegularItalic.woff2) format("woff2"),
+      url(../fonts/MullerRegularItalic.woff) format("wooff");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Muller";
-    src: local("MullerMedium"),
-        url(../fonts/MullerMedium.woff2) format("woff2"),
-        url(../fonts/MullerMedium.woff) format("wooff");
-    font-style: normal;    
-    font-weight: 500;
-    font-display: swap;
-}    
-
-@font-face {
-    font-family: "Muller";
-    src: local("MullerBold"),
-        url(../fonts/MullerBold.woff2) format("woff2"),
-        url(../fonts/MullerBold.woff) format("wooff");
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
+  font-family: "Muller";
+  src: local("MullerMedium"),
+      url(../fonts/MullerMedium.woff2) format("woff2"),
+      url(../fonts/MullerMedium.woff) format("wooff");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Muller";
-    src: local("MullerLightItalic"),
-        url(../fonts/MullerLightItalic.woff2) format("woff2"),
-        url(../fonts/MullerLightItalic.woff) format("wooff");
-    font-style: italic;
-    font-weight: 300;
-    font-display: swap;
+  font-family: "Muller";
+  src: local("MullerBold"),
+      url(../fonts/MullerBold.woff2) format("woff2"),
+      url(../fonts/MullerBold.woff) format("wooff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: local("MullerLightItalic"),
+      url(../fonts/MullerLightItalic.woff2) format("woff2"),
+      url(../fonts/MullerLightItalic.woff) format("wooff");
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
 }
 
 body {
-    font-family: "Muller", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    background-color: var(--color-wite);
-    color: var(--color-black);
+  font-family: "Muller", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+/* glob */
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  background-color: inherit;
+  border: none;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.btn{
+  width: 245px;
+  height: 70px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.section-title {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 100%;
+}
+
+/* header */
+
+.header__rowOne {
+  height: 80px;
+  justify-content: space-between;
+}
+
+.header__nav__list {
+  width: 638px;
+  justify-content: space-between;
+}
+
+.header__item {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.header__search {
+  margin-right: 24px;
+}
+
+.header__btn {
+  width: 104px;
+  height: 40px;
+  font-weight: 500;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-black);
+  border-radius: 77px;
+}
+
+.header__rowTwo {
+  height: 60px;
+  border: 1px solid var(--color-dark-white);
+}
+
+.header__rowTwo__container {
+  justify-content: space-between;
+}
+
+.header__rowTwo__list {
+  width: 610px;
+  justify-content: space-between;
+}
+
+.header__rowTwo__play {
+  width: 175px;
+  height: 40px;
+  padding-left: 42px;
+  background-image: url(../img/play_header_btn.svg);
+  background-position:left;
+  background-position-x: 10px;
+  background-repeat: no-repeat;
+  border-left: 1px solid var(--color-dark-white);
+  border-right: 1px solid var(--color-dark-white);
+}
+
+.header__rowTwo__play:last-of-type {
+  margin-right: 52px;
+}
+
+.header__rowTwo__play__title {
+  margin-bottom: 5px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #A1A6B4;
 }
