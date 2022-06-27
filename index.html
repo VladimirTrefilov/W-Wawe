@@ -9,67 +9,116 @@
     <title>W-Wawe</title>
 </head>
 <body>
-    <header class="header">
-      <div class="container">
-        <div class="header__rowOne flex">
-            <div class="header__logo">
-              <img src="./img/logo.svg" alt="Логотип">
-            </div>
-            <nav class="">
-                <ul class="header__nav__list list-reset flex">
-                    <li class="header__item">
-                      <a href="">Подкасты</a>
-                    </li>
-                    <li class="header__item">
-                      <a href="">Передачи</a>
-                    </li>
-                    <li class="header__item">
-                      <a href="">Гости</a>
-                    </li>
-                    <li class="header__item">
-                      <a href="">Плейлисты</a>
-                    </li>
-                    <li class="header__item">
-                      <a href="">О нас</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="flex">
-              <div class="header__search">
-                <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M20.9999 21L16.6499 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-              </div>
-              <button class="header__btn btn">Вход</button>
-            </div>
+  <header class="header">
+    <div class="container">
+      <div class="header__rowOne flex">
+        <div class="header__rowOne__logo">
+          <img src="./img/logo.svg" alt="Логотип">
         </div>
-      </div>
-      <div class="header__rowTwo">
-        <div class="header__rowTwo__container container flex">
-          <ul class="header__rowTwo__list list-reset flex">
-              <li class="header__rowTwo__item">Новости</li>
-              <li class="header__rowTwo__item">Блоги</li>
-              <li class="header__rowTwo__item">Топы</li>
-              <li class="header__rowTwo__item">Опросы</li>
-              <li class="header__rowTwo__item">Рейтинги</li>
-              <li class="header__rowTwo__item">Реклама</li>
+        <nav class="">
+          <ul class="header__rowOne__nav__list list-reset flex">
+            <li class="header__rowOne__item">
+              <a href="#">Подкасты</a>
+            </li>
+            <li class="header__rowOne__item">
+              <a href="#">Передачи</a>
+            </li>
+            <li class="header__rowOne__item">
+              <a href="#">Гости</a>
+            </li>
+            <li class="header__rowOne__item">
+              <a href="#">Плейлисты</a>
+            </li>
+            <li class="header__rowOne__item">
+              <a href="#">О нас</a>
+            </li>
           </ul>
-          <div class="flex">
-            <div class="header__rowTwo__play">
-              <div class="">Ранее в эфире</div>
-              <div class="">«Музыка»</div>
-            </div>
-            <div class="header__rowTwo__play">
-              <div class="header__rowTwo__play__title">Сейчас в эфире</div>
-              <div class="">«Как так?»</div>
-            </div>
-            <img class="header__rowTwo__ageLimit" src="./img/12+.png" alt="Возрастной лимит 12+">
-
+        </nav>
+        <div class="flex">
+          <div class="header__rowOne__search">
+            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20.9999 21L16.6499 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </div>
+          <button class="header__rowOne__btn btn">Вход</button>
         </div>
       </div>
-    </header>
-
+    </div>
+    <div class="header__rowTwo">
+      <div class="header__rowTwo__container container flex">
+        <ul class="header__rowTwo__list list-reset flex">
+          <li class="header__rowTwo__item">
+            <a href="#">Новости</a>
+          </li>
+          <li class="header__rowTwo__item">
+            <a href="#">Блоги</a>
+          </li>
+          <li class="header__rowTwo__item">
+            <a href="#">Топы</a>
+          </li>
+          <li class="header__rowTwo__item">
+            <a href="#">Опросы</a>
+          </li>
+          <li class="header__rowTwo__item">
+            <a href="#">Рейтинги</a>
+          </li>
+          <li class="header__rowTwo__item">
+            <a href="#">Реклама</a>
+          </li>
+        </ul>
+        <div class="flex">
+          <div class="header__rowTwo__play">
+            <div class="">Ранее в эфире</div>
+            <div class="">«Музыка»</div>
+          </div>
+          <div class="header__rowTwo__play">
+            <div class="header__rowTwo__play__title">Сейчас в эфире</div>
+            <div class="">«Как так?»</div>
+          </div>
+          <img class="header__rowTwo__ageLimit" src="./img/12+.png" alt="Возрастной лимит 12+">
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero container">
+      <h1 class="hero__title">
+        Радио <span class="hero__title__span">W-Wawe</span>
+      </h1>
+      <p class="hero__descr">
+        Привет, на&nbsp;связи W-Wawe! Раньше мы&nbsp;были изданием, а&nbsp;теперь пробуем себя в&nbsp;разоворном жанре. Говорим о&nbsp;музыке, политике, истории, науке и&nbsp;культуре. Здесь, помимо прямого эфира&nbsp;&mdash; архив передач и&nbsp;многое другое:)
+      </p>
+      <button class="hero__btn btn">Слушать эфир</button>
+    </section>
+    <section class="podcasts">
+      <div class="container">
+        <h2 class="section-title">Подкасты</h2>
+        <article class="podcasts__article flex">
+          <picture class="podcasts__article__picture">
+            <source media="(min-width: 1024px)" srcset="/img/podcasts-1.jpg">
+            <img class="podcasts__article__img" src="./img/podcasts-1.jpg" alt="Европа. XIX век">
+          </picture>
+          <div class="podcasts__article__col">
+            <div class="podcasts__article__descr flex">
+              <div class="podcasts__article__content">
+                <div class="podcasts__article__time">15:43</div>
+                <div class="podcasts__article__title">Европа. XIX век</div>
+                <div class="podcasts__article__text">Дмитрий Гутенберг</div>
+                <div class="podcasts__article__play"></div>
+              </div>
+              <div class="podcasts__article__btn-play"></div>
+            </div>
+            <div class="podcasts__article__actions flex">
+              <div class="podcasts__article__icon podcasts__article__summary">258</div>
+              <div class="podcasts__article__icon podcasts__article__like">104</div>
+              <div class="podcasts__article__icon podcasts__article__share">68</div>
+            </div>
+          </div>
+          <div class="podcasts__article__date">14 июня</div>
+        </article>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
