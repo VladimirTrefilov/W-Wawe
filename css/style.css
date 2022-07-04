@@ -9,6 +9,7 @@ html {
   --color-dark-white: #E6E8EC;
   --color-gray: #F2F2F2;
   --color-dark-gray: #A1A6B4;
+  --color-golden: #F0D288;
 }
 
 *,
@@ -624,14 +625,16 @@ body {
 }
 
 /* playlists */
+
 .playlists {
   align-items: flex-start;
+  padding-bottom: 95px;
 }
 
 .playlists__text {
-  max-width: 350px;
+  width: 350px;
   margin: 0;
-  margin-top: 15px;
+  margin-top: 13px;
   padding-top: 40px;
   line-height: 22px;
   border-top: 1px solid #D2D5DD;
@@ -653,29 +656,37 @@ body {
 
 .playlists__content__cards {
   padding-top: 75px;
+  flex-wrap: wrap;
 }
 
 .playlists__content__cards__article {
+  position: relative;
   height: 224px;
   margin-top: 30px;
-  margin-left: 30px;
+  margin-left: 27px;
   border: 1px solid var(--color-dark-white);
 }
 
 .playlists__content__cards__article__title {
   margin: 0;
   font-weight: 500;
-  padding-top: 10px;
+  padding-top: 9px;
   padding-left: 15px;
 }
 
 .playlists__content__cards__article__descr {
   margin: 0;
-  padding-top: 3px;
+  padding-top: 2px;
   padding-left: 15px;
   font-size: 12px;
   line-height: 12px;
   color: var(--color-dark-gray);
+}
+
+.playlists__content__cards__article__flag {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 fieldset {
@@ -728,4 +739,68 @@ border: 7px solid #6D31EE;
 
 .ui-checkboxradio-icon-space {
   padding-left: 15px;
+}
+
+/* product */
+
+.product {
+  background-color: #292E39;
+}
+
+.product__content {
+  position: relative;
+  padding-bottom: 135px;
+  padding-left: 60%;
+  background-image: url(../img/product-radio.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 57%;
+}
+
+.product__icon_new {
+  position: absolute;
+  left: 0;
+  top: 100px;
+}
+
+.product__content__title {
+  padding-bottom: 20px;
+  font-size: 48px;
+  line-height: 100%;
+  color: var(--color-golden);
+  border-bottom: 10px solid #A1A6B4;
+  border-image: url(../img/border-wave.svg) 12;
+}
+
+.product__content__descr {
+  margin: 0;
+  margin-top: 15px;
+  line-height: 180%;
+  color: var(--color-white);
+}
+
+.product__content__price {
+  margin: 0;
+  margin: 30px 0;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--color-white);
+}
+
+.product__content__btn {
+  width: 300px;
+  height: 70px;
+  padding-left: 30px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  border: 2px solid var(--color-golden);
+  border-radius: 100px;
+  background-color: initial;
+  background-image: url(../img/yandex-icon.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: 10px;
+  color: var(--color-golden);
 }
