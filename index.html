@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/choices.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>W-Wawe</title>
@@ -18,10 +20,10 @@
         <nav class="">
           <ul class="header__rowOne__nav__list list-reset flex">
             <li class="header__rowOne__item">
-              <a href="#">Подкасты</a>
+              <a href="#podcasts">Подкасты</a>
             </li>
             <li class="header__rowOne__item">
-              <a href="#">Передачи</a>
+              <a href="#broadcasts">Передачи</a>
             </li>
             <li class="header__rowOne__item">
               <a href="#">Гости</a>
@@ -91,34 +93,399 @@
       </p>
       <button class="hero__btn btn">Слушать эфир</button>
     </section>
-    <section class="podcasts">
+    <section class="podcasts" id="podcasts">
       <div class="container">
         <h2 class="section-title">Подкасты</h2>
-        <article class="podcasts__article flex">
-          <picture class="podcasts__article__picture">
-            <source media="(min-width: 1024px)" srcset="/img/podcasts-1.jpg">
-            <img class="podcasts__article__img" src="./img/podcasts-1.jpg" alt="Европа. XIX век">
-          </picture>
-          <div class="podcasts__article__col">
-            <div class="podcasts__article__descr flex">
-              <div class="podcasts__article__content">
-                <div class="podcasts__article__time">15:43</div>
-                <div class="podcasts__article__title">Европа. XIX век</div>
-                <div class="podcasts__article__text">Дмитрий Гутенберг</div>
-                <div class="podcasts__article__play"></div>
+        <div class="podcasts__contaiter flex">
+          <article class="podcasts__article flex">
+            <picture class="podcasts__article__picture">
+              <source media="(min-width: 1024px)" srcset="/img/podcasts-1.jpg">
+              <img class="podcasts__article__img" src="./img/podcasts-1.jpg" alt="Европа. XIX век">
+            </picture>
+            <div class="podcasts__article__col">
+              <div class="podcasts__article__descr flex">
+                <div class="podcasts__article__content">
+                  <div class="podcasts__article__time">15:43</div>
+                  <h3 class="podcasts__article__title">Европа. XIX век</h3>
+                  <div class="podcasts__article__text">Дмитрий Гутенберг</div>
+                  <div class="podcasts__article__play"></div>
+                </div>
+                <div class="podcasts__article__btn-play"></div>
               </div>
-              <div class="podcasts__article__btn-play"></div>
+              <div class="podcasts__article__actions flex">
+                <div class="podcasts__article__icon podcasts__article__summary">258</div>
+                <div class="podcasts__article__icon podcasts__article__like">104</div>
+                <div class="podcasts__article__icon podcasts__article__share">68</div>
+              </div>
             </div>
-            <div class="podcasts__article__actions flex">
-              <div class="podcasts__article__icon podcasts__article__summary">258</div>
-              <div class="podcasts__article__icon podcasts__article__like">104</div>
-              <div class="podcasts__article__icon podcasts__article__share">68</div>
+            <div class="podcasts__article__date">14 июня</div>
+          </article>
+          <article class="podcasts__article flex">
+            <picture class="podcasts__article__picture">
+              <source media="(min-width: 1024px)" srcset="/img/podcasts-2.jpg">
+              <img class="podcasts__article__img" src="./img/podcasts-2.jpg" alt="О музыке">
+            </picture>
+            <div class="podcasts__article__col">
+              <div class="podcasts__article__descr flex">
+                <div class="podcasts__article__content">
+                  <div class="podcasts__article__time">5:32</div>
+                  <h3 class="podcasts__article__title">О музыке</h3>
+                  <div class="podcasts__article__text">Дмитрий Гутенберг</div>
+                  <div class="podcasts__article__play"></div>
+                </div>
+                <div class="podcasts__article__btn-play"></div>
+              </div>
+              <div class="podcasts__article__actions flex">
+                <div class="podcasts__article__icon podcasts__article__summary">207</div>
+                <div class="podcasts__article__icon podcasts__article__like">34</div>
+                <div class="podcasts__article__icon podcasts__article__share">18</div>
+              </div>
+            </div>
+            <div class="podcasts__article__date">11 июня</div>
+          </article>
+          <article class="podcasts__article flex">
+            <picture class="podcasts__article__picture">
+              <source media="(min-width: 1024px)" srcset="/img/podcasts-3.jpg">
+              <img class="podcasts__article__img" src="./img/podcasts-3.jpg" alt="Европа. XIX век">
+            </picture>
+            <div class="podcasts__article__col">
+              <div class="podcasts__article__descr flex">
+                <div class="podcasts__article__content">
+                  <div class="podcasts__article__time">8:54</div>
+                  <h3 class="podcasts__article__title">Люди сегодня</h3>
+                  <div class="podcasts__article__text">Анна Васильева</div>
+                  <div class="podcasts__article__play"></div>
+                </div>
+                <div class="podcasts__article__btn-play"></div>
+              </div>
+              <div class="podcasts__article__actions flex">
+                <div class="podcasts__article__icon podcasts__article__summary">104</div>
+                <div class="podcasts__article__icon podcasts__article__like">54</div>
+                <div class="podcasts__article__icon podcasts__article__share">42</div>
+              </div>
+            </div>
+            <div class="podcasts__article__date">8 июня</div>
+          </article>
+          <article class="podcasts__article flex">
+            <picture class="podcasts__article__picture">
+              <source media="(min-width: 1024px)" srcset="/img/podcasts-4.jpg">
+              <img class="podcasts__article__img" src="./img/podcasts-4.jpg" alt="Хэллоу, Африка!">
+            </picture>
+            <div class="podcasts__article__col">
+              <div class="podcasts__article__descr flex">
+                <div class="podcasts__article__content">
+                  <div class="podcasts__article__time">9:04</div>
+                  <h3 class="podcasts__article__title">Хэллоу, Африка!</h3>
+                  <div class="podcasts__article__text">Пётр Дмитриевский</div>
+                  <div class="podcasts__article__play"></div>
+                </div>
+                <div class="podcasts__article__btn-play"></div>
+              </div>
+              <div class="podcasts__article__actions flex">
+                <div class="podcasts__article__icon podcasts__article__summary">87</div>
+                <div class="podcasts__article__icon podcasts__article__like">44</div>
+                <div class="podcasts__article__icon podcasts__article__share">5</div>
+              </div>
+            </div>
+            <div class="podcasts__article__date">5 июня</div>
+          </article>
+          <article class="podcasts__article flex">
+            <picture class="podcasts__article__picture">
+              <source media="(min-width: 1024px)" srcset="/img/podcasts-5.jpg">
+              <img class="podcasts__article__img" src="./img/podcasts-5.jpg" alt="Европа. XIX век">
+            </picture>
+            <div class="podcasts__article__col">
+              <div class="podcasts__article__descr flex">
+                <div class="podcasts__article__content">
+                  <div class="podcasts__article__time">7:03</div>
+                  <h3 class="podcasts__article__title">Обо всём</h3>
+                  <div class="podcasts__article__text">Пётр Дмитриевский</div>
+                  <div class="podcasts__article__play"></div>
+                </div>
+                <div class="podcasts__article__btn-play"></div>
+              </div>
+              <div class="podcasts__article__actions flex">
+                <div class="podcasts__article__icon podcasts__article__summary">64</div>
+                <div class="podcasts__article__icon podcasts__article__like">30</div>
+                <div class="podcasts__article__icon podcasts__article__share">8</div>
+              </div>
+            </div>
+            <div class="podcasts__article__date">2 июня</div>
+          </article>
+          <article class="podcasts__article flex">
+            <picture class="podcasts__article__picture">
+              <source media="(min-width: 1024px)" srcset="/img/podcasts-6.jpg">
+              <img class="podcasts__article__img" src="./img/podcasts-6.jpg" alt="Физика цвета">
+            </picture>
+            <div class="podcasts__article__col">
+              <div class="podcasts__article__descr flex">
+                <div class="podcasts__article__content">
+                  <div class="podcasts__article__time">9:15</div>
+                  <h3 class="podcasts__article__title">Физика цвета</h3>
+                  <div class="podcasts__article__text">Татьяна Флеганова</div>
+                  <div class="podcasts__article__play"></div>
+                </div>
+                <div class="podcasts__article__btn-play"></div>
+              </div>
+              <div class="podcasts__article__actions flex">
+                <div class="podcasts__article__icon podcasts__article__summary">58</div>
+                <div class="podcasts__article__icon podcasts__article__like">29</div>
+                <div class="podcasts__article__icon podcasts__article__share">14</div>
+              </div>
+            </div>
+            <div class="podcasts__article__date">28 мая</div>
+          </article>
+          <article class="podcasts__article flex">
+            <picture class="podcasts__article__picture">
+              <source media="(min-width: 1024px)" srcset="/img/podcasts-7.jpg">
+              <img class="podcasts__article__img" src="./img/podcasts-7.jpg" alt="Источник звука">
+            </picture>
+            <div class="podcasts__article__col">
+              <div class="podcasts__article__descr flex">
+                <div class="podcasts__article__content">
+                  <div class="podcasts__article__time">16:04</div>
+                  <h3 class="podcasts__article__title">Источник звука</h3>
+                  <div class="podcasts__article__text">Пётр Дмитриевский</div>
+                  <div class="podcasts__article__play"></div>
+                </div>
+                <div class="podcasts__article__btn-play"></div>
+              </div>
+              <div class="podcasts__article__actions flex">
+                <div class="podcasts__article__icon podcasts__article__summary">55</div>
+                <div class="podcasts__article__icon podcasts__article__like">20</div>
+                <div class="podcasts__article__icon podcasts__article__share">12</div>
+              </div>
+            </div>
+            <div class="podcasts__article__date">22 мая</div>
+          </article>
+          <article class="podcasts__article flex">
+            <picture class="podcasts__article__picture">
+              <source media="(min-width: 1024px)" srcset="/img/podcasts-8.jpg">
+              <img class="podcasts__article__img" src="./img/podcasts-8.jpg" alt="Правила этикета">
+            </picture>
+            <div class="podcasts__article__col">
+              <div class="podcasts__article__descr flex">
+                <div class="podcasts__article__content">
+                  <div class="podcasts__article__time">6:55</div>
+                  <h3 class="podcasts__article__title">Правила этикета</h3>
+                  <div class="podcasts__article__text">Татьяна Флеганова</div>
+                  <div class="podcasts__article__play"></div>
+                </div>
+                <div class="podcasts__article__btn-play"></div>
+              </div>
+              <div class="podcasts__article__actions flex">
+                <div class="podcasts__article__icon podcasts__article__summary">24</div>
+                <div class="podcasts__article__icon podcasts__article__like">54</div>
+                <div class="podcasts__article__icon podcasts__article__share">42</div>
+              </div>
+            </div>
+            <div class="podcasts__article__date">18 мая</div>
+          </article>
+        </div>
+        <div class="podcasts__btn btn flex">Ещё подкасты</div>
+      </div>
+    </section>
+    <section class="broadcasts container flex" id="broadcasts">
+      <div class="">
+        <h2 class="broadcasts__title section-title">Передачи</h2>
+        <div class="broadcasts__autor">Автор:</div>
+        <div class="broadcasts__select">
+          <select class="select" name="select">
+            <option value="1">Дмитрий Гутенберг</option>
+            <option value="2">Татьяна Флеганова</option>
+            <option value="3">Анна Васильева</option>
+            <option value="4">Пётр Дмитриевский</option>
+          </select>
+        </div>
+      </div>
+      <div class="broadcasts__container flex">
+        <article class="broadcasts__article">
+          <picture>
+            <source media="(min-width: 1024)" srcset="/img/broadcasts-1.jpg">
+            <img src="./img/broadcasts-1.jpg" alt="О людях и книгах">
+          </picture>
+          <h3 class="broadcasts__article__title">О людях и книгах</h3>
+          <div class="broadcasts__article__descr">Анонсируется отдельно</div>
+          <a class="broadcasts__article__btn" href="#">Подробнее</a>
+        </article>
+        <article class="broadcasts__article">
+          <picture>
+            <source media="(min-width: 1024)" srcset="/img/broadcasts-2.jpg">
+            <img src="./img/broadcasts-2.jpg" alt="Графомания td">
+          </picture>
+          <h3 class="broadcasts__article__title">Графомания td</h3>
+          <div class="broadcasts__article__descr">По понедельникам в 10:00</div>
+          <a class="broadcasts__article__btn" href="#">Подробнее</a>
+        </article>
+        <article class="broadcasts__article">
+          <picture>
+            <source media="(min-width: 1024)" srcset="/img/broadcasts-3.jpg">
+            <img src="./img/broadcasts-3.jpg" alt="Не Рим, не Троя">
+          </picture>
+          <h3 class="broadcasts__article__title">Не Рим, не Троя</h3>
+          <div class="broadcasts__article__descr">По вторникам в 12:00</div>
+          <a class="broadcasts__article__btn" href="#">Подробнее</a>
+        </article>
+        <article class="broadcasts__article">
+          <picture>
+            <source media="(min-width: 1024)" srcset="/img/broadcasts-4.jpg">
+            <img src="./img/broadcasts-4.jpg" alt="Эрудит">
+          </picture>
+          <h3 class="broadcasts__article__title">Эрудит</h3>
+          <div class="broadcasts__article__descr">По пятницам в 17:00</div>
+          <a class="broadcasts__article__btn" href="#">Подробнее</a>
+        </article>
+        <article class="broadcasts__article">
+          <picture>
+            <source media="(min-width: 1024)" srcset="/img/broadcasts-5.jpg">
+            <img src="./img/broadcasts-5.jpg" alt="Тонкости эпох">
+          </picture>
+          <h3 class="broadcasts__article__title">Тонкости эпох</h3>
+          <div class="broadcasts__article__descr">По пятницам в 17:00</div>
+          <a class="broadcasts__article__btn" href="#">Подробнее</a>
+        </article>
+        <article class="broadcasts__article">
+          <picture>
+            <source media="(min-width: 1024)" srcset="/img/broadcasts-6.jpg">
+            <img src="./img/broadcasts-6.jpg" alt="Живые мысли">
+          </picture>
+          <h3 class="broadcasts__article__title">Живые мысли</h3>
+          <div class="broadcasts__article__descr">По воскресеньям в 15:30</div>
+          <a class="broadcasts__article__btn" href="#">Подробнее</a>
+        </article>
+      </div>
+      <div class="broadcasts__aside">
+        <button class="broadcasts__aside__btn btn">Архив</button>
+        <p class="broadcasts__aside__text">В&nbsp;архив попадают все передачи, которые вы&nbsp;пропустили! Enjoy:)</p>
+      </div>
+    </section>
+    <section class="guests">
+      <div class="container">
+        <h2 class="guests__title section-title">Гости</h2>
+        <h3 class="guests__descr">У нас бывают:</h3>
+        <p class="guests__text">Блогеры, арт-критики и&nbsp;деятели искусства, музыканты, молодые учёные и&nbsp;люди науки, историки, филологи и&nbsp;много других интересных гостей!</p>
+        <div class="guests__container flex">
+          <div class="guests__accordion list-reset" id="accordion">
+            <h3 class="accordion__title">Блогеры
+              <img class="accordion__icon" src="./img/accordion-icon.svg" alt="">
+            </h3>
+            <div class="accordion__content">
+              <span class="accordion__item">Сергей Денисов</span>
+              <span class="accordion__item">Матвей Мечников</span>
+              <span class="accordion__item">Константин Прусино</span>
+              <span class="accordion__item">Иван Калитников</span>
+              <span class="accordion__item">Евгений Войновский</span>
+              <span class="accordion__item" id="Ольга_Мартынова">Ольга Мартынова</span>
+              <span class="accordion__item">Дмитрий Михалок</span>
+              <span class="accordion__item">Пётр Пиотровский</span>
+              <span class="accordion__item">Олег Свиридовский</span>
+              <span class="accordion__item">Владислав Кауперс</span>
+              <span class="accordion__item">Михаил Пожитников</span>
+              <span class="accordion__item">Георгий Полуян</span>
+              <span class="accordion__item">Денис Тельман</span>
+              <span class="accordion__item">Юрий Горин</span>
+              <span class="accordion__item">Максим Сергеев</span>
+            </div>
+            <h3 class="accordion__control">Арт-критики
+              <img class="accordion__icon" src="./img/accordion-icon.svg" alt="">
+            </h3>
+            <div class="accordion__content">
+            </div>
+            <h3 class="accordion__control">Художники
+              <img class="accordion__icon" src="./img/accordion-icon.svg" alt="">
+            </h3>
+            <div class="accordion__content"></div>
+            <h3 class="accordion__control">Люди науки
+              <img class="accordion__icon" src="./img/accordion-icon.svg" alt="">
+            </h3>
+            <div class="accordion__content"></div>
+            <h3 class="accordion__control">Историки
+              <img class="accordion__icon" src="./img/accordion-icon.svg" alt="">
+            </h3>
+            <div class="accordion__content"></div>
+            <h3 class="accordion__control">Филологи
+              <img class="accordion__icon" src="./img/accordion-icon.svg" alt="">
+            </h3>
+            <div class="accordion__content">
+            <span class="accordion__item">Сергей Денисов</span>
+            <span class="accordion__item">Матвей Мечников</span>
+            <span class="accordion__item">Константин Прусино</span>
+            <span class="accordion__item">Иван Калитников</span>
+            <span class="accordion__item">Евгений Войновский</span>
+            <span class="accordion__item">Ольга Мартынова</span>
+            <span class="accordion__item">Дмитрий Михалок</span>
+            <span class="accordion__item">Пётр Пиотровский</span>
+            <span class="accordion__item">Олег Свиридовский</span>
+            <span class="accordion__item">Владислав Кауперс</span>
+            <span class="accordion__item">Михаил Пожитников</span>
             </div>
           </div>
-          <div class="podcasts__article__date">14 июня</div>
-        </article>
+          <div class="guests__cards__default"></div>
+          <article class="guests__cards closed" >
+            <picture>
+              <source media="(min-width: 1024px)" srcset="/img/guests-1.jpg">
+              <img src="./img/guests-1.jpg" alt="Фотография Ольга Мартынова">
+            </picture>
+            <div class="flex">
+              <svg class="guests__cards__icon" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z" fill="#A1A6B4"/>
+              </svg>
+              <svg class="guests__cards__icon" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.78 22V14.26H18.3722L18.76 11.2511H15.78V9.33111C15.78 8.46 16.0222 7.86556 17.2711 7.86556H18.8644V5.17444C18.0931 5.09261 17.3179 5.05292 16.5422 5.05556C14.2456 5.05556 12.6733 6.45778 12.6733 9.03333V11.2511H10.0756V14.26H12.6733V22H3.11111C2.81643 22 2.53381 21.8829 2.32544 21.6746C2.11706 21.4662 2 21.1836 2 20.8889V3.11111C2 2.81643 2.11706 2.53381 2.32544 2.32544C2.53381 2.11706 2.81643 2 3.11111 2H20.8889C21.1836 2 21.4662 2.11706 21.6746 2.32544C21.8829 2.53381 22 2.81643 22 3.11111V20.8889C22 21.1836 21.8829 21.4662 21.6746 21.6746C21.4662 21.8829 21.1836 22 20.8889 22H15.78Z" fill="#A1A6B4"/>
+              </svg>
+              <svg class="guests__cards__icon" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.1621 5.65593C21.3986 5.99362 20.589 6.2154 19.7601 6.31393C20.6338 5.79136 21.2878 4.96894 21.6001 3.99993C20.7801 4.48793 19.8811 4.82993 18.9441 5.01493C18.3147 4.34151 17.4804 3.89489 16.571 3.74451C15.6616 3.59413 14.728 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0772 6.14972C11.6979 6.98983 11.6068 7.93171 11.8181 8.82893C10.1552 8.74558 8.52838 8.31345 7.04334 7.56059C5.55829 6.80773 4.24818 5.75097 3.19805 4.45893C2.82634 5.09738 2.63101 5.82315 2.63205 6.56193C2.63205 8.01193 3.37005 9.29293 4.49205 10.0429C3.82806 10.022 3.17869 9.84271 2.59805 9.51993V9.57193C2.59825 10.5376 2.93242 11.4735 3.5439 12.221C4.15538 12.9684 5.00653 13.4814 5.95305 13.6729C5.33667 13.84 4.69036 13.8646 4.06305 13.7449C4.32992 14.5762 4.85006 15.3031 5.55064 15.824C6.25123 16.3449 7.09718 16.6337 7.97005 16.6499C7.10253 17.3313 6.10923 17.8349 5.04693 18.1321C3.98464 18.4293 2.87418 18.5142 1.77905 18.3819C3.69075 19.6114 5.91615 20.264 8.18905 20.2619C15.8821 20.2619 20.0891 13.8889 20.0891 8.36193C20.0891 8.18193 20.0841 7.99993 20.0761 7.82193C20.8949 7.23009 21.6017 6.49695 22.1631 5.65693L22.1621 5.65593Z" fill="#A1A6B4"/>
+              </svg>
+            </div>
+            <h3 class="guests__cards__title">Ольга Мартынова</h3>
+            <p class="guests__cards__descr">Российский искусствовед, арт-критик, куратор выставок, дизайнер, кандидат культурологии. Арт-критик газеты &laquo;Коммерсантъ&raquo;. Ведёт активную блогерскую деятельность как куратор музея &laquo;Гараж&raquo;, коим является с&nbsp;2016&nbsp;года.</p>
+            <button class="guests__cards__btn btn">Эфиры с гостем</button>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div class="playlists flex">
+        <div class="playlists__content">
+          <h2 class="section-title">Плейлисты</h2>
+          <fieldset>
+            <legend>Жанр</legend>
+            <label for="radio-1" >Постпанк</label>
+            <input type="radio" name="radio-1" id="radio-1">
+            <label for="radio-2" >Хардкор</label>
+            <input type="radio" name="radio-1" id="radio-2">
+            <label for="radio-3" >Панк-рок</label>
+            <input type="radio" name="radio-1" id="radio-3">
+            <label for="radio-4" >Рок</label>
+            <input type="radio" name="radio-1" id="radio-4">
+            <label for="radio-5" >Прогрессивный рок</label>
+            <input type="radio" name="radio-1" id="radio-5">
+            <label for="radio-6" >Электронная музыка</label>
+            <input type="radio" name="radio-1" id="radio-6">
+            <label for="radio-7" >Классическая музыка</label>
+            <input type="radio" name="radio-1" id="radio-7">
+            <label for="radio-8" >Звуки природы и шум города</label>
+            <input type="radio" name="radio-1" id="radio-8">
+          </fieldset>
+          <p class="playlists__text">Раздел &laquo;Плейлисты&raquo; может содержать информацию, не&nbsp;предназначенную для несовершеннолетних</p>
+          <p class="playlists__logo">© 2021 l W-Wave</p>
+        </div>
+        <div class="playlists__content__cards flex" id="slider">
+          <article class="playlists__content__cards__article">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="/img/playlists-1.jpg">
+              <img src="./img/playlists-1.jpg" alt="">
+            </picture>
+            <p class="playlists__content__cards__article__title">Ploho</p>
+            <p class="playlists__content__cards__article__descr">3 последних альбома</p>
+          </article>
+        </div>
       </div>
     </section>
   </main>
+  <script defer src="./scripts/choices.min.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script defer src="./scripts/main.js"></script>
 </body>
 </html>
