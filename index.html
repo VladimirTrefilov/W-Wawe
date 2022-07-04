@@ -365,6 +365,7 @@
         <h3 class="guests__descr">У нас бывают:</h3>
         <p class="guests__text">Блогеры, арт-критики и&nbsp;деятели искусства, музыканты, молодые учёные и&nbsp;люди науки, историки, филологи и&nbsp;много других интересных гостей!</p>
         <div class="guests__container flex">
+          <!-- jquery accordion -->
           <div class="guests__accordion list-reset" id="accordion">
             <h3 class="accordion__title">Блогеры
               <img class="accordion__icon" src="./img/accordion-icon.svg" alt="">
@@ -448,6 +449,7 @@
       <div class="playlists flex">
         <div class="playlists__content">
           <h2 class="section-title">Плейлисты</h2>
+          <!-- jquery checkboxradio -->
           <fieldset>
             <legend>Жанр</legend>
             <label for="radio-1" >Постпанк</label>
@@ -474,11 +476,149 @@
           <article class="playlists__content__cards__article">
             <picture>
               <source media="(min-width: 1024px)" srcset="/img/playlists-1.jpg">
-              <img src="./img/playlists-1.jpg" alt="">
+              <img src="./img/playlists-1.jpg" alt="Ploho">
             </picture>
             <p class="playlists__content__cards__article__title">Ploho</p>
             <p class="playlists__content__cards__article__descr">3 последних альбома</p>
+            <div class="playlists__content__cards__article__flag">
+              <img src="./img/flag-Russian.jpg" alt="Российский флаг">
+            </div>
           </article>
+          <article class="playlists__content__cards__article">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="/img/playlists-2.jpg">
+              <img src="./img/playlists-2.jpg" alt="Molchat Doma">
+            </picture>
+            <p class="playlists__content__cards__article__title">Molchat Doma</p>
+            <p class="playlists__content__cards__article__descr">Все песни</p>
+            <div class="playlists__content__cards__article__flag">
+              <img src="./img/flag-Russian.jpg" alt="Российский флаг">
+            </div>
+          </article>
+          <article class="playlists__content__cards__article">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="/img/playlists-3.jpg">
+              <img src="./img/playlists-3.jpg" alt="Motorama">
+            </picture>
+            <p class="playlists__content__cards__article__title">Motorama</p>
+            <p class="playlists__content__cards__article__descr">Все синглы</p>
+            <div class="playlists__content__cards__article__flag">
+              <img src="./img/flag-Russian.jpg" alt="Российский флаг">
+            </div>
+          </article>
+          <article class="playlists__content__cards__article">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="/img/playlists-4.jpg">
+              <img src="./img/playlists-4.jpg" alt="Human Tetris">
+            </picture>
+            <p class="playlists__content__cards__article__title">Human Tetris</p>
+            <p class="playlists__content__cards__article__descr">3 последних альбома</p>
+            <div class="playlists__content__cards__article__flag">
+              <img src="./img/flag-Russian.jpg" alt="Российский флаг">
+            </div>
+          </article>
+          <article class="playlists__content__cards__article">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="/img/playlists-5.jpg">
+              <img src="./img/playlists-5.jpg" alt="Буерак">
+            </picture>
+            <p class="playlists__content__cards__article__title">Буерак</p>
+            <p class="playlists__content__cards__article__descr">Все EP</p>
+            <div class="playlists__content__cards__article__flag">
+              <img src="./img/flag-Russian.jpg" alt="Российский флаг">
+            </div>
+          </article>
+          <article class="playlists__content__cards__article">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="/img/playlists-6.jpg">
+              <img src="./img/playlists-6.jpg" alt="Июльские Дни">
+            </picture>
+            <p class="playlists__content__cards__article__title">Июльские Дни</p>
+            <p class="playlists__content__cards__article__descr">Альбом «Колокол»</p>
+            <div class="playlists__content__cards__article__flag">
+              <img src="./img/flag-Russian.jpg" alt="Российский флаг">
+            </div>
+          </article>
+          <article class="playlists__content__cards__article">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="/img/playlists-7.jpg">
+              <img src="./img/playlists-7.jpg" alt="Joy Division">
+            </picture>
+            <p class="playlists__content__cards__article__title">Joy Division</p>
+            <p class="playlists__content__cards__article__descr">Лучшее за всё время</p>
+            <div class="playlists__content__cards__article__flag">
+              <img src="./img/flag-Britain.jpg" alt="Британский флаг">
+            </div>
+          </article>
+          <article class="playlists__content__cards__article">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="/img/playlists-8.jpg">
+              <img src="./img/playlists-8.jpg" alt="The Cure">
+            </picture>
+            <p class="playlists__content__cards__article__title">The Cure</p>
+            <p class="playlists__content__cards__article__descr">Лучшее за всё время</p>
+            <div class="playlists__content__cards__article__flag">
+              <img src="./img/flag-Britain.jpg" alt="Британский флаг">
+            </div>
+          </article>
+          <article class="playlists__content__cards__article">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="/img/playlists-9.jpg">
+              <img src="./img/playlists-9.jpg" alt="The Smiths">
+            </picture>
+            <p class="playlists__content__cards__article__title">The Smiths</p>
+            <p class="playlists__content__cards__article__descr">Период 1984–1988</p>
+            <div class="playlists__content__cards__article__flag">
+              <img src="./img/flag-Britain.jpg" alt="Британский флаг">
+            </div>
+          </article>
+          <article class="playlists__content__cards__article">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="/img/playlists-10.jpg">
+              <img src="./img/playlists-10.jpg" alt="New Order">
+            </picture>
+            <p class="playlists__content__cards__article__title">New Order</p>
+            <p class="playlists__content__cards__article__descr">Хиты</p>
+            <div class="playlists__content__cards__article__flag">
+              <img src="./img/flag-Britain.jpg" alt="Британский флаг">
+            </div>
+          </article>
+          <article class="playlists__content__cards__article">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="/img/playlists-11.jpg">
+              <img src="./img/playlists-11.jpg" alt="Bauhaus">
+            </picture>
+            <p class="playlists__content__cards__article__title">Bauhaus</p>
+            <p class="playlists__content__cards__article__descr">Все синглы</p>
+            <div class="playlists__content__cards__article__flag">
+              <img src="./img/flag-Britain.jpg" alt="Британский флаг">
+            </div>
+          </article>
+          <article class="playlists__content__cards__article">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="/img/playlists-12.jpg">
+              <img src="./img/playlists-12.jpg" alt="Gang Of Four">
+            </picture>
+            <p class="playlists__content__cards__article__title">Gang Of Four</p>
+            <p class="playlists__content__cards__article__descr">3 последних альбома</p>
+            <div class="playlists__content__cards__article__flag">
+              <img src="./img/flag-Britain.jpg" alt="Британский флаг">
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="product">
+      <div class="container flex">
+        <div>
+        </div>
+        <div class="product__content">
+          <h2 class="product__content__title section-title">Будь с нами на одной волне!</h2>
+          <p class="product__content__descr">Друзья, рады представить вам продукт нашего производства! Да-да, несмотря на&nbsp;то, что мы&nbsp;только начали свой путь радиовещателей, нам хочется, чтобы вы&nbsp;могли как следует нас расслышать:)</p>
+          <p class="product__content__descr">Итак, встречайте! Портативный радиоприёмник-колонка W-Wave 1.0&nbsp;xm. Тщательный подбор всех делатей, ручная сборка, качественный звук. Пока доступно только 60&nbsp;штук в&nbsp;3&nbsp;цветах, но&nbsp;мы&nbsp;активно трудимся над новыми партиями и&nbsp;дизайном. Спешите приобрести!</p>
+          <p class="product__content__price">2 800 ₽</p>
+          <button class="product__content__btn btn">Купить на Яндекс.Маркет</button>
+          <img class="product__icon_new" src="./img/new.svg" alt="Иконка, новый">
         </div>
       </div>
     </section>
