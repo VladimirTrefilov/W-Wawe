@@ -48,5 +48,32 @@ document.addEventListener('DOMContentLoaded', function() {
   //   });
   // } );
 
+  // swiper
+
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 4,
+    spaceBetween: 30,
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  const swiperPrev = document.getElementById('swiperPrev')
+  const swiperNext = document.getElementById('swiperNext')
+
+  swiperPrev.addEventListener('click', () => {
+    swiper.slidePrev();
+  })
+  swiperNext.addEventListener('click', () => {
+    swiper.slideNext();
+  })
+
+
+
 
 })

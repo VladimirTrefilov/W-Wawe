@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/choices.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -609,9 +610,7 @@
       </div>
     </section>
     <section class="product">
-      <div class="container flex">
-        <div>
-        </div>
+      <div class="container">
         <div class="product__content">
           <h2 class="product__content__title section-title">Будь с нами на одной волне!</h2>
           <p class="product__content__descr">Друзья, рады представить вам продукт нашего производства! Да-да, несмотря на&nbsp;то, что мы&nbsp;только начали свой путь радиовещателей, нам хочется, чтобы вы&nbsp;могли как следует нас расслышать:)</p>
@@ -622,8 +621,119 @@
         </div>
       </div>
     </section>
+    <section class="about">
+      <div class="container">
+        <div class="flex">
+          <div class="about__content">
+            <h2 class="about__title section-title">О нас</h2>
+            <p class="about__descr_title">Приём-приём! Как слышно? Мы&nbsp;уже в&nbsp;эфире? Отлично, поехали!</p>
+            <p class="about__descr">Друзья, мы&nbsp;будем очень рады, если вы&nbsp;поможете стать нам лучше. Нам важен каждый слушатель, поэтому вы&nbsp;можете поделиться обратной связью о&nbsp;наших предеачах, темах, подборках и&nbsp;вообще обо всём! Это можно сделать либо написав нам в&nbsp;форме ниже, либо кликнув на&nbsp;наши соцсети в&nbsp;подвале сайта. Спасибо! Услышимся!:)</p>
+          </div>
+          <div class="about__pic flex">
+            <img class="about__spiral" src="./img/about-spiral.svg" alt="">
+            <img class="about__dawn" src="./img/about-dawn.svg" alt="">
+          </div>
+        </div>
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="about__swiper swiper-slide">
+              <picture>
+                <source media="(min-width: 1024px)" srcset="/img/about-1.jpg">
+                <img src="./img/about-1.jpg" alt="Дмитрий Гутенберг">
+              </picture>
+              <h3 class="about__swiper__title">Дмитрий Гутенберг</h3>
+              <p class="about__swiper__descr">Эксперт (ну, почти) по&nbsp;всем вопросам (почти)</p>
+            </div>
+            <div class="about__swiper swiper-slide">
+              <picture>
+                <source media="(min-width: 1024px)" srcset="/img/about-2.jpg">
+                <img src="./img/about-2.jpg" alt="Анна Васильева">
+              </picture>
+              <h3 class="about__swiper__title">Анна Васильева</h3>
+              <p class="about__swiper__descr">Как я&nbsp;здесь оказалась? А&nbsp;главное&nbsp;&mdash; зачем?</p>
+            </div>
+            <div class="about__swiper swiper-slide">
+              <picture>
+                <source media="(min-width: 1024px)" srcset="/img/about-3.jpg">
+                <img src="./img/about-3.jpg" alt="Пётр Дмитриевский">
+              </picture>
+              <h3 class="about__swiper__title">Пётр Дмитриевский</h3>
+              <p class="about__swiper__descr">Господа! Внимание! Благодарю за&nbsp;внимание!</p>
+            </div>
+            <div class="about__swiper swiper-slide">
+              <picture>
+                <source media="(min-width: 1024px)" srcset="/img/about-4.jpg">
+                <img src="./img/about-4.jpg" alt="Татьяна Флеганова">
+              </picture>
+              <h3 class="about__swiper__title">Татьяна Флеганова</h3>
+              <p class="about__swiper__descr">Одна я&nbsp;в&nbsp;пальто стою красивая, а&nbsp;вокруг...</p>
+            </div>
+            <div class="about__swiper swiper-slide">
+              <picture>
+                <source media="(min-width: 1024px)" srcset="/img/about-5.jpg">
+                <img src="./img/about-5.jpg" alt="Фёдор Прокопьев">
+              </picture>
+              <h3 class="about__swiper__title">Фёдор Прокопьев</h3>
+              <p class="about__swiper__descr">Привет! Я&nbsp;фотограф, музыкант, ведущий</p>
+            </div>
+            <div class="about__swiper swiper-slide">
+              <picture>
+                <source media="(min-width: 1024px)" srcset="/img/about-6.jpg">
+                <img src="./img/about-6.jpg" alt="Светлана Кортнева">
+              </picture>
+              <h3 class="about__swiper__title">Светлана Кортнева</h3>
+              <p class="about__swiper__descr">Художник-оформитель. Оформляю</p>
+            </div>
+          </div>
+        </div>
+        <svg class="about__swiperPrev" id="swiperPrev" width="42" height="42" viewbox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle r="20" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 21 21)" stroke="#A1A6B4" stroke-width="2"/>
+          <path d="M23 29L15 21L23 13" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+        </svg>
+        <svg class="about__swiperNext" id="swiperNext" width="42" height="42" viewbox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="21" cy="21" r="20" transform="rotate(-90 21 21)" stroke="#A1A6B4" stroke-width="2"/>
+            <path d="M19 29L27 21L19 13" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+        </svg>
+        <div >
+          <form class="about__form" action="">
+            <!-- <input  type="text" name="text" id="about__form_text" > -->
+            <textarea class="about__form__text input-form"  name="" id="" cols="30" rows="10" placeholder="Что скажете?" required></textarea>
+            <div class="flex">
+              <input class="about__form__name input-form" type="text" name="name" id="about__form_name" placeholder="Имя" required>
+              <input class="about__form__email input-form" type="email" name="email" id="about__form_email" placeholder="Email" required>
+            </div>
+            <button class="about__form__btn btn">Отправить</button>
+            <div class="">
+              <label class="about__form__checkbox" for="checkbox">
+                <input class="checkbox" type="checkbox" name="" id="checkbox" checked>
+                <span class="about-checkbox">Согласен на обработку персональных данных</span>
+              </label>
+            </div>
+          </form>
+        </div>
+
+
+        <!-- <div class="container__form">
+          <form action="" class="form" id="form">
+            <div>
+              <label class="form__label" for="name">Как вас зовут?</label>
+              <input class="form__input form-control" type="name" name="name" id="name" placeholder="Имя*">
+            </div>
+            <div>
+              <label class="form__label" for="email">Укажите ваш e-mail</label>
+              <input class="form__input form-control" type="email" name="email" id="email" placeholder="E-mail*">
+            </div>
+            <button class="btn form__btn btn-primary" id="submit-btn">Заказать</button>
+          </form>
+        </div> -->
+
+      </div>
+    </section>
   </main>
   <script defer src="./scripts/choices.min.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script defer src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
   <script defer src="./scripts/main.js"></script>

@@ -111,6 +111,7 @@ body {
 }
 
 .container {
+  position: relative;
   max-width: 1110px;
   margin: 0 auto;
 }
@@ -803,4 +804,162 @@ border: 7px solid #6D31EE;
   background-position: left;
   background-position-x: 10px;
   color: var(--color-golden);
+}
+
+
+/* about */
+
+.about {
+  background: var(--color-black);
+}
+
+.about__content {
+  width: 635px;
+}
+
+.about__title {
+  font-size: 48px;
+  line-height: 100%;
+  color: var(--color-white);
+}
+
+.about__descr_title {
+  margin: 0;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--color-dark-gray);
+}
+
+.about__descr {
+  margin: 0;
+  margin-top: 8px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  line-height: 160%;
+  color: var(--color-dark-gray);
+}
+
+.about__pic {
+  margin-top: 80px;
+  margin-left: 30px;
+}
+
+.about__dawn{
+  margin-left: 30px;
+}
+
+.about__swiperPrev {
+  position: absolute;
+  top: 40%;
+  left: -75px;
+  cursor: pointer;
+}
+
+.about__swiperNext {
+  position: absolute;
+  top: 40%;
+  right: -75px;
+  cursor: pointer;
+}
+
+/* about__swiper */
+
+.about__swiper {
+  margin-top: 15px;
+}
+
+.about__swiper__title {
+  margin: 0;
+  margin-top: 25px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--color-white);
+}
+
+.about__swiper__descr {
+  margin: 0;
+  margin-top: 8px;
+  line-height: 24px;
+  color: var(--color-dark-gray);
+}
+
+/* about__form */
+
+.about__form {
+  width: 920px;
+  padding-bottom: 85px;
+}
+
+.input-form {
+  margin-top: 26px;
+  padding: 30px;
+  font-size: 20px;
+  line-height: 20px;
+  border: 1px solid #FFFFFF;
+  border-radius: 30px;
+  background: inherit;
+  color: var(--color-dark-gray);
+
+}
+
+.about__form__text {
+  width: 100%;
+  height: 150px;
+}
+
+.about__form__name {
+  width: 50%;
+  height: 70px;
+}
+.about__form__email {
+  width: 50%;
+  height: 70px;
+  margin-left: 30px;
+}
+
+.about__form__btn {
+  width: 212px;
+  height: 70px;
+  margin-top: 32px;
+  font-size: 20px;
+  line-height: 20px;
+  border-radius: 40px;
+  background: var(--color-purple);
+  color: var(--color-white);
+}
+
+.about__form__checkbox {
+  position: relative;
+  margin-top: 30px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 12px;
+  color: var(--color-white);
+}
+
+.checkbox {
+  width: 14px;
+  height: 14px;
+  opacity: 0;
+  margin-right: 7px;
+}
+
+.about-checkbox::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #FFFFFF;
+}
+
+.checkbox:checked + .about-checkbox::before {
+  background-image: url(../img/about-check.svg);
 }
