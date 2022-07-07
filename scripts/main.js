@@ -1,6 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-  // select
+  // header button search
+
+  document.querySelector('.header__rowOne__search').addEventListener('click',function() {
+    document.querySelector('.header__rowOne__search__active').style.opacity = '1';
+    document.querySelector('.header__rowOne__search__active').style.visibility = 'initial';
+  });
+  document.querySelector('.header__rowOne__search__active_btn').addEventListener('click',function() {
+    document.querySelector('.header__rowOne__search__active').style.opacity = '0';
+    document.querySelector('.header__rowOne__search__active').style.visibility = 'hidden';
+  });
+
+  // podcasts article more podcasts
+
+  morePodcasts = document.querySelectorAll('.more-podcasts-toggle');
+
+  document.querySelector('.podcasts__btn').addEventListener('click', function () {
+    morePodcasts.forEach(n => {
+      n.classList.toggle('more-podcasts')
+    })
+  });
+
+  // broadcasts select
 
   const element = document.querySelector('.select');
   const choices = new Choices(element, {
@@ -9,7 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
     itemSelectText: ''
   });
 
-  // accordion
+
+  // guests accordion
 
   // new Accordion('.guests__accordion', {
   //   elementClass: 'accordion',
@@ -48,7 +70,8 @@ document.addEventListener('DOMContentLoaded', function() {
   //   });
   // } );
 
-  // swiper
+
+  // about swiper
 
   const swiper = new Swiper('.swiper', {
     // Optional parameters
@@ -63,17 +86,62 @@ document.addEventListener('DOMContentLoaded', function() {
     },
   });
 
-  const swiperPrev = document.getElementById('swiperPrev')
-  const swiperNext = document.getElementById('swiperNext')
+  const swiperPrev = document.getElementById('swiperPrev');
+  const swiperNext = document.getElementById('swiperNext');
 
   swiperPrev.addEventListener('click', () => {
     swiper.slidePrev();
-  })
+  });
   swiperNext.addEventListener('click', () => {
     swiper.slideNext();
-  })
+  });
 
 
+  // about form validation
 
+  const validation = new JustValidate('#about__form');
+
+  validation
+    .addField('#about__form__text', [
+      {
+        rule: 'required',
+      },
+      {
+        rule: 'minLength',
+        value: 2,
+        errorMessage: 'Введите минимум 2 символа',
+      },
+    ])
+    .addField('#about__form_name', [
+      {
+        rule: 'required',
+        errorMessage: "Введите имя",
+      },
+      {
+        rule: 'customRegexp',
+        value: /^[\p{L} ,.'-]+$/u,
+        errorMessage: 'Введите имя из букв',
+      },
+      {
+        rule: 'minLength',
+        value: 2,
+        errorMessage: 'Введите минимум 2 символа',
+      },
+      {
+        rule: 'maxLength',
+        value: 30,
+        errorMessage: 'Максимум 30 символов',
+      },
+    ])
+    .addField('#about__form_email', [
+      {
+        rule: 'required',
+        errorMessage: 'Введите email',
+      },
+      {
+        rule: 'email',
+        errorMessage: 'Введите корректный email',
+      },
+  ]);
 
 })

@@ -4,6 +4,8 @@ html {
 
 :root {
   --color-purple: #6D31EE;
+  --color-purple-light: #AA9DFA;
+  --color-purple-dark: #4F28A5;
   --color-white: #fff;
   --color-black: #121723;
   --color-dark-white: #E6E8EC;
@@ -16,6 +18,10 @@ html {
 *::before,
 *::after {
 	box-sizing: inherit;
+}
+
+*:focus {
+  outline: none;
 }
 
 a {
@@ -151,13 +157,71 @@ body {
   cursor: pointer;
 }
 
+.header__search:focus svg path, .header__search:hover svg path {
+  stroke: var(--color-purple-light);
+}
+
+.header__search:active svg path {
+  stroke: var(--color-purple-dark);
+}
+
+.header__rowOne__search__active {
+  display: flex;
+  width: 404px;
+  height: 60px;
+  position: absolute;
+  right: 107px;
+  top: 10px;
+  padding-top: 16px;
+  background: var(--color-white);
+  transition: 0.9s ease, color 0.9s linear;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header__rowOne__search__active_input {
+  width: 330px;
+  height: 20px;
+  margin-left: 28px;
+  margin-top: 5px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--color-purple);
+}
+
+.header__rowOne__search__active_btn {
+  margin-right: 20px;
+  margin-bottom: 15px;
+
+}
+
 .header__rowOne__btn {
   width: 104px;
   height: 40px;
+  padding-right: 10px;
   font-weight: 500;
+  justify-content: space-around;
   background-color: var(--color-white);
   border: 2px solid var(--color-black);
   border-radius: 77px;
+}
+
+.header__rowOne__btn:focus {
+  background: var(--color-purple-light);
+  border: 2px solid var(--color-black);
+}
+
+.header__rowOne__btn:hover {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.header__rowOne__btn:hover svg path {
+  stroke: var(--color-white);
+}
+
+.header__rowOne__btn:active {
+  background: var(--color-purple-dark);
 }
 
 .header__rowTwo {
@@ -177,14 +241,9 @@ body {
 .header__rowTwo__play {
   width: 175px;
   height: 40px;
-  padding-left: 42px;
-  background-image: url(../img/header_play_btn.svg);
-  background-position:left;
-  background-position-x: 10px;
-  background-repeat: no-repeat;
+  padding-left: 12px;
   border-left: 1px solid var(--color-dark-white);
   border-right: 1px solid var(--color-dark-white);
-  cursor: pointer;
 }
 
 .header__rowTwo__play:last-of-type {
@@ -192,11 +251,42 @@ body {
   border-left: none;
 }
 
+.header__rowTwo__play__btn {
+  margin-right: 10px;
+}
+
+.header__rowTwo__play__btn:focus svg path {
+  fill: var(--color-purple-light);
+}
+
+.header__rowTwo__play__btn:hover svg path {
+  fill: var(--color-purple);
+}
+
+.header__rowTwo__play__btn:active svg path {
+  fill: var(--color-purple-dark);
+}
+
 .header__rowTwo__play__title {
+  margin: 0;
   margin-bottom: 5px;
   font-size: 12px;
   line-height: 12px;
   color: var(--color-dark-gray);
+}
+
+.header__item_link:focus {
+  padding: 4px 10px;
+  background-color: var(--color-purple-light);
+  color: var(--color-white);
+}
+
+.header__item_link:hover {
+  color: var(--color-purple);
+}
+
+.header__item_link:active {
+  color: var(--color-purple-dark);
 }
 
 /* hero */
@@ -236,6 +326,20 @@ body {
   color: var(--color-white);
 }
 
+.hero__btn:focus {
+  background: var(--color-purple-light);
+  border: 2px solid var(--color-purple-dark);
+}
+
+.hero__btn:hover {
+  background: var(--color-purple-light);
+  border: none;
+}
+
+.hero__btn:active {
+  background: var(--color-purple-dark);
+}
+
 /* podcasts */
 
 .podcasts{
@@ -252,6 +356,10 @@ body {
   width: 49%;
   margin-top: 30px;
   background-color: var(--color-white);
+}
+
+.more-podcasts {
+  display: none;
 }
 
 .podcasts__article:nth-child(2n) {
@@ -272,10 +380,30 @@ body {
   height: 48px;
   margin-top: 15px;
   margin-right: 33px;
-  background-image: url(../img/padcasts_play_btn.svg);
-  background-repeat: no-repeat;
-  background-position: right;
-  cursor: pointer;
+}
+
+.podcasts__article__btn-play:focus svg path {
+  fill: var(--color-purple-light);
+}
+
+.podcasts__article__btn-play:focus svg circle {
+  stroke: var(--color-purple-light);
+}
+
+.podcasts__article__btn-play:hover svg path {
+  fill: var(--color-purple);
+}
+
+.podcasts__article__btn-play:hover svg circle {
+  stroke: var(--color-purple);
+}
+
+.podcasts__article__btn-play:active svg path {
+  fill: var(--color-white);
+}
+
+.podcasts__article__btn-play:active svg circle {
+  fill: var(--color-purple-dark);
 }
 
 .podcasts__article__time {
@@ -349,6 +477,22 @@ body {
   justify-content: center;
 }
 
+.podcasts__btn:focus {
+  background: var(--color-purple-light);
+  border: 2px solid var(--color-purple-dark);
+  color: var(--color-white);
+}
+
+.podcasts__btn:hover {
+  background: var(--color-purple);
+  color: var(--color-white);
+}
+
+.podcasts__btn:active {
+  background: var(--color-purple-dark);
+  color: var(--color-white);
+}
+
 /* broadcasts */
 
 .broadcasts {
@@ -368,7 +512,8 @@ body {
 }
 
 .broadcasts__article {
-  height: 260px;
+  min-height: 260px;
+  width: min-content;
   margin-left: 27px;
   margin-top: 30px;
   border: 1px solid var(--color-dark-white);
@@ -570,8 +715,8 @@ body {
   height: 40px;
   margin-top: 30px;
   background-color: inherit;
-  border: 2px solid #AA9DFA;
-  color: #AA9DFA;
+  border: 2px solid var(--color-purple-light);
+  color: var(--color-purple-light);
 }
 
 /* guests accordion jquery */
@@ -609,8 +754,8 @@ body {
 }
 
 .ui-accordion-header.ui-state-active {
-  border-top: 1px solid #AA9DFA;
-  border-bottom: 1px solid #AA9DFA;
+  border-top: 1px solid var(--color-purple-light);
+  border-bottom: 1px solid var(--color-purple-light);
 }
 
 .ui-accordion .ui-accordion-content {
@@ -659,7 +804,8 @@ body {
 
 .playlists__content__cards__article {
   position: relative;
-  height: 224px;
+  min-height: 224px;
+  width: min-content;
   margin-top: 30px;
   margin-left: 27px;
   border: 1px solid var(--color-dark-white);
@@ -898,7 +1044,6 @@ border: 7px solid var(--color-purple);
   border-radius: 30px;
   background: inherit;
   color: var(--color-dark-gray);
-
 }
 
 .about__form__text {
@@ -959,6 +1104,15 @@ border: 7px solid var(--color-purple);
 .checkbox:checked + .about-checkbox::before {
   background-image: url(../img/about-check.svg);
 }
+
+.just-validate-error-field.input-form  {
+  border-color: red;
+}
+
+.just-validate-error-label {
+  display: none;
+}
+
 
 /* footer */
 

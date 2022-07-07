@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/choices.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
@@ -18,64 +19,95 @@
         <img class="header__rowOne__logo" src="./img/logo.svg" alt="Логотип">
         <nav class="">
           <ul class="header__rowOne__nav__list list-reset flex">
-            <li class="header__rowOne__item">
-              <a href="#podcasts">Подкасты</a>
+            <li class="header__rowOne__item ">
+              <a class="header__item_link" href="#podcasts">Подкасты</a>
             </li>
-            <li class="header__rowOne__item">
-              <a href="#broadcasts">Передачи</a>
+            <li class="header__rowOne__item ">
+              <a class="header__item_link" href="#broadcasts">Передачи</a>
             </li>
-            <li class="header__rowOne__item">
-              <a href="#guests">Гости</a>
+            <li class="header__rowOne__item ">
+              <a class="header__item_link" href="#guests">Гости</a>
             </li>
-            <li class="header__rowOne__item">
-              <a href="#playlists">Плейлисты</a>
+            <li class="header__rowOne__item ">
+              <a class="header__item_link" href="#playlists">Плейлисты</a>
             </li>
-            <li class="header__rowOne__item">
-              <a href="#about">О нас</a>
+            <li class="header__rowOne__item ">
+              <a class="header__item_link" href="#about">О нас</a>
             </li>
           </ul>
         </nav>
         <div class="flex">
-          <div class="header__rowOne__search">
+          <button class="header__rowOne__search header__search btn-reset" aria-label="Поиск">
             <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M20.9999 21L16.6499 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+              <path d="M21 21L16.65 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+          </button>
+          <div class="header__rowOne__search__active">
+            <input class="header__rowOne__search__active_input" type="search" name="search" placeholder="Поиск по сайту">
+            <button class="header__rowOne__search__active_btn header__search btn-reset" aria-label="Поиск">
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 21L16.65 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              </button>
           </div>
-          <button class="header__rowOne__btn btn">Вход</button>
+          <button class="header__rowOne__btn btn flex">
+            <svg width="19" height="18" viewbox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.5 1.5L2 5.25L9.5 9L17 5.25L9.5 1.5Z" stroke="#121723" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 12.75L9.5 16.5L17 12.75" stroke="#121723" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 9L9.5 12.75L17 9" stroke="#121723" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>Вход
+          </button>
         </div>
       </div>
     </div>
     <div class="header__rowTwo">
       <div class="header__rowTwo__container container flex">
-        <ul class="header__rowTwo__list list-reset flex">
-          <li class="header__rowTwo__item">
-            <a href="#">Новости</a>
-          </li>
-          <li class="header__rowTwo__item">
-            <a href="#">Блоги</a>
-          </li>
-          <li class="header__rowTwo__item">
-            <a href="#">Топы</a>
-          </li>
-          <li class="header__rowTwo__item">
-            <a href="#">Опросы</a>
-          </li>
-          <li class="header__rowTwo__item">
-            <a href="#">Рейтинги</a>
-          </li>
-          <li class="header__rowTwo__item">
-            <a href="#">Реклама</a>
-          </li>
-        </ul>
+        <nav>
+          <ul class="header__rowTwo__list list-reset flex">
+            <li class="header__rowTwo__item header__item_link">
+              <a class="header__item_link" href="#">Новости</a>
+            </li>
+            <li class="header__rowTwo__item header__item_link">
+              <a class="header__item_link" href="#">Блоги</a>
+            </li>
+            <li class="header__rowTwo__item header__item_link">
+              <a class="header__item_link" href="#">Топы</a>
+            </li>
+            <li class="header__rowTwo__item header__item_link">
+              <a class="header__item_link" href="#">Опросы</a>
+            </li>
+            <li class="header__rowTwo__item header__item_link">
+              <a class="header__item_link" href="#">Рейтинги</a>
+            </li>
+            <li class="header__rowTwo__item header__item_link">
+              <a class="header__item_link" href="#">Реклама</a>
+            </li>
+          </ul>
+        </nav>
         <div class="flex">
-          <div class="header__rowTwo__play">
-            <div class="">Ранее в эфире</div>
-            <div class="">«Музыка»</div>
+          <div class="header__rowTwo__play flex">
+            <button class="header__rowTwo__play__btn btn-reset">
+              <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z" fill="#A1A6B4"/>
+                </svg>
+            </button>
+            <div>
+              <h4 class="header__rowTwo__play__title">Ранее в эфире</h4>
+              <span class="">«Музыка»</span>
+            </div>
           </div>
-          <div class="header__rowTwo__play">
-            <div class="header__rowTwo__play__title">Сейчас в эфире</div>
-            <div class="">«Как так?»</div>
+          <div class="header__rowTwo__play flex">
+            <button class="header__rowTwo__play__btn btn-reset">
+              <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z" fill="#A1A6B4"/>
+                </svg>
+            </button>
+            <div>
+              <h4 class="header__rowTwo__play__title">Сейчас в эфире</h4>
+              <span class="">«Как так?»</span>
+            </div>
           </div>
           <img class="header__rowTwo__ageLimit" src="./img/12+.png" alt="Возрастной лимит 12+">
         </div>
@@ -109,7 +141,12 @@
                   <div class="podcasts__article__text">Дмитрий Гутенберг</div>
                   <div class="podcasts__article__play"></div>
                 </div>
-                <div class="podcasts__article__btn-play"></div>
+                <button class="podcasts__article__btn-play btn-reset">
+                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                    <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
+                  </svg>
+                </button>
               </div>
               <div class="podcasts__article__actions flex">
                 <div class="podcasts__article__icon podcasts__article__summary">258</div>
@@ -132,7 +169,12 @@
                   <div class="podcasts__article__text">Дмитрий Гутенберг</div>
                   <div class="podcasts__article__play"></div>
                 </div>
-                <div class="podcasts__article__btn-play"></div>
+                <button class="podcasts__article__btn-play btn-reset">
+                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                    <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
+                  </svg>
+                </button>
               </div>
               <div class="podcasts__article__actions flex">
                 <div class="podcasts__article__icon podcasts__article__summary">207</div>
@@ -155,7 +197,12 @@
                   <div class="podcasts__article__text">Анна Васильева</div>
                   <div class="podcasts__article__play"></div>
                 </div>
-                <div class="podcasts__article__btn-play"></div>
+                <button class="podcasts__article__btn-play btn-reset">
+                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                    <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
+                  </svg>
+                </button>
               </div>
               <div class="podcasts__article__actions flex">
                 <div class="podcasts__article__icon podcasts__article__summary">104</div>
@@ -178,7 +225,12 @@
                   <div class="podcasts__article__text">Пётр Дмитриевский</div>
                   <div class="podcasts__article__play"></div>
                 </div>
-                <div class="podcasts__article__btn-play"></div>
+                <button class="podcasts__article__btn-play btn-reset">
+                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                    <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
+                  </svg>
+                </button>
               </div>
               <div class="podcasts__article__actions flex">
                 <div class="podcasts__article__icon podcasts__article__summary">87</div>
@@ -201,7 +253,12 @@
                   <div class="podcasts__article__text">Пётр Дмитриевский</div>
                   <div class="podcasts__article__play"></div>
                 </div>
-                <div class="podcasts__article__btn-play"></div>
+                <button class="podcasts__article__btn-play btn-reset">
+                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                    <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
+                  </svg>
+                </button>
               </div>
               <div class="podcasts__article__actions flex">
                 <div class="podcasts__article__icon podcasts__article__summary">64</div>
@@ -224,7 +281,12 @@
                   <div class="podcasts__article__text">Татьяна Флеганова</div>
                   <div class="podcasts__article__play"></div>
                 </div>
-                <div class="podcasts__article__btn-play"></div>
+                <button class="podcasts__article__btn-play btn-reset">
+                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                    <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
+                  </svg>
+                </button>
               </div>
               <div class="podcasts__article__actions flex">
                 <div class="podcasts__article__icon podcasts__article__summary">58</div>
@@ -247,7 +309,12 @@
                   <div class="podcasts__article__text">Пётр Дмитриевский</div>
                   <div class="podcasts__article__play"></div>
                 </div>
-                <div class="podcasts__article__btn-play"></div>
+                <button class="podcasts__article__btn-play btn-reset">
+                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                    <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
+                  </svg>
+                </button>
               </div>
               <div class="podcasts__article__actions flex">
                 <div class="podcasts__article__icon podcasts__article__summary">55</div>
@@ -270,7 +337,12 @@
                   <div class="podcasts__article__text">Татьяна Флеганова</div>
                   <div class="podcasts__article__play"></div>
                 </div>
-                <div class="podcasts__article__btn-play"></div>
+                <button class="podcasts__article__btn-play btn-reset">
+                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                    <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
+                  </svg>
+                </button>
               </div>
               <div class="podcasts__article__actions flex">
                 <div class="podcasts__article__icon podcasts__article__summary">24</div>
@@ -280,8 +352,122 @@
             </div>
             <div class="podcasts__article__date">18 мая</div>
           </article>
+          <!-- more-podcasts-toggle more-podcasts -->
+          <article class="podcasts__article more-podcasts-toggle more-podcasts flex">
+            <picture class="podcasts__article__picture">
+              <source media="(min-width: 1024px)" srcset="/img/podcasts-8.jpg">
+              <img class="podcasts__article__img" src="./img/podcasts-8.jpg" alt="Правила этикета">
+            </picture>
+            <div class="podcasts__article__col">
+              <div class="podcasts__article__descr flex">
+                <div class="podcasts__article__content">
+                  <div class="podcasts__article__time">6:55</div>
+                  <h3 class="podcasts__article__title">Правила этикета</h3>
+                  <div class="podcasts__article__text">Татьяна Флеганова</div>
+                  <div class="podcasts__article__play"></div>
+                </div>
+                <button class="podcasts__article__btn-play btn-reset">
+                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                    <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="podcasts__article__actions flex">
+                <div class="podcasts__article__icon podcasts__article__summary">24</div>
+                <div class="podcasts__article__icon podcasts__article__like">54</div>
+                <div class="podcasts__article__icon podcasts__article__share">42</div>
+              </div>
+            </div>
+            <div class="podcasts__article__date">18 мая</div>
+          </article>
+          <article class="podcasts__article more-podcasts-toggle more-podcasts flex">
+            <picture class="podcasts__article__picture">
+              <source media="(min-width: 1024px)" srcset="/img/podcasts-8.jpg">
+              <img class="podcasts__article__img" src="./img/podcasts-8.jpg" alt="Правила этикета">
+            </picture>
+            <div class="podcasts__article__col">
+              <div class="podcasts__article__descr flex">
+                <div class="podcasts__article__content">
+                  <div class="podcasts__article__time">6:55</div>
+                  <h3 class="podcasts__article__title">Правила этикета</h3>
+                  <div class="podcasts__article__text">Татьяна Флеганова</div>
+                  <div class="podcasts__article__play"></div>
+                </div>
+                <button class="podcasts__article__btn-play btn-reset">
+                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                    <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="podcasts__article__actions flex">
+                <div class="podcasts__article__icon podcasts__article__summary">24</div>
+                <div class="podcasts__article__icon podcasts__article__like">54</div>
+                <div class="podcasts__article__icon podcasts__article__share">42</div>
+              </div>
+            </div>
+            <div class="podcasts__article__date">18 мая</div>
+          </article>
+          <article class="podcasts__article more-podcasts-toggle more-podcasts flex">
+            <picture class="podcasts__article__picture">
+              <source media="(min-width: 1024px)" srcset="/img/podcasts-8.jpg">
+              <img class="podcasts__article__img" src="./img/podcasts-8.jpg" alt="Правила этикета">
+            </picture>
+            <div class="podcasts__article__col">
+              <div class="podcasts__article__descr flex">
+                <div class="podcasts__article__content">
+                  <div class="podcasts__article__time">6:55</div>
+                  <h3 class="podcasts__article__title">Правила этикета</h3>
+                  <div class="podcasts__article__text">Татьяна Флеганова</div>
+                  <div class="podcasts__article__play"></div>
+                </div>
+                <button class="podcasts__article__btn-play btn-reset">
+                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                    <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="podcasts__article__actions flex">
+                <div class="podcasts__article__icon podcasts__article__summary">24</div>
+                <div class="podcasts__article__icon podcasts__article__like">54</div>
+                <div class="podcasts__article__icon podcasts__article__share">42</div>
+              </div>
+            </div>
+            <div class="podcasts__article__date">18 мая</div>
+          </article>
+          <article class="podcasts__article more-podcasts-toggle more-podcasts flex">
+            <picture class="podcasts__article__picture">
+              <source media="(min-width: 1024px)" srcset="/img/podcasts-8.jpg">
+              <img class="podcasts__article__img" src="./img/podcasts-8.jpg" alt="Правила этикета">
+            </picture>
+            <div class="podcasts__article__col">
+              <div class="podcasts__article__descr flex">
+                <div class="podcasts__article__content">
+                  <div class="podcasts__article__time">6:55</div>
+                  <h3 class="podcasts__article__title">Правила этикета</h3>
+                  <div class="podcasts__article__text">Татьяна Флеганова</div>
+                  <div class="podcasts__article__play"></div>
+                </div>
+                <button class="podcasts__article__btn-play btn-reset">
+                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                    <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="podcasts__article__actions flex">
+                <div class="podcasts__article__icon podcasts__article__summary">24</div>
+                <div class="podcasts__article__icon podcasts__article__like">54</div>
+                <div class="podcasts__article__icon podcasts__article__share">42</div>
+              </div>
+            </div>
+            <div class="podcasts__article__date">18 мая</div>
+          </article>
+          <!-- more-podcasts-toggle more-podcasts end -->
         </div>
-        <div class="podcasts__btn btn flex">Ещё подкасты</div>
+        <button class="podcasts__btn btn flex">Ещё подкасты</button>
       </div>
     </section>
     <section class="broadcasts container flex" id="broadcasts">
@@ -695,8 +881,8 @@
             <path d="M19 29L27 21L19 13" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
         </svg>
         <div >
-          <form class="about__form" action="">
-            <textarea class="about__form__text input-form" placeholder="Что скажете?" required></textarea>
+          <form class="about__form" action="" id="about__form">
+            <textarea class="about__form__text input-form" id="about__form__text" placeholder="Что скажете?" required></textarea>
             <div class="flex">
               <input class="about__form__name input-form" type="text" name="name" id="about__form_name" placeholder="Имя" required>
               <input class="about__form__email input-form" type="email" name="email" id="about__form_email" placeholder="Email" required>
@@ -767,6 +953,8 @@
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script defer src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script defer src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <!-- <script defer src="./scripts/inputmask.min.js"></script> -->
   <script defer src="./scripts/main.js"></script>
 </body>
 </html>
