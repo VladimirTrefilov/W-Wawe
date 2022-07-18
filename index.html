@@ -52,13 +52,7 @@
               </svg>
               </button>
           </div>
-          <button class="header__rowOne__btn btn flex">
-            <svg width="19" height="18" viewbox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9.5 1.5L2 5.25L9.5 9L17 5.25L9.5 1.5Z" stroke="#121723" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M2 12.75L9.5 16.5L17 12.75" stroke="#121723" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M2 9L9.5 12.75L17 9" stroke="#121723" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>Вход
-          </button>
+          <button class="header__rowOne__btn btn">Вход</button>
         </div>
       </div>
     </div>
@@ -476,14 +470,14 @@
         <div class="broadcasts__autor">Автор:</div>
         <div class="broadcasts__select">
           <select class="select" name="select">
-            <option value="1">Дмитрий Гутенберг</option>
-            <option value="2">Татьяна Флеганова</option>
-            <option value="3">Анна Васильева</option>
-            <option value="4">Пётр Дмитриевский</option>
+            <option value="Дмитрий Гутенберг">Дмитрий Гутенберг</option>
+            <option value="Татьяна Флеганова">Татьяна Флеганова</option>
+            <option value="Анна Васильева">Анна Васильева</option>
+            <option value="Пётр Дмитриевский">Пётр Дмитриевский</option>
           </select>
         </div>
       </div>
-      <div class="broadcasts__container flex">
+      <div class="broadcasts__container flex" id="Дмитрий Гутенберг">
         <article class="broadcasts__article">
           <picture>
             <source media="(min-width: 1024)" srcset="/img/broadcasts-1.jpg">
@@ -491,7 +485,11 @@
           </picture>
           <h3 class="broadcasts__article__title">О людях и книгах</h3>
           <div class="broadcasts__article__descr">Анонсируется отдельно</div>
-          <a class="broadcasts__article__btn" href="#">Подробнее</a>
+          <a class="broadcasts__article__btn" href="#">Подробнее
+            <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z" fill="#121723"/>
+            </svg>
+          </a>
         </article>
         <article class="broadcasts__article">
           <picture>
@@ -500,7 +498,11 @@
           </picture>
           <h3 class="broadcasts__article__title">Графомания td</h3>
           <div class="broadcasts__article__descr">По понедельникам в 10:00</div>
-          <a class="broadcasts__article__btn" href="#">Подробнее</a>
+          <a class="broadcasts__article__btn" href="#">Подробнее
+            <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z" fill="#121723"/>
+            </svg>
+          </a>
         </article>
         <article class="broadcasts__article">
           <picture>
@@ -509,7 +511,11 @@
           </picture>
           <h3 class="broadcasts__article__title">Не Рим, не Троя</h3>
           <div class="broadcasts__article__descr">По вторникам в 12:00</div>
-          <a class="broadcasts__article__btn" href="#">Подробнее</a>
+          <a class="broadcasts__article__btn" href="#">Подробнее
+            <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z" fill="#121723"/>
+            </svg>
+          </a>
         </article>
         <article class="broadcasts__article">
           <picture>
@@ -518,7 +524,11 @@
           </picture>
           <h3 class="broadcasts__article__title">Эрудит</h3>
           <div class="broadcasts__article__descr">По пятницам в 17:00</div>
-          <a class="broadcasts__article__btn" href="#">Подробнее</a>
+          <a class="broadcasts__article__btn" href="#">Подробнее
+            <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z" fill="#121723"/>
+            </svg>
+          </a>
         </article>
         <article class="broadcasts__article">
           <picture>
@@ -527,7 +537,11 @@
           </picture>
           <h3 class="broadcasts__article__title">Тонкости эпох</h3>
           <div class="broadcasts__article__descr">По пятницам в 17:00</div>
-          <a class="broadcasts__article__btn" href="#">Подробнее</a>
+          <a class="broadcasts__article__btn" href="#">Подробнее
+            <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z" fill="#121723"/>
+            </svg>
+          </a>
         </article>
         <article class="broadcasts__article">
           <picture>
@@ -536,11 +550,21 @@
           </picture>
           <h3 class="broadcasts__article__title">Живые мысли</h3>
           <div class="broadcasts__article__descr">По воскресеньям в 15:30</div>
-          <a class="broadcasts__article__btn" href="#">Подробнее</a>
+          <a class="broadcasts__article__btn" href="#">Подробнее
+            <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z" fill="#121723"/>
+            </svg>
+          </a>
         </article>
       </div>
       <div class="broadcasts__aside">
-        <button class="broadcasts__aside__btn btn">Архив</button>
+        <button class="broadcasts__aside__btn btn flex">
+          <svg width="19" height="18" viewbox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.5 1.5L2 5.25L9.5 9L17 5.25L9.5 1.5Z" stroke="#121723" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 12.75L9.5 16.5L17 12.75" stroke="#121723" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 9L9.5 12.75L17 9" stroke="#121723" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>Архив
+        </button>
         <p class="broadcasts__aside__text">В&nbsp;архив попадают все передачи, которые вы&nbsp;пропустили! Enjoy:)</p>
       </div>
     </section>
@@ -550,8 +574,96 @@
         <h3 class="guests__descr">У нас бывают:</h3>
         <p class="guests__text">Блогеры, арт-критики и&nbsp;деятели искусства, музыканты, молодые учёные и&nbsp;люди науки, историки, филологи и&nbsp;много других интересных гостей!</p>
         <div class="guests__container flex">
+          <div class="guests__accordion" id="guests__accordion">
+            <div class="accordion__item">
+              <div class="accordion__header">
+                Блогеры
+                <svg class="accordion__icon" width="42" height="42" viewbox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                  <path d="M13 19L21 27L29 19" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+                </svg>
+              </div>
+              <div class="accordion__body">
+                <span class="accordion__body__item">Сергей Денисов</span>
+                <span class="accordion__body__item">Матвей Мечников</span>
+                <span class="accordion__body__item">Константин Прусино</span>
+                <span class="accordion__body__item">Иван Калитников</span>
+                <span class="accordion__body__item">Евгений Войновский</span>
+                <span class="accordion__body__item" id="Ольга_Мартынова">Ольга Мартынова</span>
+                <span class="accordion__body__item">Дмитрий Михалок</span>
+                <span class="accordion__body__item">Пётр Пиотровский</span>
+                <span class="accordion__body__item">Олег Свиридовский</span>
+                <span class="accordion__body__item">Владислав Кауперс</span>
+                <span class="accordion__body__item">Михаил Пожитников</span>
+                <span class="accordion__body__item">Георгий Полуян</span>
+                <span class="accordion__body__item">Денис Тельман</span>
+                <span class="accordion__body__item">Юрий Горин</span>
+                <span class="accordion__body__item">Максим Сергеев</span>
+                </div>
+            </div>
+            <div class="accordion__item">
+              <div class="accordion__header">
+                Арт-критики
+                <svg class="accordion__icon" width="42" height="42" viewbox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                  <path d="M13 19L21 27L29 19" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+                </svg>
+              </div>
+              <div class="accordion__body">
+                Содержимое 2
+              </div>
+            </div>
+            <div class="accordion__item">
+              <div class="accordion__header">
+                Художники
+                <svg class="accordion__icon" width="42" height="42" viewbox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                  <path d="M13 19L21 27L29 19" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+                </svg>
+              </div>
+              <div class="accordion__body">
+                Содержимое 2
+              </div>
+            </div>
+            <div class="accordion__item">
+              <div class="accordion__header">
+                Люди науки
+                <svg class="accordion__icon" width="42" height="42" viewbox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                  <path d="M13 19L21 27L29 19" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+                </svg>
+              </div>
+              <div class="accordion__body">
+                Содержимое 2
+              </div>
+            </div>
+            <div class="accordion__item">
+              <div class="accordion__header">
+                Историки
+                <svg class="accordion__icon" width="42" height="42" viewbox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                  <path d="M13 19L21 27L29 19" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+                </svg>
+              </div>
+              <div class="accordion__body">
+                Содержимое 2
+              </div>
+            </div>
+            <div class="accordion__item">
+              <div class="accordion__header">
+                Филологи
+                <svg class="accordion__icon" width="42" height="42" viewbox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                  <path d="M13 19L21 27L29 19" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+                </svg>
+              </div>
+              <div class="accordion__body">
+                Содержимое 2
+              </div>
+            </div>
+          </div>
           <!-- jquery accordion -->
-          <div class="guests__accordion list-reset" id="accordion">
+          <!-- <div class="guests__accordion list-reset" id="accordion">
             <h3 class="accordion__title">Блогеры
               <img class="accordion__icon" src="./img/accordion-icon.svg" alt="">
             </h3>
@@ -605,7 +717,7 @@
             <span class="accordion__item">Владислав Кауперс</span>
             <span class="accordion__item">Михаил Пожитников</span>
             </div>
-          </div>
+          </div> -->
           <div class="guests__cards__default"></div>
           <article class="guests__cards closed" >
             <picture>
@@ -951,8 +1063,8 @@
   </footer>
   <script defer src="./scripts/choices.min.js"></script>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-  <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script defer src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <!-- <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script> -->
   <script defer src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
   <!-- <script defer src="./scripts/inputmask.min.js"></script> -->
   <script defer src="./scripts/main.js"></script>

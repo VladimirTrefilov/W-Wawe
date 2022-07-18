@@ -30,46 +30,42 @@ document.addEventListener('DOMContentLoaded', function() {
     itemSelectText: ''
   });
 
+  choices.passedElement.element.addEventListener(
+    'unhighlightItem',
+    function(event) {
+      // each time an item is highlighted
+      console.log(event.detail.id);
+      console.log(event.detail.value);
+      console.log(event.detail.label);
+      console.log(event.detail.groupValue);
+    },
+    false,
+  );
 
   // guests accordion
 
-  // new Accordion('.guests__accordion', {
-  //   elementClass: 'accordion',
-  //   triggerClass: 'accordion__control',
-  //   panelClass: 'accordion__content',
-  //   activeClass: 'accordion-active'
-  // });
+  const header = document.querySelectorAll('.accordion__item')
 
-  $( function() {
-    $( "#accordion" ).accordion({
-      icons: false,
-      heightStyle: "content",
-      collapsible: true,
-      active: false,
-      width: 700,
-    });
+  function itemShowDel (el) {
+    el.forEach(d => {
+      d.classList.remove('accordion__item_show');
+    })
+  }
+
+  header.forEach(n => {
+    n.addEventListener('click', (e) => {
+      itemShowDel(header)
+
+      // получим элемент .accordion__header
+      const elHeader = e.target.closest('.accordion__header');
+      // если такой элемент не найден, то прекращаем выполнение функции
+      if (!elHeader) {
+        return;
+      }
+      // переключим класс accordion__item_show элемента .accordion__header
+      elHeader.parentElement.classList.toggle('accordion__item_show');
+    })
   });
-
-  let item = document.querySelector('.accordion__item');
-  let def = document.querySelector('.guests__cards__default');
-  let card = document.querySelector('.guests__cards');
-
-  item.addEventListener("click", function() {
-    card.classList.toggle("closed");
-    def.classList.toggle("closed");
-  });
-
-  $( function() {
-    $( "input" ).checkboxradio({
-    });
-  } );
-
-  // $( function() {
-  //   $( "#slider" ).slider({
-  //     disable: true
-  //   });
-  // } );
-
 
   // about swiper
 
