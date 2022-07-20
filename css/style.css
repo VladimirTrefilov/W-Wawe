@@ -763,6 +763,22 @@ body {
   color: var(--color-purple-light);
 }
 
+.guests__cards__btn:focus {
+  background-color: var(--color-purple);
+  border: none;
+  color: var(--color-white);
+}
+
+.guests__cards__btn:hover {
+  background-color: var(--color-purple-light);
+  border: none;
+  color: var(--color-white);
+}
+
+.guests__cards__btn:active {
+  background-color: var(--color-purple-dark);
+}
+
 /* guests accordion */
 
 .guests__accordion {
@@ -771,17 +787,28 @@ body {
 
 .accordion__item {
   position: relative;
+  border-top: 1px solid  var(--color-dark-gray);
   border-bottom: 1px solid var(--color-dark-gray);
 }
 
-.accordion__item:first-of-type {
-  border-top: 1px solid  var(--color-dark-gray);
+.accordion__item:not(:first-of-type) {
+  border-top: none;
+}
+
+.accordion__item:not(.accordion__item_show) .accordion__body {
+  display: none;
+}
+
+.accordion__item_show.accordion__item {
+  border-top: 1px solid  var(--color-purple-light);
+  border-bottom: 1px solid  var(--color-purple-light);
 }
 
 .accordion__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0;
   padding: 34px 0;
   font-weight: 500;
   font-size: 20px;
@@ -790,8 +817,6 @@ body {
   transition: 0.2s ease-out;
   color: var(--color-white);
 }
-
-
 
 .accordion__icon {
   position: absolute;
@@ -802,21 +827,12 @@ body {
   transform: rotate(-180deg);
 }
 
-.accordion__header:hover .accordion__icon {
-  background-color: #0b5ed7;
-}
-
-/* .accordion__item_hidden .accordion__header {
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-} */
-
 .accordion__body {
   display: flex;
   flex-wrap: wrap;
   padding: 15px 0 20px 0;
   transition: 0.5s ease;
-  border-top: 1px solid  var(--color-dark-gray);
+  border-top: 1px solid  var(--color-purple-light);
 }
 
 .accordion__body__item {
@@ -824,10 +840,25 @@ body {
   padding-top: 14px;
 }
 
-.accordion__item:not(.accordion__item_show) .accordion__body {
-  display: none;
+.accordion__header:focus {
+  background: #292E39;
 }
 
+.accordion__header:hover {
+  color: var(--color-purple-light);
+}
+
+.accordion__header:hover .accordion__icon circle, .accordion__header:hover .accordion__icon path {
+  stroke: var(--color-purple-light);
+}
+
+.accordion__header:active .accordion__icon circle {
+  fill: var(--color-purple-light);
+}
+
+.accordion__header:active .accordion__icon path {
+  stroke: var(--color-white);
+}
 /* guests accordion jquery */
 
 .ui-state-default, .ui-widget-content {
