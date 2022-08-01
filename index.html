@@ -744,163 +744,242 @@
     </section>
     <section class="container" id="playlists">
       <div class="playlists flex">
-        <div class="playlists__content">
+        <div class="playlists">
           <h2 class="section-title">Плейлисты</h2>
-          <!-- jquery checkboxradio -->
-          <fieldset>
-            <legend>Жанр</legend>
-            <label for="radio-1" >Постпанк</label>
-            <input type="radio" name="radio-1" id="radio-1">
-            <label for="radio-2" >Хардкор</label>
-            <input type="radio" name="radio-1" id="radio-2">
-            <label for="radio-3" >Панк-рок</label>
-            <input type="radio" name="radio-1" id="radio-3">
-            <label for="radio-4" >Рок</label>
-            <input type="radio" name="radio-1" id="radio-4">
-            <label for="radio-5" >Прогрессивный рок</label>
-            <input type="radio" name="radio-1" id="radio-5">
-            <label for="radio-6" >Электронная музыка</label>
-            <input type="radio" name="radio-1" id="radio-6">
-            <label for="radio-7" >Классическая музыка</label>
-            <input type="radio" name="radio-1" id="radio-7">
-            <label for="radio-8" >Звуки природы и шум города</label>
-            <input type="radio" name="radio-1" id="radio-8">
+          <fieldset class="playlists__radio">
+            <legend class="playlists__radio__title">Жанр</legend>
+            <input  type="radio" name="radio-1" id="radio-1">
+            <label class="playlists__radio__input" for="radio-1" tabindex="0">Постпанк
+            </label>
+            <input  type="radio" name="radio-1" id="radio-2">
+            <label class="playlists__radio__input" for="radio-2" tabindex="0">Хардкор
+            </label>
+            <input  type="radio" name="radio-1" id="radio-3">
+            <label class="playlists__radio__input" for="radio-3" tabindex="0">Панк-рок
+            </label>
+            <input  type="radio" name="radio-1" id="radio-4">
+            <label class="playlists__radio__input" for="radio-4" tabindex="0">Рок
+            </label>
+            <input  type="radio" name="radio-1" id="radio-5">
+            <label class="playlists__radio__input" for="radio-5" tabindex="0">Прогрессивный рок
+            </label>
+            <input  type="radio" name="radio-1" id="radio-6">
+            <label class="playlists__radio__input" for="radio-6" tabindex="0">Электронная музыка
+            </label>
+            <input  type="radio" name="radio-1" id="radio-7">
+            <label class="playlists__radio__input" for="radio-7" tabindex="0">Классическая музыка
+            </label>
+            <input  type="radio" name="radio-1" id="radio-8">
+            <label class="playlists__radio__input" for="radio-8" tabindex="0">Звуки природы и шум города
+            </label>
           </fieldset>
           <p class="playlists__text">Раздел &laquo;Плейлисты&raquo; может содержать информацию, не&nbsp;предназначенную для несовершеннолетних</p>
           <p class="playlists__logo">© 2021 l W-Wave</p>
         </div>
-        <div class="playlists__content__cards flex" id="slider">
-          <article class="playlists__content__cards__article">
-            <picture>
+        <div class="playlists__cards flex" id="slider">
+          <article class="playlists__cards__article">
+            <picture >
               <source media="(min-width: 1024px)" srcset="/img/playlists-1.jpg">
-              <img src="./img/playlists-1.jpg" alt="Ploho">
+              <img class="playlists__cards__article__pic" src="./img/playlists-1.jpg" alt="Ploho">
             </picture>
-            <p class="playlists__content__cards__article__title">Ploho</p>
-            <p class="playlists__content__cards__article__descr">3 последних альбома</p>
-            <div class="playlists__content__cards__article__flag">
+            <div class="playlists__cards__article__content">
+              <p class="playlists__cards__article__title">Ploho</p>
+              <p class="playlists__cards__article__descr">3 последних альбома</p>
+            </div>
+            <div class="playlists__cards__article__flag">
               <img src="./img/flag-Russian.jpg" alt="Российский флаг">
             </div>
+            <svg class="playlists__cards__article__play" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+            </svg>
           </article>
-          <article class="playlists__content__cards__article">
+          <article class="playlists__cards__article">
             <picture>
               <source media="(min-width: 1024px)" srcset="/img/playlists-2.jpg">
-              <img src="./img/playlists-2.jpg" alt="Molchat Doma">
+              <img class="playlists__cards__article__pic" src="./img/playlists-2.jpg" alt="Molchat Doma">
             </picture>
-            <p class="playlists__content__cards__article__title">Molchat Doma</p>
-            <p class="playlists__content__cards__article__descr">Все песни</p>
-            <div class="playlists__content__cards__article__flag">
+            <div class="playlists__cards__article__content">
+              <p class="playlists__cards__article__title">Molchat Doma</p>
+              <p class="playlists__cards__article__descr">Все песни</p>
+            </div>
+            <div class="playlists__cards__article__flag">
               <img src="./img/flag-Russian.jpg" alt="Российский флаг">
             </div>
+            <svg class="playlists__cards__article__play" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+            </svg>
           </article>
-          <article class="playlists__content__cards__article">
+          <article class="playlists__cards__article">
             <picture>
               <source media="(min-width: 1024px)" srcset="/img/playlists-3.jpg">
-              <img src="./img/playlists-3.jpg" alt="Motorama">
+              <img class="playlists__cards__article__pic" src="./img/playlists-3.jpg" alt="Motorama">
             </picture>
-            <p class="playlists__content__cards__article__title">Motorama</p>
-            <p class="playlists__content__cards__article__descr">Все синглы</p>
-            <div class="playlists__content__cards__article__flag">
+            <div class="playlists__cards__article__content">
+              <p class="playlists__cards__article__title">Motorama</p>
+              <p class="playlists__cards__article__descr">Все синглы</p>
+            </div>
+            <div class="playlists__cards__article__flag">
               <img src="./img/flag-Russian.jpg" alt="Российский флаг">
             </div>
+            <svg class="playlists__cards__article__play" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+            </svg>
           </article>
-          <article class="playlists__content__cards__article">
+          <article class="playlists__cards__article">
             <picture>
               <source media="(min-width: 1024px)" srcset="/img/playlists-4.jpg">
-              <img src="./img/playlists-4.jpg" alt="Human Tetris">
+              <img class="playlists__cards__article__pic" src="./img/playlists-4.jpg" alt="Human Tetris">
             </picture>
-            <p class="playlists__content__cards__article__title">Human Tetris</p>
-            <p class="playlists__content__cards__article__descr">3 последних альбома</p>
-            <div class="playlists__content__cards__article__flag">
+            <div class="playlists__cards__article__content">
+              <p class="playlists__cards__article__title">Human Tetris</p>
+              <p class="playlists__cards__article__descr">3 последних альбома</p>
+            </div>
+            <div class="playlists__cards__article__flag">
               <img src="./img/flag-Russian.jpg" alt="Российский флаг">
             </div>
+            <svg class="playlists__cards__article__play" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+            </svg>
           </article>
-          <article class="playlists__content__cards__article">
+          <article class="playlists__cards__article">
             <picture>
               <source media="(min-width: 1024px)" srcset="/img/playlists-5.jpg">
-              <img src="./img/playlists-5.jpg" alt="Буерак">
+              <img class="playlists__cards__article__pic" src="./img/playlists-5.jpg" alt="Буерак">
             </picture>
-            <p class="playlists__content__cards__article__title">Буерак</p>
-            <p class="playlists__content__cards__article__descr">Все EP</p>
-            <div class="playlists__content__cards__article__flag">
+            <div class="playlists__cards__article__content">
+              <p class="playlists__cards__article__title">Буерак</p>
+              <p class="playlists__cards__article__descr">Все EP</p>
+            </div>
+            <div class="playlists__cards__article__flag">
               <img src="./img/flag-Russian.jpg" alt="Российский флаг">
             </div>
+            <svg class="playlists__cards__article__play" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+            </svg>
           </article>
-          <article class="playlists__content__cards__article">
+          <article class="playlists__cards__article">
             <picture>
               <source media="(min-width: 1024px)" srcset="/img/playlists-6.jpg">
-              <img src="./img/playlists-6.jpg" alt="Июльские Дни">
+              <img class="playlists__cards__article__pic" src="./img/playlists-6.jpg" alt="Июльские Дни">
             </picture>
-            <p class="playlists__content__cards__article__title">Июльские Дни</p>
-            <p class="playlists__content__cards__article__descr">Альбом «Колокол»</p>
-            <div class="playlists__content__cards__article__flag">
+            <div class="playlists__cards__article__content">
+              <p class="playlists__cards__article__title">Июльские Дни</p>
+              <p class="playlists__cards__article__descr">Альбом «Колокол»</p>
+            </div>
+            <div class="playlists__cards__article__flag">
               <img src="./img/flag-Russian.jpg" alt="Российский флаг">
             </div>
+            <svg class="playlists__cards__article__play" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+            </svg>
           </article>
-          <article class="playlists__content__cards__article">
+          <article class="playlists__cards__article">
             <picture>
               <source media="(min-width: 1024px)" srcset="/img/playlists-7.jpg">
-              <img src="./img/playlists-7.jpg" alt="Joy Division">
+              <img class="playlists__cards__article__pic" src="./img/playlists-7.jpg" alt="Joy Division">
             </picture>
-            <p class="playlists__content__cards__article__title">Joy Division</p>
-            <p class="playlists__content__cards__article__descr">Лучшее за всё время</p>
-            <div class="playlists__content__cards__article__flag">
+            <div class="playlists__cards__article__content">
+              <p class="playlists__cards__article__title">Joy Division</p>
+              <p class="playlists__cards__article__descr">Лучшее за всё время</p>
+            </div>
+            <div class="playlists__cards__article__flag">
               <img src="./img/flag-Britain.jpg" alt="Британский флаг">
             </div>
+            <svg class="playlists__cards__article__play" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+            </svg>
           </article>
-          <article class="playlists__content__cards__article">
+          <article class="playlists__cards__article">
             <picture>
               <source media="(min-width: 1024px)" srcset="/img/playlists-8.jpg">
-              <img src="./img/playlists-8.jpg" alt="The Cure">
+              <img class="playlists__cards__article__pic" src="./img/playlists-8.jpg" alt="The Cure">
             </picture>
-            <p class="playlists__content__cards__article__title">The Cure</p>
-            <p class="playlists__content__cards__article__descr">Лучшее за всё время</p>
-            <div class="playlists__content__cards__article__flag">
+            <div class="playlists__cards__article__content">
+              <p class="playlists__cards__article__title">The Cure</p>
+              <p class="playlists__cards__article__descr">Лучшее за всё время</p>
+            </div>
+            <div class="playlists__cards__article__flag">
               <img src="./img/flag-Britain.jpg" alt="Британский флаг">
             </div>
+            <svg class="playlists__cards__article__play" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+            </svg>
           </article>
-          <article class="playlists__content__cards__article">
+          <article class="playlists__cards__article">
             <picture>
               <source media="(min-width: 1024px)" srcset="/img/playlists-9.jpg">
-              <img src="./img/playlists-9.jpg" alt="The Smiths">
+              <img class="playlists__cards__article__pic" src="./img/playlists-9.jpg" alt="The Smiths">
             </picture>
-            <p class="playlists__content__cards__article__title">The Smiths</p>
-            <p class="playlists__content__cards__article__descr">Период 1984–1988</p>
-            <div class="playlists__content__cards__article__flag">
+            <div class="playlists__cards__article__content">
+              <p class="playlists__cards__article__title">The Smiths</p>
+              <p class="playlists__cards__article__descr">Период 1984–1988</p>
+            </div>
+            <div class="playlists__cards__article__flag">
               <img src="./img/flag-Britain.jpg" alt="Британский флаг">
             </div>
+            <svg class="playlists__cards__article__play" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+            </svg>
           </article>
-          <article class="playlists__content__cards__article">
+          <article class="playlists__cards__article">
             <picture>
               <source media="(min-width: 1024px)" srcset="/img/playlists-10.jpg">
-              <img src="./img/playlists-10.jpg" alt="New Order">
+              <img class="playlists__cards__article__pic" src="./img/playlists-10.jpg" alt="New Order">
             </picture>
-            <p class="playlists__content__cards__article__title">New Order</p>
-            <p class="playlists__content__cards__article__descr">Хиты</p>
-            <div class="playlists__content__cards__article__flag">
+            <div class="playlists__cards__article__content">
+              <p class="playlists__cards__article__title">New Order</p>
+              <p class="playlists__cards__article__descr">Хиты</p>
+            </div>
+            <div class="playlists__cards__article__flag">
               <img src="./img/flag-Britain.jpg" alt="Британский флаг">
             </div>
+            <svg class="playlists__cards__article__play" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+            </svg>
           </article>
-          <article class="playlists__content__cards__article">
+          <article class="playlists__cards__article">
             <picture>
               <source media="(min-width: 1024px)" srcset="/img/playlists-11.jpg">
-              <img src="./img/playlists-11.jpg" alt="Bauhaus">
+              <img class="playlists__cards__article__pic" src="./img/playlists-11.jpg" alt="Bauhaus">
             </picture>
-            <p class="playlists__content__cards__article__title">Bauhaus</p>
-            <p class="playlists__content__cards__article__descr">Все синглы</p>
-            <div class="playlists__content__cards__article__flag">
+            <div class="playlists__cards__article__content">
+              <p class="playlists__cards__article__title">Bauhaus</p>
+              <p class="playlists__cards__article__descr">Все синглы</p>
+            </div>
+            <div class="playlists__cards__article__flag">
               <img src="./img/flag-Britain.jpg" alt="Британский флаг">
             </div>
+            <svg class="playlists__cards__article__play" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+            </svg>
           </article>
-          <article class="playlists__content__cards__article">
+          <article class="playlists__cards__article">
             <picture>
               <source media="(min-width: 1024px)" srcset="/img/playlists-12.jpg">
-              <img src="./img/playlists-12.jpg" alt="Gang Of Four">
+              <img class="playlists__cards__article__pic" src="./img/playlists-12.jpg" alt="Gang Of Four">
             </picture>
-            <p class="playlists__content__cards__article__title">Gang Of Four</p>
-            <p class="playlists__content__cards__article__descr">3 последних альбома</p>
-            <div class="playlists__content__cards__article__flag">
+            <div class="playlists__cards__article__content">
+              <p class="playlists__cards__article__title">Gang Of Four</p>
+              <p class="playlists__cards__article__descr">3 последних альбома</p>
+            </div>
+            <div class="playlists__cards__article__flag">
               <img src="./img/flag-Britain.jpg" alt="Британский флаг">
             </div>
+            <svg class="playlists__cards__article__play" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+            </svg>
           </article>
         </div>
       </div>
@@ -912,7 +991,19 @@
           <p class="product__content__descr">Друзья, рады представить вам продукт нашего производства! Да-да, несмотря на&nbsp;то, что мы&nbsp;только начали свой путь радиовещателей, нам хочется, чтобы вы&nbsp;могли как следует нас расслышать:)</p>
           <p class="product__content__descr">Итак, встречайте! Портативный радиоприёмник-колонка W-Wave 1.0&nbsp;xm. Тщательный подбор всех делатей, ручная сборка, качественный звук. Пока доступно только 60&nbsp;штук в&nbsp;3&nbsp;цветах, но&nbsp;мы&nbsp;активно трудимся над новыми партиями и&nbsp;дизайном. Спешите приобрести!</p>
           <p class="product__content__price">2 800 ₽</p>
-          <button class="product__content__btn btn">Купить на Яндекс.Маркет</button>
+          <button class="product__content__btn btn">Купить на Яндекс.Маркет
+            <svg class="product__content__btn_pic" width="21" height="20" viewbox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_24531_3992)">
+              <path class="product__content__btn_picStr1" d="M10.5 20C16.0228 20 20.5 15.5228 20.5 9.99998C20.5 4.47714 16.0228 0 10.5 0C4.97724 0 0.5 4.47714 0.5 9.99998C0.5 15.5228 4.97724 20 10.5 20Z" fill="#F0D288"/>
+              <path class="product__content__btn_picStr2" d="M17.4385 4.54415L13.7295 3.177L8.3957 10.8639L8.92677 7.37535L6.02058 5.68243L0.67395 12.1143C0.924269 13.3861 1.4102 14.5721 2.08387 15.6241L5.27373 11.7714L4.09993 16.2964L7.73707 17.6273L13.1408 9.84664L11.9569 14.296L14.9033 16.0181L20.558 10.3177C20.5592 10.2537 20.5599 10.1891 20.5599 10.1249C20.5599 8.78283 20.3017 7.50156 19.8329 6.32921L16.5482 9.65404L17.4385 4.54415Z" fill="#121723"/>
+              </g>
+              <defs>
+              <clippath id="clip0_24531_3992">
+              <rect x="0.5" width="20" height="20" rx="10" fill="white"/>
+              </clippath>
+              </defs>
+            </svg>
+          </button>
           <img class="product__icon_new" src="./img/new.svg" alt="Иконка, новый">
         </div>
       </div>

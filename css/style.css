@@ -33,6 +33,10 @@ picture {
   font-size: 0;
 }
 
+img {
+  display: block;
+}
+
 @font-face {
   font-family: "Muller";
   src: local("MullerRegular"),
@@ -518,7 +522,7 @@ body {
 .broadcasts__article__title {
   margin: 0;
   margin-left: 15px;
-  margin-top: 14px;
+  margin-top: 20px;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
@@ -914,6 +918,63 @@ body {
   padding-bottom: 95px;
 }
 
+.playlists__radio {
+  display: flex;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 16px;
+  border: none;
+  outline: none;
+  color: var(--color-dark-gray);
+}
+
+.playlists__radio__title {
+  padding-top: 5px;
+}
+
+.playlists__radio__input {
+  position: relative;
+  padding: 10px 0 16px 42px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: #121723;
+  cursor: pointer;
+}
+
+.playlists__radio input[type=radio] {
+	display: none;
+}
+
+.playlists__radio__input::before {
+  content: "";
+	display: inline-block;
+  width: 24px;
+  height: 24px;
+	position: absolute;
+	left: 2px;
+  bottom: 13px;
+  border: 2px solid var(--color-dark-gray);
+  border-radius: 50%;
+}
+
+.playlists__radio__input:focus::before{
+  background: #D2D5DD;
+  border: 2px solid var(--color-purple);
+}
+
+.playlists__radio__input:hover::before{
+  background: var(--color-white);
+  border: 2px solid var(--color-purple);
+}
+
+.playlists__radio input[type=radio]:checked + .playlists__radio__input::before {
+  border: 7px solid var(--color-purple);
+}
+
 .playlists__text {
   width: 350px;
   margin: 0;
@@ -937,93 +998,104 @@ body {
   background-position-y: 24px;
 }
 
-.playlists__content__cards {
-  padding-top: 75px;
+.playlists__cards {
+  padding-top: 78px;
   flex-wrap: wrap;
 }
 
-.playlists__content__cards__article {
+.playlists__cards__article {
   position: relative;
   min-height: 224px;
   width: min-content;
   margin-top: 30px;
   margin-left: 27px;
+  background: var(--color-black);
   border: 1px solid var(--color-dark-white);
+  cursor: pointer;
 }
 
-.playlists__content__cards__article__title {
+.playlists__cards__article__content {
+  background-color: var(--color-white);
+}
+
+.playlists__cards__article:focus .playlists__cards__article__pic, .playlists__cards__article:focus .playlists__cards__article__flag {
+  opacity: 0.8;
+}
+
+.playlists__cards__article:focus .playlists__cards__article__content {
+  background-color: var(--color-purple-light);
+}
+
+.playlists__cards__article:focus .playlists__cards__article__descr {
+  color: var(--color-black);
+}
+
+.playlists__cards__article:hover .playlists__cards__article__pic, .playlists__cards__article:hover .playlists__cards__article__flag {
+  opacity: 0.8;
+}
+
+.playlists__cards__article:hover .playlists__cards__article__content {
+  background-color: var(--color-purple);
+}
+
+.playlists__cards__article:hover .playlists__cards__article__descr, .playlists__cards__article:hover .playlists__cards__article__title {
+  color: var(--color-white);
+}
+
+.playlists__cards__article:active .playlists__cards__article__pic, .playlists__cards__article:active .playlists__cards__article__flag {
+  opacity: 0.8;
+}
+
+.playlists__cards__article:active .playlists__cards__article__content {
+  background-color: var(--color-purple);
+}
+
+.playlists__cards__article__title {
   margin: 0;
   font-weight: 500;
-  padding-top: 9px;
+  padding-top: 16px;
   padding-left: 15px;
 }
 
-.playlists__content__cards__article__descr {
+.playlists__cards__article__descr {
   margin: 0;
-  padding-top: 2px;
-  padding-left: 15px;
+  padding: 2px 0 13px 15px;
   font-size: 12px;
   line-height: 12px;
   color: var(--color-dark-gray);
 }
 
-.playlists__content__cards__article__flag {
+.playlists__cards__article__flag {
   position: absolute;
   top: 0;
   right: 0;
 }
 
-fieldset {
-  margin: 0;
-  margin-top: 10px;
-  padding: 0;
-  line-height: 16px;
-  border: none;
-  outline: none;
-  color: var(--color-dark-gray);
+.playlists__cards__article__play {
+  display: none;
+  position: absolute;
+  top: 25%;
+  right: 35%;
 }
 
-.ui-checkboxradio-label {
-  display: flex;
-  width: auto;
-  padding: 12.5px 0;
-  font-size: 20px;
-  line-height: 20px;
-  border: none;
-  background-color: inherit;
-  color: inherit;
+.playlists__cards__article:focus .playlists__cards__article__play {
+  display: block;
 }
 
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button:hover, .ui-button.ui-state-active:hover {
-  border: none;
-  background-color: inherit;
-  color: inherit;
+.playlists__cards__article:hover .playlists__cards__article__play {
+  display: block;
 }
 
-.ui-checkboxradio-radio-label .ui-icon-background {
-  width: 26px;
-  height: 26px;
-  border: 2px solid var(--color-dark-gray);
+.playlists__cards__article:active .playlists__cards__article__play {
+  display: block;
+  width: 56px;
+  height: 56px;
+  top: 23%;
+  right: 33%;
 }
 
-.ui-visual-focus, .ui-checkboxradio-label .ui-icon-background {
-  box-shadow: none;
-}
 
-.ui-checkboxradio-radio-label:hover .ui-icon {
-  /* background: #D2D5DD; */
-  border: 2px solid var(--color-purple);
-}
 
-.ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon, .ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-icon {
-width: 26px;
-height: 26px;
-border: 7px solid var(--color-purple);
-}
-
-.ui-checkboxradio-icon-space {
-  padding-left: 15px;
-}
 
 /* product */
 
@@ -1073,6 +1145,7 @@ border: 7px solid var(--color-purple);
 }
 
 .product__content__btn {
+  position: relative;
   width: 300px;
   height: 70px;
   padding-left: 30px;
@@ -1082,11 +1155,35 @@ border: 7px solid var(--color-purple);
   border: 2px solid var(--color-golden);
   border-radius: 100px;
   background-color: initial;
-  background-image: url(../img/yandex-icon.svg);
-  background-repeat: no-repeat;
-  background-position: left;
-  background-position-x: 10px;
   color: var(--color-golden);
+}
+
+.product__content__btn_pic {
+  position: absolute;
+  left: 10px;
+}
+
+.product__content__btn:focus {
+  background-color: #BB973E;
+  color: var(--color-black);
+}
+
+.product__content__btn:hover {
+  background-color: var(--color-golden);
+  color: var(--color-black);
+}
+
+.product__content__btn:hover .product__content__btn_picStr1 {
+  fill: #121723;
+}
+
+.product__content__btn:hover .product__content__btn_picStr2 {
+  fill: #F0D288;
+}
+
+.product__content__btn:active {
+  background-color: #BB973E;
+  border: none;
 }
 
 /* about */
@@ -1154,7 +1251,7 @@ border: 7px solid var(--color-purple);
 
 .about__swiper__title {
   margin: 0;
-  margin-top: 25px;
+  margin-top: 30px;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
