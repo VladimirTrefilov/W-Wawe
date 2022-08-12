@@ -101,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .addField('#about__form__text', [
       {
         rule: 'required',
+        errorMessage: 'Введите минимум 2 символа',
       },
       {
         rule: 'minLength',
