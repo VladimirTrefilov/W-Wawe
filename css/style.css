@@ -1377,15 +1377,15 @@ body {
   margin-left: 22px;
 }
 
-.footer__pic__icons__link:focus .footer__pic__icons_social path {
+.footer__pic__icons__link:focus .footer__pic__icons__social path {
   fill: var(--color-purple-light);
 }
 
-.footer__pic__icons__link:hover .footer__pic__icons_social path {
+.footer__pic__icons__link:hover .footer__pic__icons__social path {
   fill: var(--color-purple);
 }
 
-.footer__pic__icons__link:active .footer__pic__icons_social path {
+.footer__pic__icons__link:active .footer__pic__icons__social path {
   fill: var(--color-purple-dark);
 }
 
@@ -1412,4 +1412,149 @@ body {
   border-image: url(../img/footer-border.svg) 12 round;
   color: var(--color-dark-gray);
 }
+
+.modal {
+  position: fixed;
+  background-color: rgb(0 0 0 / 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--color-white);
+}
+
+.modal__content {
+  position: relative;
+  width: 824px;
+  height: 655px;
+  margin-top: 80px;
+  padding: 60px;
+  background: var(--color-black);
+}
+
+.modal__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 100%;
+}
+
+.modal__text {
+  margin: 0;
+  margin-top: 17px;
+}
+
+.modal__link {
+  color: var(--color-purple);
+}
+
+.modal__form {
+  width: 526px;
+  height: 70px;
+  margin-top: 30px;
+  padding-left: 32px;
+  background-color: inherit;
+  border: 1px solid var(--color-white);
+  border-radius: 40px;
+  color: var(--color-dark-gray);
+}
+
+.modal__form__input {
+  position: relative;
+}
+
+.just-validate-error-field.modal__form  {
+  border-color: red;
+}
+
+.modal__btn {
+  width: 167px;
+  height: 70px;
+  margin-top: 30px;
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+.modal__text__help {
+  margin: 0;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(230, 232, 236, 0.4);
+}
+
+.modal__social {
+  width: 200px;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+
+.close__modal {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+
+/* .visually-hidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+} */
+
+.close__modal:focus path, .close__modal:focus circle {
+  stroke: var(--color-purple-light);
+}
+
+.close__modal:hover path, .close__modal:hover circle {
+  stroke: var(--color-purple);
+}
+
+.close__modal:active path, .close__modal:active circle {
+  stroke: var(--color-purple-dark);
+}
+
+.modal__btn:focus {
+  background: var(--color-purple-light);
+  border: 2px solid var(--color-purple-dark);
+}
+
+.modal__btn:hover {
+  background: var(--color-purple-light);
+  border: none;
+}
+
+.modal__btn:active {
+  background: var(--color-purple-dark);
+}
+
+.modal__pic__icons__link:focus .modal__pic__icons__social_f path {
+  fill: var(--color-purple-light);
+}
+
+.modal__pic__icons__link:hover .modal__pic__icons__social_f path {
+  fill: var(--color-purple);
+}
+
+.modal__pic__icons__link:active .modal__pic__icons__social_f path {
+  fill: var(--color-purple-dark);
+}
+
+.modal__pic__icons__link:focus .modal__pic__icons__social rect {
+  fill: var(--color-purple-light);
+}
+
+.modal__pic__icons__link:hover .modal__pic__icons__social rect {
+  fill: var(--color-purple);
+}
+
+.modal__pic__icons__link:active .modal__pic__icons__social rect {
+  fill: var(--color-purple-dark);
+}
+
+
 
