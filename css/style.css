@@ -498,6 +498,7 @@ body {
 
 .broadcasts {
   position: relative;
+  min-height: 530px;
   align-items: start;
 }
 
@@ -854,6 +855,7 @@ body {
 .accordion__body__item {
   width: 25%;
   padding-top: 14px;
+  cursor: pointer;
 }
 
 .accordion__header:focus {

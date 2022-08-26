@@ -47,40 +47,50 @@ document.addEventListener('DOMContentLoaded', function() {
     itemSelectText: ''
   });
 
-  choices.passedElement.element.addEventListener(
-    'unhighlightItem',
+  element.addEventListener(
+    'addItem',
     function(event) {
-      // each time an item is highlighted
-      console.log(event.detail.id);
-      console.log(event.detail.value);
-      console.log(event.detail.label);
-      console.log(event.detail.groupValue);
+      choices.config.choices.forEach(d =>{
+        const itemClosed = d.value;
+        document.getElementById(itemClosed).classList.add('closed'); // скрываем передачи авторов
+      });
+      const item = event.detail.value;
+      document.getElementById(item).classList.remove('closed'); //показываем передачи выбранного автора
     },
     false,
   );
 
   // guests accordion
 
-  const header = document.querySelectorAll('.accordion__item')
+  const header = document.querySelectorAll('.accordion__item');
 
   function itemShowDel (el) {
     el.forEach(d => {
       d.classList.remove('accordion__item_show');
     })
-  }
+  };
 
   header.forEach(n => {
     n.addEventListener('click', (e) => {
-      itemShowDel(header)
       // получим элемент .accordion__header
       const elHeader = e.target.closest('.accordion__header');
       // если такой элемент не найден, то прекращаем выполнение функции
       if (!elHeader) {
         return;
       }
+      itemShowDel(header)
       // переключим класс accordion__item_show элемента .accordion__header
       elHeader.parentElement.classList.toggle('accordion__item_show');
     })
+  });
+
+  document.addEventListener('click', function(event) {
+    let id = event.target.dataset.toggleId;
+    console.log(event.target)
+    if (!id) return;
+    let elem = document.getElementById(id);
+    elem.classList.toggle('closed');
+    document.querySelector('.guests__cards__default').classList.toggle('closed');
   });
 
   // about swiper
