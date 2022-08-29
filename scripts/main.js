@@ -14,18 +14,19 @@ document.addEventListener('DOMContentLoaded', function() {
     searchActive.style.opacity = '0';
     searchActive.style.visibility = 'hidden';
   });
-  window.addEventListener('click', e => { // при клике в любом месте окна браузера
-    const target = e.target // находим элемент, на котором был клик
+
+  window.addEventListener('click', event => {       // при клике в любом месте окна браузера
+    const target = event.target;                     // находим элемент, на котором был клик
     if (!target.closest('.header__rowOne__search__active') && !target.closest('.header__rowOne__search')) { // если этот элемент или его родительские элементы не окно навигации и не кнопка
       searchActive.style.opacity = '0';
       searchActive.style.visibility = 'hidden';
-    }
-  })
-  searchActive.addEventListener('keydown', function(e) {
-    if (e.key === "Escape") {
+    };
+  });
+  searchActive.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
       searchActive.style.opacity = '0';
       searchActive.style.visibility = 'hidden';
-      }
+      };
   });
 
   // podcasts article more podcasts
@@ -55,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById(itemClosed).classList.add('closed'); // скрываем передачи авторов
       });
       const item = event.detail.value;
-      document.getElementById(item).classList.remove('closed'); //показываем передачи выбранного автора
+      document.getElementById(item).classList.remove('closed');      //показываем передачи выбранного автора
     },
     false,
   );
@@ -64,33 +65,52 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const header = document.querySelectorAll('.accordion__item');
 
-  function itemShowDel (el) {
+  function itemShowDel (el) {                                         // удалим все классы accordion__item_show
     el.forEach(d => {
       d.classList.remove('accordion__item_show');
-    })
+    });
+  };
+
+  function itemShowToggle (el) {
+    const elHeader = el.target.closest('.accordion__header');        // получим элемент .accordion__header
+    if (!elHeader) return;                                           // если такой элемент не найден, то прекращаем выполнение функции
+    itemShowDel(header);
+    elHeader.parentElement.classList.toggle('accordion__item_show'); // переключим класс accordion__item_show элемента .accordion__header
+    document.querySelectorAll('.guests__cards').forEach(d => {       // закроем все карточки
+      d.classList.add('closed');
+    });
+    document.querySelector('.guests__cards__default').classList.remove('closed');
   };
 
   header.forEach(n => {
-    n.addEventListener('click', (e) => {
-      // получим элемент .accordion__header
-      const elHeader = e.target.closest('.accordion__header');
-      // если такой элемент не найден, то прекращаем выполнение функции
-      if (!elHeader) {
-        return;
-      }
-      itemShowDel(header)
-      // переключим класс accordion__item_show элемента .accordion__header
-      elHeader.parentElement.classList.toggle('accordion__item_show');
-    })
+    n.addEventListener("keydown", (event) => {                       // нажатие на enter
+      if (event.key === 'Enter') {
+        itemShowToggle(event);
+      };
+    });
+    n.addEventListener('click', (event) => {                         // нажатие на кнопку мыши
+      itemShowToggle(event);
+    });
   });
 
-  document.addEventListener('click', function(event) {
-    let id = event.target.dataset.toggleId;
-    console.log(event.target)
+  function cardOpen (el) {                                           // открытие карточки гостя по ID
+    let id = el.target.dataset.toggleId;
     if (!id) return;
+    document.querySelectorAll('.guests__cards').forEach(d => {
+      d.classList.add('closed');
+    });
     let elem = document.getElementById(id);
     elem.classList.toggle('closed');
-    document.querySelector('.guests__cards__default').classList.toggle('closed');
+    document.querySelector('.guests__cards__default').classList.add('closed');
+  };
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      cardOpen(event);
+    };
+  });
+  document.addEventListener('click', (event) => {
+    cardOpen (event);
   });
 
   // about swiper

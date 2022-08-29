@@ -878,6 +878,14 @@ body {
   stroke: var(--color-white);
 }
 
+.accordion__body__item:focus {
+  background: var(--color-black-light);
+}
+
+.accordion__body__item:hover {
+  color: var(--color-purple-light);
+}
+
 /* playlists */
 
 .playlists {
