@@ -1,16 +1,16 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
   // header button search
 
   const searchActive = document.querySelector('.header__rowOne__search__active');
   const activeInput = document.querySelector('.header__rowOne__search__active_input');
 
-  document.querySelector('.header__rowOne__search').addEventListener('click',function() {
+  document.querySelector('.header__rowOne__search').addEventListener('click', function () {
     searchActive.style.opacity = '1';
     searchActive.style.visibility = 'initial';
     activeInput.focus();
   });
-  document.querySelector('.header__rowOne__search__active_btn').addEventListener('click',function() {
+  document.querySelector('.header__rowOne__search__active_btn').addEventListener('click', function () {
     searchActive.style.opacity = '0';
     searchActive.style.visibility = 'hidden';
   });
@@ -22,11 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
       searchActive.style.visibility = 'hidden';
     };
   });
-  searchActive.addEventListener('keydown', function(event) {
+  searchActive.addEventListener('keydown', function (event) {
     if (event.key === "Escape") {
       searchActive.style.opacity = '0';
       searchActive.style.visibility = 'hidden';
-      };
+    };
   });
 
   // podcasts article more podcasts
@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   element.addEventListener(
     'addItem',
-    function(event) {
-      choices.config.choices.forEach(d =>{
+    function (event) {
+      choices.config.choices.forEach(d => {
         const itemClosed = d.value;
         document.getElementById(itemClosed).classList.add('closed'); // скрываем передачи авторов
       });
@@ -65,13 +65,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const header = document.querySelectorAll('.accordion__item');
 
-  function itemShowDel (el) {                                         // удалим все классы accordion__item_show
+  function itemShowDel(el) {                                         // удалим все классы accordion__item_show
     el.forEach(d => {
       d.classList.remove('accordion__item_show');
     });
   };
 
-  function itemShowToggle (el) {
+  function itemShowToggle(el) {
     const elHeader = el.target.closest('.accordion__header');        // получим элемент .accordion__header
     if (!elHeader) return;                                           // если такой элемент не найден, то прекращаем выполнение функции
     itemShowDel(header);
@@ -82,35 +82,77 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.guests__cards__default').classList.remove('closed');
   };
 
+  function cardOpen(el) {                                           // открытие карточки по ID
+    let id = el.target.dataset.toggleId;
+    if (!id) return;
+    let elem = document.getElementById(id);
+    elem.classList.remove('closed');
+    return id;
+  };
+
   header.forEach(n => {
     n.addEventListener("keydown", (event) => {                       // нажатие на enter
       if (event.key === 'Enter') {
+        document.querySelectorAll('.guests__cards').forEach(d => {
+          d.classList.add('closed');
+        });
+        document.querySelector('.guests__cards__default').classList.add('closed');
         itemShowToggle(event);
+        cardOpen(event);
       };
     });
     n.addEventListener('click', (event) => {                         // нажатие на кнопку мыши
+      document.querySelectorAll('.guests__cards').forEach(d => {
+        d.classList.add('closed');
+      });
+      document.querySelector('.guests__cards__default').classList.add('closed');
       itemShowToggle(event);
-    });
-  });
-
-  function cardOpen (el) {                                           // открытие карточки гостя по ID
-    let id = el.target.dataset.toggleId;
-    if (!id) return;
-    document.querySelectorAll('.guests__cards').forEach(d => {
-      d.classList.add('closed');
-    });
-    let elem = document.getElementById(id);
-    elem.classList.toggle('closed');
-    document.querySelector('.guests__cards__default').classList.add('closed');
-  };
-
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
       cardOpen(event);
-    };
+    });
   });
-  document.addEventListener('click', (event) => {
-    cardOpen (event);
+
+
+
+  // playlists radio
+
+  const playlistsRadio = this.querySelectorAll('.playlists__radio__input');
+
+
+
+  playlistsRadio.forEach(n => {
+    n.addEventListener("keydown", (event) => {
+      if (event.key === 'Enter') {
+        this.querySelectorAll('.playlists__cards').forEach(d => {
+          d.classList.add('closed');
+        });
+        const cadrID = cardOpen(event);
+        const playlistsCards = this.getElementById(cadrID).querySelectorAll('.playlists__cards__article');
+        if (playlistsCards.length > 10) {
+          const playlistsSwiper = new Swiper('.playlistsSwiper', {
+            // Optional parameters
+
+            slidesPerView: 4,
+            grid: {
+              rows: 2,
+            },
+            spaceBetween: 30,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+          });
+          console.log(playlistsCards.length);
+        }
+      };
+    });
+  });
+  playlistsRadio.forEach(n => {
+    n.addEventListener('click', (event) => {
+      this.querySelectorAll('.playlists__cards').forEach(d => {
+        d.classList.add('closed');
+      });
+      cardOpen(event);
+    });
   });
 
   // about swiper
@@ -185,9 +227,9 @@ document.addEventListener('DOMContentLoaded', function() {
         rule: 'email',
         errorMessage: 'Введите корректный email',
       },
-  ]);
+    ]);
 
-    // Open modal
+  // Open modal
 
   const FOCUSABLE_SELECTORS = 'input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]';
   const openModalBtn = document.querySelector('.open__modal');
@@ -196,27 +238,27 @@ document.addEventListener('DOMContentLoaded', function() {
   const main = document.querySelector('main');
 
   function openModal() {
-      modal.style.display = 'flex';
-      modal.querySelector(FOCUSABLE_SELECTORS).focus();
-      const focusableElements = main.querySelectorAll(FOCUSABLE_SELECTORS);
-      focusableElements.forEach(el => el.setAttribute('tabindex', '-1'));
-      // Trap the screen reader focus as well with aria roles. This is much easier as our main and modal elements are siblings, otherwise you'd have to set aria-hidden on every screen reader focusable element not in the modal.
-      modal.removeAttribute('aria-hidden');
-      main.setAttribute('aria-hidden', 'true');
+    modal.style.display = 'flex';
+    modal.querySelector(FOCUSABLE_SELECTORS).focus();
+    const focusableElements = main.querySelectorAll(FOCUSABLE_SELECTORS);
+    focusableElements.forEach(el => el.setAttribute('tabindex', '-1'));
+    // Trap the screen reader focus as well with aria roles. This is much easier as our main and modal elements are siblings, otherwise you'd have to set aria-hidden on every screen reader focusable element not in the modal.
+    modal.removeAttribute('aria-hidden');
+    main.setAttribute('aria-hidden', 'true');
   }
 
   function closeModal() {
-      modal.style.display = 'none';
-      const focusableElements = main.querySelectorAll(FOCUSABLE_SELECTORS);
-      focusableElements.forEach(el => el.removeAttribute('tabindex'));
-      modal.setAttribute('aria-hidden', 'true');
-      main.removeAttribute('aria-hidden');
-      openModalBtn.focus();
+    modal.style.display = 'none';
+    const focusableElements = main.querySelectorAll(FOCUSABLE_SELECTORS);
+    focusableElements.forEach(el => el.removeAttribute('tabindex'));
+    modal.setAttribute('aria-hidden', 'true');
+    main.removeAttribute('aria-hidden');
+    openModalBtn.focus();
   }
 
   openModalBtn.addEventListener('click', openModal);
   closeModalBtn.addEventListener('click', closeModal);
-  modal.addEventListener('keydown', function(e) {
+  modal.addEventListener('keydown', function (e) {
     if (e.key === "Escape") {
       closeModal()
     }
