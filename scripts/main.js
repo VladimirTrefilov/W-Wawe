@@ -111,13 +111,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-
-
   // playlists radio
 
   const playlistsRadio = this.querySelectorAll('.playlists__radio__input');
-
-
 
   playlistsRadio.forEach(n => {
     n.addEventListener("keydown", (event) => {
@@ -126,23 +122,6 @@ document.addEventListener('DOMContentLoaded', function () {
           d.classList.add('closed');
         });
         const cadrID = cardOpen(event);
-        const playlistsCards = this.getElementById(cadrID).querySelectorAll('.playlists__cards__article');
-        if (playlistsCards.length > 10) {
-          const playlistsSwiper = new Swiper('.playlistsSwiper', {
-            // Optional parameters
-
-            slidesPerView: 4,
-            grid: {
-              rows: 2,
-            },
-            spaceBetween: 30,
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-            },
-          });
-          console.log(playlistsCards.length);
-        }
       };
     });
   });
