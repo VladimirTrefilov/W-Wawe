@@ -13,6 +13,9 @@
   <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"> -->
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/device-1024.css">
+  <link rel="stylesheet" href="./css/device-768.css">
+  <link rel="stylesheet" href="./css/device-320.css">
   <title>W-Wawe</title>
 </head>
 
@@ -20,7 +23,7 @@
   <header class="header">
     <div class="header__rowThree">
       <div class="container header__rowThree__logo flex">
-        <svg width="112" height="14" viewbox="0 0 112 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="header__rowThree__logo_svg" width="112" height="14" viewbox="0 0 112 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M20.4686 0.232044V8.21823C20.4686 10.1004 19.9538 11.5378 18.9241 12.5304C17.8945 13.5101 16.4348 14 14.545 14C13.6066 14 12.766 13.8646 12.0231 13.5939C11.2932 13.3232 10.6937 12.9429 10.2245 12.453C9.74229 12.9429 9.13625 13.3232 8.40639 13.5939C7.67653 13.8646 6.84893 14 5.92357 14C4.03376 14 2.57405 13.5101 1.54443 12.5304C0.51481 11.5378 0 10.1004 0 8.21823V0.232044H3.16706V8.12155C3.16706 9.21731 3.39514 10.0295 3.8513 10.558C4.30746 11.0737 4.98518 11.3315 5.88447 11.3315C7.72215 11.3315 8.64099 10.2615 8.64099 8.12155V0.232044H11.808V8.12155C11.808 10.2615 12.7334 11.3315 14.5841 11.3315C16.3827 11.3315 17.282 10.2615 17.282 8.12155V0.232044H20.4686Z"
             fill="#292E39" />
@@ -44,8 +47,23 @@
     </div>
     <div class="container">
       <div class="header__rowOne flex">
+        <div class="burger">
+          <svg class="burger-open" width="24" height="24" viewbox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_24531_4514)">
+              <rect width="24" height="3" rx="1.5" fill="#6D31EE" />
+              <rect y="21" width="24" height="3" rx="1.5" fill="#6D31EE" />
+              <rect y="11" width="24" height="3" rx="1.5" fill="#6D31EE" />
+            </g>
+            <defs>
+              <clippath id="clip0_24531_4514">
+                <rect width="24" height="24" fill="white" />
+              </clippath>
+            </defs>
+          </svg>
+        </div>
         <img class="header__rowOne__logo" src="./img/logo.svg" alt="Логотип">
-        <nav class="">
+        <nav class="header__nav">
           <ul class="header__rowOne__nav__list list-reset flex">
             <li class="header__rowOne__item ">
               <a class="item-link" href="#podcasts">Подкасты</a>
@@ -93,7 +111,7 @@
     </div>
     <div class="header__rowTwo">
       <div class="header__rowTwo__container container flex">
-        <nav>
+        <nav class="">
           <ul class="header__rowTwo__list list-reset flex">
             <li class="header__rowTwo__item">
               <a class="item-link" href="#">Новости</a>
@@ -143,8 +161,22 @@
             </div>
           </div>
           <img class="header__rowTwo__ageLimit" src="./img/12+.png" alt="Возрастной лимит 12+">
+          <svg class="play-little" width="20" height="20" viewbox="0 0 20 20" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z"
+              fill="#A1A6B4" />
+          </svg>
         </div>
       </div>
+    </div>
+    <div class="header__rowFour flex">
+      <svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="7.5" cy="7.5" r="7.5" fill="#6D31EE" />
+        <path d="M12 7.00014V8.00014H3V7.00014H12Z" fill="white" />
+        <path d="M8 12.0001H7L7 3.00014L8 3.00014L8 12.0001Z" fill="white" />
+      </svg>
+      <h4 class="header__rowFour_title">Что в эфире?</h4>
     </div>
   </header>
   <main>
@@ -165,7 +197,7 @@
         <div class="podcasts__contaiter flex">
           <article class="podcasts__article flex">
             <picture class="podcasts__article__picture">
-              <source media="(min-width: 1024px)" srcset="/img/podcasts-1.jpg">
+              <source media="(max-width: 320px)" srcset="./img/podcasts-320-1.jpg">
               <img class="podcasts__article__img" src="./img/podcasts-1.jpg" alt="Европа. XIX век">
             </picture>
             <div class="podcasts__article__col">
@@ -176,8 +208,8 @@
                   <div class="podcasts__article__text">Дмитрий Гутенберг</div>
                   <div class="podcasts__article__play"></div>
                 </div>
-                <button class="podcasts__article__btn-play btn-reset">
-                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button class=" btn-reset">
+                  <svg class="podcasts__article__btn-play" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
                     <path
                       d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z"
@@ -195,7 +227,7 @@
           </article>
           <article class="podcasts__article flex">
             <picture class="podcasts__article__picture">
-              <source media="(min-width: 1024px)" srcset="/img/podcasts-2.jpg">
+              <source media="(max-width: 320px)" srcset="./img/podcasts-320-2.jpg">
               <img class="podcasts__article__img" src="./img/podcasts-2.jpg" alt="О музыке">
             </picture>
             <div class="podcasts__article__col">
@@ -206,8 +238,8 @@
                   <div class="podcasts__article__text">Дмитрий Гутенберг</div>
                   <div class="podcasts__article__play"></div>
                 </div>
-                <button class="podcasts__article__btn-play btn-reset">
-                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button class="btn-reset">
+                  <svg class="podcasts__article__btn-play" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
                     <path
                       d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z"
@@ -225,7 +257,7 @@
           </article>
           <article class="podcasts__article flex">
             <picture class="podcasts__article__picture">
-              <source media="(min-width: 1024px)" srcset="/img/podcasts-3.jpg">
+              <source media="(max-width: 320px)" srcset="./img/podcasts-320-3.jpg">
               <img class="podcasts__article__img" src="./img/podcasts-3.jpg" alt="Европа. XIX век">
             </picture>
             <div class="podcasts__article__col">
@@ -236,8 +268,8 @@
                   <div class="podcasts__article__text">Анна Васильева</div>
                   <div class="podcasts__article__play"></div>
                 </div>
-                <button class="podcasts__article__btn-play btn-reset">
-                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button class="btn-reset">
+                  <svg class="podcasts__article__btn-play" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
                     <path
                       d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z"
@@ -255,7 +287,7 @@
           </article>
           <article class="podcasts__article flex">
             <picture class="podcasts__article__picture">
-              <source media="(min-width: 1024px)" srcset="/img/podcasts-4.jpg">
+              <source media="(max-width: 320px)" srcset="./img/podcasts-320-4.jpg">
               <img class="podcasts__article__img" src="./img/podcasts-4.jpg" alt="Хэллоу, Африка!">
             </picture>
             <div class="podcasts__article__col">
@@ -266,8 +298,8 @@
                   <div class="podcasts__article__text">Пётр Дмитриевский</div>
                   <div class="podcasts__article__play"></div>
                 </div>
-                <button class="podcasts__article__btn-play btn-reset">
-                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button class="btn-reset">
+                  <svg class="podcasts__article__btn-play" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
                     <path
                       d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z"
@@ -285,7 +317,7 @@
           </article>
           <article class="podcasts__article flex">
             <picture class="podcasts__article__picture">
-              <source media="(min-width: 1024px)" srcset="/img/podcasts-5.jpg">
+              <source media="(max-width: 320px)" srcset="./img/podcasts-320-5.jpg">
               <img class="podcasts__article__img" src="./img/podcasts-5.jpg" alt="Европа. XIX век">
             </picture>
             <div class="podcasts__article__col">
@@ -296,8 +328,8 @@
                   <div class="podcasts__article__text">Пётр Дмитриевский</div>
                   <div class="podcasts__article__play"></div>
                 </div>
-                <button class="podcasts__article__btn-play btn-reset">
-                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button class="btn-reset">
+                  <svg class="podcasts__article__btn-play" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
                     <path
                       d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z"
@@ -315,7 +347,7 @@
           </article>
           <article class="podcasts__article flex">
             <picture class="podcasts__article__picture">
-              <source media="(min-width: 1024px)" srcset="/img/podcasts-6.jpg">
+              <source media="(max-width: 320px)" srcset="./img/podcasts-320-6.jpg">
               <img class="podcasts__article__img" src="./img/podcasts-6.jpg" alt="Физика цвета">
             </picture>
             <div class="podcasts__article__col">
@@ -326,8 +358,8 @@
                   <div class="podcasts__article__text">Татьяна Флеганова</div>
                   <div class="podcasts__article__play"></div>
                 </div>
-                <button class="podcasts__article__btn-play btn-reset">
-                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button class="btn-reset">
+                  <svg class="podcasts__article__btn-play" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
                     <path
                       d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z"
@@ -356,8 +388,8 @@
                   <div class="podcasts__article__text">Пётр Дмитриевский</div>
                   <div class="podcasts__article__play"></div>
                 </div>
-                <button class="podcasts__article__btn-play btn-reset">
-                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button class="btn-reset">
+                  <svg class="podcasts__article__btn-play" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
                     <path
                       d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z"
@@ -386,8 +418,8 @@
                   <div class="podcasts__article__text">Татьяна Флеганова</div>
                   <div class="podcasts__article__play"></div>
                 </div>
-                <button class="podcasts__article__btn-play btn-reset">
-                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button class="btn-reset">
+                  <svg class="podcasts__article__btn-play" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
                     <path
                       d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z"
@@ -542,14 +574,16 @@
           </select>
         </div>
       </div>
-      <div class="broadcasts__container flex" id="Дмитрий Гутенберг">
+      <div class="broadcasts__container grid" id="Дмитрий Гутенберг">
         <article class="broadcasts__article">
           <picture>
-            <source media="(min-width: 1024)" srcset="/img/broadcasts-1.jpg">
+            <source media="(max-width: 540px)" srcset="./img/broadcasts-320-1.jpg">
             <img src="./img/broadcasts-1.jpg" alt="О людях и книгах">
           </picture>
-          <h3 class="broadcasts__article__title">О людях и книгах</h3>
-          <div class="broadcasts__article__descr">Анонсируется отдельно</div>
+          <div class="broadcasts__article_descr">
+            <h3 class="broadcasts__article__title">О людях и книгах</h3>
+            <div class="broadcasts__article_text">Анонсируется отдельно</div>
+          </div>
           <a class="broadcasts__article__btn" href="#">Подробнее
             <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -561,11 +595,13 @@
         </article>
         <article class="broadcasts__article">
           <picture>
-            <source media="(min-width: 1024)" srcset="/img/broadcasts-2.jpg">
+            <source media="(max-width: 540px)" srcset="./img/broadcasts-320-2.jpg">
             <img src="./img/broadcasts-2.jpg" alt="Графомания td">
           </picture>
-          <h3 class="broadcasts__article__title">Графомания td</h3>
-          <div class="broadcasts__article__descr">По понедельникам в 10:00</div>
+          <div class="broadcasts__article_descr">
+            <h3 class="broadcasts__article__title">Графомания td</h3>
+            <div class="broadcasts__article_text">По понедельникам в 10:00</div>
+          </div>
           <a class="broadcasts__article__btn" href="#">Подробнее
             <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -575,13 +611,89 @@
             </svg>
           </a>
         </article>
+        <article class="broadcasts__article">
+          <picture>
+            <source media="(max-width: 540px)" srcset="./img/broadcasts-320-3.jpg">
+            <img src="./img/broadcasts-3.jpg" alt="Не Рим, не Троя">
+          </picture>
+          <div class="broadcasts__article_descr">
+            <h3 class="broadcasts__article__title">Не Рим, не Троя</h3>
+            <div class="broadcasts__article_text">По вторникам в 12:00</div>
+          </div>
+          <a class="broadcasts__article__btn" href="#">Подробнее
+            <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
+                fill="#121723" />
+            </svg>
+          </a>
+        </article>
+        <article class="broadcasts__article">
+          <picture>
+            <source media="(max-width: 540px)" srcset="./img/broadcasts-320-4.jpg">
+            <img src="./img/broadcasts-4.jpg" alt="Эрудит">
+          </picture>
+          <div class="broadcasts__article_descr">
+            <h3 class="broadcasts__article__title">Эрудит</h3>
+            <div class="broadcasts__article_text">По пятницам в 17:00</div>
+          </div>
+          <a class="broadcasts__article__btn" href="#">Подробнее
+            <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
+                fill="#121723" />
+            </svg>
+          </a>
+        </article>
+        <article class="broadcasts__article">
+          <picture>
+            <source media="(max-width: 540px)" srcset="./img/broadcasts-320-5.jpg">
+            <img src="./img/broadcasts-5.jpg" alt="Тонкости эпох">
+          </picture>
+          <div class="broadcasts__article_descr">
+            <h3 class="broadcasts__article__title">Тонкости эпох</h3>
+            <div class="broadcasts__article_text">По пятницам в 17:00</div>
+          </div>
+          <a class="broadcasts__article__btn" href="#">Подробнее
+            <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
+                fill="#121723" />
+            </svg>
+          </a>
+        </article>
+        <article class="broadcasts__article">
+          <picture>
+            <source media="(max-width: 540px)" srcset="./img/broadcasts-320-6.jpg">
+            <img src="./img/broadcasts-6.jpg" alt="Живые мысли">
+          </picture>
+          <div class="broadcasts__article_descr">
+            <h3 class="broadcasts__article__title">Живые мысли</h3>
+            <div class="broadcasts__article_text">По воскресеньям в 15:30</div>
+          </div>
+          <a class="broadcasts__article__btn" href="#">Подробнее
+            <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
+                fill="#121723" />
+            </svg>
+          </a>
+        </article>
+      </div>
+      <div class="broadcasts__container grid closed" id="Татьяна Флеганова">
         <article class="broadcasts__article">
           <picture>
             <source media="(min-width: 1024)" srcset="/img/broadcasts-3.jpg">
             <img src="./img/broadcasts-3.jpg" alt="Не Рим, не Троя">
           </picture>
-          <h3 class="broadcasts__article__title">Не Рим, не Троя</h3>
-          <div class="broadcasts__article__descr">По вторникам в 12:00</div>
+          <div class="broadcasts__article_descr">
+            <h3 class="broadcasts__article__title">Не Рим, не Троя</h3>
+            <div class="broadcasts__article_text">По вторникам в 12:00</div>
+          </div>
           <a class="broadcasts__article__btn" href="#">Подробнее
             <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -596,8 +708,10 @@
             <source media="(min-width: 1024)" srcset="/img/broadcasts-4.jpg">
             <img src="./img/broadcasts-4.jpg" alt="Эрудит">
           </picture>
-          <h3 class="broadcasts__article__title">Эрудит</h3>
-          <div class="broadcasts__article__descr">По пятницам в 17:00</div>
+          <div class="broadcasts__article_descr">
+            <h3 class="broadcasts__article__title">Эрудит</h3>
+            <div class="broadcasts__article_text">По пятницам в 17:00</div>
+          </div>
           <a class="broadcasts__article__btn" href="#">Подробнее
             <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -612,8 +726,10 @@
             <source media="(min-width: 1024)" srcset="/img/broadcasts-5.jpg">
             <img src="./img/broadcasts-5.jpg" alt="Тонкости эпох">
           </picture>
-          <h3 class="broadcasts__article__title">Тонкости эпох</h3>
-          <div class="broadcasts__article__descr">По пятницам в 17:00</div>
+          <div class="broadcasts__article_descr">
+            <h3 class="broadcasts__article__title">Тонкости эпох</h3>
+            <div class="broadcasts__article_text">По пятницам в 17:00</div>
+          </div>
           <a class="broadcasts__article__btn" href="#">Подробнее
             <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -628,8 +744,10 @@
             <source media="(min-width: 1024)" srcset="/img/broadcasts-6.jpg">
             <img src="./img/broadcasts-6.jpg" alt="Живые мысли">
           </picture>
-          <h3 class="broadcasts__article__title">Живые мысли</h3>
-          <div class="broadcasts__article__descr">По воскресеньям в 15:30</div>
+          <div class="broadcasts__article_descr">
+            <h3 class="broadcasts__article__title">Живые мысли</h3>
+            <div class="broadcasts__article_text">По воскресеньям в 15:30</div>
+          </div>
           <a class="broadcasts__article__btn" href="#">Подробнее
             <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -640,30 +758,16 @@
           </a>
         </article>
       </div>
-      <div class="broadcasts__container flex closed" id="Татьяна Флеганова">
-        <article class="broadcasts__article">
-          <picture>
-            <source media="(min-width: 1024)" srcset="/img/broadcasts-3.jpg">
-            <img src="./img/broadcasts-3.jpg" alt="Не Рим, не Троя">
-          </picture>
-          <h3 class="broadcasts__article__title">Не Рим, не Троя</h3>
-          <div class="broadcasts__article__descr">По вторникам в 12:00</div>
-          <a class="broadcasts__article__btn" href="#">Подробнее
-            <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
-                fill="#121723" />
-            </svg>
-          </a>
-        </article>
+      <div class="broadcasts__container grid closed" id="Анна Васильева">
         <article class="broadcasts__article">
           <picture>
             <source media="(min-width: 1024)" srcset="/img/broadcasts-4.jpg">
             <img src="./img/broadcasts-4.jpg" alt="Эрудит">
           </picture>
-          <h3 class="broadcasts__article__title">Эрудит</h3>
-          <div class="broadcasts__article__descr">По пятницам в 17:00</div>
+          <div class="broadcasts__article_descr">
+            <h3 class="broadcasts__article__title">Эрудит</h3>
+            <div class="broadcasts__article_text">По пятницам в 17:00</div>
+          </div>
           <a class="broadcasts__article__btn" href="#">Подробнее
             <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -678,8 +782,10 @@
             <source media="(min-width: 1024)" srcset="/img/broadcasts-5.jpg">
             <img src="./img/broadcasts-5.jpg" alt="Тонкости эпох">
           </picture>
-          <h3 class="broadcasts__article__title">Тонкости эпох</h3>
-          <div class="broadcasts__article__descr">По пятницам в 17:00</div>
+          <div class="broadcasts__article_descr">
+            <h3 class="broadcasts__article__title">Тонкости эпох</h3>
+            <div class="broadcasts__article_text">По пятницам в 17:00</div>
+          </div>
           <a class="broadcasts__article__btn" href="#">Подробнее
             <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -694,8 +800,10 @@
             <source media="(min-width: 1024)" srcset="/img/broadcasts-6.jpg">
             <img src="./img/broadcasts-6.jpg" alt="Живые мысли">
           </picture>
-          <h3 class="broadcasts__article__title">Живые мысли</h3>
-          <div class="broadcasts__article__descr">По воскресеньям в 15:30</div>
+          <div class="broadcasts__article_descr">
+            <h3 class="broadcasts__article__title">Живые мысли</h3>
+            <div class="broadcasts__article_text">По воскресеньям в 15:30</div>
+          </div>
           <a class="broadcasts__article__btn" href="#">Подробнее
             <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -706,30 +814,16 @@
           </a>
         </article>
       </div>
-      <div class="broadcasts__container flex closed" id="Анна Васильева">
-        <article class="broadcasts__article">
-          <picture>
-            <source media="(min-width: 1024)" srcset="/img/broadcasts-4.jpg">
-            <img src="./img/broadcasts-4.jpg" alt="Эрудит">
-          </picture>
-          <h3 class="broadcasts__article__title">Эрудит</h3>
-          <div class="broadcasts__article__descr">По пятницам в 17:00</div>
-          <a class="broadcasts__article__btn" href="#">Подробнее
-            <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
-                fill="#121723" />
-            </svg>
-          </a>
-        </article>
+      <div class="broadcasts__container grid closed" id="Пётр Дмитриевский">
         <article class="broadcasts__article">
           <picture>
             <source media="(min-width: 1024)" srcset="/img/broadcasts-5.jpg">
             <img src="./img/broadcasts-5.jpg" alt="Тонкости эпох">
           </picture>
-          <h3 class="broadcasts__article__title">Тонкости эпох</h3>
-          <div class="broadcasts__article__descr">По пятницам в 17:00</div>
+          <div class="broadcasts__article_descr">
+            <h3 class="broadcasts__article__title">Тонкости эпох</h3>
+            <div class="broadcasts__article_text">По пятницам в 17:00</div>
+          </div>
           <a class="broadcasts__article__btn" href="#">Подробнее
             <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -744,42 +838,10 @@
             <source media="(min-width: 1024)" srcset="/img/broadcasts-6.jpg">
             <img src="./img/broadcasts-6.jpg" alt="Живые мысли">
           </picture>
-          <h3 class="broadcasts__article__title">Живые мысли</h3>
-          <div class="broadcasts__article__descr">По воскресеньям в 15:30</div>
-          <a class="broadcasts__article__btn" href="#">Подробнее
-            <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
-                fill="#121723" />
-            </svg>
-          </a>
-        </article>
-      </div>
-      <div class="broadcasts__container flex closed" id="Пётр Дмитриевский">
-        <article class="broadcasts__article">
-          <picture>
-            <source media="(min-width: 1024)" srcset="/img/broadcasts-5.jpg">
-            <img src="./img/broadcasts-5.jpg" alt="Тонкости эпох">
-          </picture>
-          <h3 class="broadcasts__article__title">Тонкости эпох</h3>
-          <div class="broadcasts__article__descr">По пятницам в 17:00</div>
-          <a class="broadcasts__article__btn" href="#">Подробнее
-            <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"
-                fill="#121723" />
-            </svg>
-          </a>
-        </article>
-        <article class="broadcasts__article">
-          <picture>
-            <source media="(min-width: 1024)" srcset="/img/broadcasts-6.jpg">
-            <img src="./img/broadcasts-6.jpg" alt="Живые мысли">
-          </picture>
-          <h3 class="broadcasts__article__title">Живые мысли</h3>
-          <div class="broadcasts__article__descr">По воскресеньям в 15:30</div>
+          <div class="broadcasts__article_descr">
+            <h3 class="broadcasts__article__title">Живые мысли</h3>
+            <div class="broadcasts__article_text">По воскресеньям в 15:30</div>
+          </div>
           <a class="broadcasts__article__btn" href="#">Подробнее
             <svg class="broadcasts__article__btn_pic" width="28" height="12" viewbox="4 -2 28 12" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -917,7 +979,7 @@
                   Свиридовский</span>
               </div>
             </li>
-            <li class="accordion__item">
+            <li class="accordion__item closed">
               <h3 class="accordion__header" tabindex="0">
                 Филологи
                 <svg class="accordion__icon" width="42" height="42" viewbox="0 0 42 42" fill="none"
@@ -945,8 +1007,9 @@
           <div class="guests__cards__default"></div>
           <article class="guests__cards closed" id="Ольга_Мартынова">
             <picture>
-              <source media="(min-width: 1025px)" srcset="./img/guests-1.jpg">
-              <source media="(min-width: 769px)" srcset="./img/guests-tablet-1.jpg">
+              <source media="(max-width: 320px)" srcset="./img/guests-320-1.jpg">
+              <source media="(max-width: 768px)" srcset="./img/guests-768-1.jpg">
+              <source media="(max-width: 1024px)" srcset="./img/guests-tablet-1.jpg">
               <img src="./img/guests-1.jpg" alt="Фотография Ольга Мартынова">
             </picture>
             <div class="flex">
@@ -984,8 +1047,8 @@
           <!-- cards added -->
           <article class="guests__cards closed" id="Сергей Денисов">
             <picture>
-              <source media="(min-width: 1025px)" srcset="./img/guests-1.jpg">
-              <source media="(min-width: 769px)" srcset="./img/guests-tablet-1.jpg">
+              <source media="(max-width: 768px)" srcset="./img/guests-768-1.jpg">
+              <source media="(max-width: 1024px)" srcset="./img/guests-tablet-1.jpg">
               <img src="./img/guests-1.jpg" alt="Фотография Ольга Мартынова">
             </picture>
             <div class="flex">
@@ -1055,7 +1118,8 @@
             </label>
           </fieldset>
           <div class="playlists__descr">
-            <p class="playlists__text">Раздел &laquo;Плейлисты&raquo; может содержать информацию, не&nbsp;предназначенную
+            <p class="playlists__text">Раздел &laquo;Плейлисты&raquo; может содержать информацию,
+              не&nbsp;предназначенную
               для несовершеннолетних</p>
             <p class="playlists__logo">© 2021 l W-Wave</p>
           </div>
@@ -1063,8 +1127,8 @@
         <div class="playlists__cards grid" id="radio1">
           <article class="playlists__cards__article">
             <picture>
-              <source media="(min-width: 1025px)" srcset="./img/playlists-1.jpg">
-              <source media="(min-width: 769px)" srcset="./img/playlists-tablet-1.jpg">
+              <source media="(max-width: 768px)" srcset="./img/playlists-768-1.jpg">
+              <source media="(max-width: 1024px)" srcset="./img/playlists-tablet-1.jpg">
               <img class="playlists__cards__article__pic" src="./img/playlists-1.jpg" alt="Ploho">
             </picture>
             <div class="playlists__cards__article__content">
@@ -1084,8 +1148,8 @@
           </article>
           <article class="playlists__cards__article">
             <picture>
-              <source media="(min-width: 1025px)" srcset="./img/playlists-2.jpg">
-              <source media="(min-width: 769px)" srcset="./img/playlists-tablet-2.jpg">
+              <source media="(max-width: 768px)" srcset="./img/playlists-768-2.jpg">
+              <source media="(max-width: 1024px)" srcset="./img/playlists-tablet-2.jpg">
               <img class="playlists__cards__article__pic" src="./img/playlists-2.jpg" alt="Molchat Doma">
             </picture>
             <div class="playlists__cards__article__content">
@@ -1105,8 +1169,8 @@
           </article>
           <article class="playlists__cards__article">
             <picture>
-              <source media="(min-width: 1025px)" srcset="./img/playlists-3.jpg">
-              <source media="(min-width: 769px)" srcset="./img/playlists-tablet-3.jpg">
+              <source media="(max-width: 768px)" srcset="./img/playlists-768-3.jpg">
+              <source media="(max-width: 1024px)" srcset="./img/playlists-tablet-3.jpg">
               <img class="playlists__cards__article__pic" src="./img/playlists-3.jpg" alt="Motorama">
             </picture>
             <div class="playlists__cards__article__content">
@@ -1126,8 +1190,8 @@
           </article>
           <article class="playlists__cards__article">
             <picture>
-              <source media="(min-width: 1025px)" srcset="./img/playlists-4.jpg">
-              <source media="(min-width: 769px)" srcset="./img/playlists-tablet-4.jpg">
+              <source media="(max-width: 768px)" srcset="./img/playlists-768-4.jpg">
+              <source media="(max-width: 1024px)" srcset="./img/playlists-tablet-4.jpg">
               <img class="playlists__cards__article__pic" src="./img/playlists-4.jpg" alt="Human Tetris">
             </picture>
             <div class="playlists__cards__article__content">
@@ -1147,8 +1211,8 @@
           </article>
           <article class="playlists__cards__article">
             <picture>
-              <source media="(min-width: 1025px)" srcset="./img/playlists-5.jpg">
-              <source media="(min-width: 769px)" srcset="./img/playlists-tablet-5.jpg">
+              <source media="(max-width: 768px)" srcset="./img/playlists-768-5.jpg">
+              <source media="(max-width: 1024px)" srcset="./img/playlists-tablet-5.jpg">
               <img class="playlists__cards__article__pic" src="./img/playlists-5.jpg" alt="Буерак">
             </picture>
             <div class="playlists__cards__article__content">
@@ -1168,8 +1232,8 @@
           </article>
           <article class="playlists__cards__article">
             <picture>
-              <source media="(min-width: 1025px)" srcset="./img/playlists-6.jpg">
-              <source media="(min-width: 769px)" srcset="./img/playlists-tablet-6.jpg">
+              <source media="(max-width: 768px)" srcset="./img/playlists-768-6.jpg">
+              <source media="(max-width: 1024px)" srcset="./img/playlists-tablet-6.jpg">
               <img class="playlists__cards__article__pic" src="./img/playlists-6.jpg" alt="Июльские Дни">
             </picture>
             <div class="playlists__cards__article__content">
@@ -1189,8 +1253,8 @@
           </article>
           <article class="playlists__cards__article">
             <picture>
-              <source media="(min-width: 1025px)" srcset="./img/playlists-7.jpg">
-              <source media="(min-width: 769px)" srcset="./img/playlists-tablet-7.jpg">
+              <source media="(max-width: 768px)" srcset="./img/playlists-768-7.jpg">
+              <source media="(max-width: 1024px)" srcset="./img/playlists-tablet-7.jpg">
               <img class="playlists__cards__article__pic" src="./img/playlists-7.jpg" alt="Joy Division">
             </picture>
             <div class="playlists__cards__article__content">
@@ -1210,8 +1274,8 @@
           </article>
           <article class="playlists__cards__article">
             <picture>
-              <source media="(min-width: 1025px)" srcset="./img/playlists-8.jpg">
-              <source media="(min-width: 769px)" srcset="./img/playlists-tablet-8.jpg">
+              <source media="(max-width: 768px)" srcset="./img/playlists-768-8.jpg">
+              <source media="(max-width: 1024px)" srcset="./img/playlists-tablet-8.jpg">
               <img class="playlists__cards__article__pic" src="./img/playlists-8.jpg" alt="The Cure">
             </picture>
             <div class="playlists__cards__article__content">
@@ -1231,8 +1295,8 @@
           </article>
           <article class="playlists__cards__article">
             <picture>
-              <source media="(min-width: 1025px)" srcset="./img/playlists-9.jpg">
-              <source media="(min-width: 769px)" srcset="./img/playlists-tablet-9.jpg">
+              <source media="(max-width: 768px)" srcset="./img/playlists-768-9.jpg">
+              <source media="(max-width: 1024px)" srcset="./img/playlists-tablet-9.jpg">
               <img class="playlists__cards__article__pic" src="./img/playlists-9.jpg" alt="The Smiths">
             </picture>
             <div class="playlists__cards__article__content">
@@ -1252,8 +1316,8 @@
           </article>
           <article class="playlists__cards__article">
             <picture>
-              <source media="(min-width: 1025px)" srcset="./img/playlists-10.jpg">
-              <source media="(min-width: 769px)" srcset="./img/playlists-tablet-10.jpg">
+              <source media="(max-width: 768px)" srcset="./img/playlists-768-10.jpg">
+              <source media="(max-width: 1024px)" srcset="./img/playlists-tablet-10.jpg">
               <img class="playlists__cards__article__pic" src="./img/playlists-10.jpg" alt="New Order">
             </picture>
             <div class="playlists__cards__article__content">
@@ -1273,8 +1337,8 @@
           </article>
           <article class="playlists__cards__article">
             <picture>
-              <source media="(min-width: 1025px)" srcset="./img/playlists-11.jpg">
-              <source media="(min-width: 769px)" srcset="./img/playlists-tablet-11.jpg">
+              <source media="(max-width: 768px)" srcset="./img/playlists-768-11.jpg">
+              <source media="(max-width: 1024px)" srcset="./img/playlists-tablet-11.jpg">
               <img class="playlists__cards__article__pic" src="./img/playlists-11.jpg" alt="Bauhaus">
             </picture>
             <div class="playlists__cards__article__content">
@@ -1294,8 +1358,8 @@
           </article>
           <article class="playlists__cards__article">
             <picture>
-              <source media="(min-width: 1025px)" srcset="./img/playlists-12.jpg">
-              <source media="(min-width: 769px)" srcset="./img/playlists-tablet-12.jpg">
+              <source media="(max-width: 768px)" srcset="./img/playlists-768-12.jpg">
+              <source media="(max-width: 1024px)" srcset="./img/playlists-tablet-12.jpg">
               <img class="playlists__cards__article__pic" src="./img/playlists-12.jpg" alt="Gang Of Four">
             </picture>
             <div class="playlists__cards__article__content">
@@ -1781,7 +1845,7 @@
     </section>
     <section class="about" id="about">
       <div class="container">
-        <div class="flex">
+        <div class="about__container flex">
           <div class="about__content">
             <h2 class="about__title section-title">О нас</h2>
             <p class="about__descr_title">Приём-приём! Как слышно? Мы&nbsp;уже в&nbsp;эфире? Отлично, поехали!</p>
@@ -1792,6 +1856,7 @@
           </div>
           <div class="about__pic flex">
             <img class="about__spiral" src="./img/about-spiral.svg" alt="">
+            <img class="about__spiral_long" src="./img/about-spiral-long.svg" alt="">
             <img class="about__dawn" src="./img/about-dawn.svg" alt="">
           </div>
         </div>
@@ -1869,7 +1934,7 @@
           <div class="about__form__text">
             <textarea class="input-form" id="about__form__text" placeholder="Что скажете?" required></textarea>
           </div>
-          <div class="flex">
+          <div class="about__form__row flex">
             <div class="about__form__name">
               <input class="input-form" type="text" name="name" id="about__form_name" placeholder="Имя" required>
             </div>
@@ -2009,6 +2074,51 @@
         <circle cx="21" cy="21" r="19.5" stroke="#A1A6B4" stroke-width="3" />
         <path d="M29.6777 12L12 29.6777M29.6777 29.6777L12 12" stroke="#A1A6B4" stroke-width="3" />
       </svg>
+    </div>
+  </div>
+  <div class="burger-modal" style="display: none;">
+    <div class="burger__content">
+      <svg class="burger-close" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <rect x="4.5752" y="2.95406" width="24" height="3" rx="1.5" transform="rotate(45 4.5752 2.95406)"
+          fill="#6D31EE" />
+        <rect x="21.5459" y="5.07538" width="24" height="3" rx="1.5" transform="rotate(135 21.5459 5.07538)"
+          fill="#6D31EE" />
+      </svg>
+      <nav class="burger__nav flex">
+        <ul class="burger__nav_list list-reset grid">
+          <li class="burger__item ">
+            <a class="burger__item-link burger-close" href="#podcasts">Подкасты</a>
+          </li>
+          <li class="burger__item ">
+            <a class="burger__item-link burger-close" href="#broadcasts">Передачи</a>
+          </li>
+          <li class="burger__item ">
+            <a class="burger__item-link burger-close" href="#guests">Гости</a>
+          </li>
+          <li class="burger__item ">
+            <a class="burger__item-link burger-close" href="#playlists">Плейлисты</a>
+          </li>
+          <li class="burger__item ">
+            <a class="burger__item-link burger-close" href="#about">О нас</a>
+          </li>
+        </ul>
+        <div class="">
+          <svg class="burger-spiral_left" width="115" height="315" viewbox="0 0 115 315" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M73.4159 1C33.4215 1 1 11.2609 1 23.9184C1 36.5758 33.4215 46.8368 73.4159 46.8368C95.8298 46.8368 114 42.4932 114 37.1351C114 31.777 95.8298 27.4335 73.4159 27.4335C33.4215 27.4335 1 37.6944 1 50.3518C1 63.0094 33.4215 73.2706 73.4159 73.2706C95.8298 73.2706 114 68.9268 114 63.5686C114 58.2105 95.8298 53.8669 73.4159 53.8669C33.4215 53.8669 1 64.1908 1 76.9259C1 89.6609 33.4215 99.9851 73.4159 99.9851C95.8298 99.9851 114 95.6414 114 90.2831C114 84.9249 95.8298 80.582 73.4159 80.582C33.4215 80.582 1 90.8425 1 103.5C1 116.158 33.4215 126.418 73.4159 126.418C95.8298 126.418 114 122.075 114 116.717C114 111.359 95.8298 107.015 73.4159 107.015C33.4215 107.015 1 117.276 1 129.934C1 142.591 33.4215 152.852 73.4159 152.852C95.8298 152.852 114 148.508 114 143.151C114 137.792 95.8298 133.449 73.4159 133.449C33.4215 133.449 1 143.71 1 156.367C1 169.024 33.4215 179.285 73.4159 179.285C95.8298 179.285 114 174.942 114 169.583C114 164.226 95.8298 159.882 73.4159 159.882C33.4215 159.882 1 170.206 1 182.941C1 195.676 33.4215 206 73.4159 206M73.4159 160C33.4215 160 1 170.261 1 182.918C1 195.576 33.4215 205.837 73.4159 205.837C95.8298 205.837 114 201.493 114 196.135C114 190.777 95.8298 186.433 73.4159 186.433C33.4215 186.433 1 196.694 1 209.352C1 222.009 33.4215 232.271 73.4159 232.271C95.8298 232.271 114 227.927 114 222.569C114 217.211 95.8298 212.867 73.4159 212.867C33.4215 212.867 1 223.191 1 235.926C1 248.661 33.4215 258.985 73.4159 258.985C95.8298 258.985 114 254.641 114 249.283C114 243.925 95.8298 239.582 73.4159 239.582C33.4215 239.582 1 249.842 1 262.5C1 275.158 33.4215 285.418 73.4159 285.418C95.8298 285.418 114 281.075 114 275.717C114 270.359 95.8298 266.015 73.4159 266.015C33.4215 266.015 1 276.276 1 288.934C1 301.591 33.4215 311.852 73.4159 311.852C95.8298 311.852 114 307.508 114 302.151C114 296.792 95.8298 292.449 73.4159 292.449C33.4215 292.449 1 302.71 1 315.367C1 328.024 33.4215 338.285 73.4159 338.285C95.8298 338.285 114 333.942 114 328.583C114 323.226 95.8298 318.882 73.4159 318.882C33.4215 318.882 1 329.206 1 341.941C1 354.676 33.4215 365 73.4159 365"
+              stroke="#A1A6B4" stroke-linecap="round" />
+          </svg>
+          <svg class="burger-spiral_right" width="115" height="315" viewbox="0 0 115 315" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M73.4159 1C33.4215 1 1 11.2609 1 23.9184C1 36.5758 33.4215 46.8368 73.4159 46.8368C95.8298 46.8368 114 42.4932 114 37.1351C114 31.777 95.8298 27.4335 73.4159 27.4335C33.4215 27.4335 1 37.6944 1 50.3518C1 63.0094 33.4215 73.2706 73.4159 73.2706C95.8298 73.2706 114 68.9268 114 63.5686C114 58.2105 95.8298 53.8669 73.4159 53.8669C33.4215 53.8669 1 64.1908 1 76.9259C1 89.6609 33.4215 99.9851 73.4159 99.9851C95.8298 99.9851 114 95.6414 114 90.2831C114 84.9249 95.8298 80.582 73.4159 80.582C33.4215 80.582 1 90.8425 1 103.5C1 116.158 33.4215 126.418 73.4159 126.418C95.8298 126.418 114 122.075 114 116.717C114 111.359 95.8298 107.015 73.4159 107.015C33.4215 107.015 1 117.276 1 129.934C1 142.591 33.4215 152.852 73.4159 152.852C95.8298 152.852 114 148.508 114 143.151C114 137.792 95.8298 133.449 73.4159 133.449C33.4215 133.449 1 143.71 1 156.367C1 169.024 33.4215 179.285 73.4159 179.285C95.8298 179.285 114 174.942 114 169.583C114 164.226 95.8298 159.882 73.4159 159.882C33.4215 159.882 1 170.206 1 182.941C1 195.676 33.4215 206 73.4159 206M73.4159 160C33.4215 160 1 170.261 1 182.918C1 195.576 33.4215 205.837 73.4159 205.837C95.8298 205.837 114 201.493 114 196.135C114 190.777 95.8298 186.433 73.4159 186.433C33.4215 186.433 1 196.694 1 209.352C1 222.009 33.4215 232.271 73.4159 232.271C95.8298 232.271 114 227.927 114 222.569C114 217.211 95.8298 212.867 73.4159 212.867C33.4215 212.867 1 223.191 1 235.926C1 248.661 33.4215 258.985 73.4159 258.985C95.8298 258.985 114 254.641 114 249.283C114 243.925 95.8298 239.582 73.4159 239.582C33.4215 239.582 1 249.842 1 262.5C1 275.158 33.4215 285.418 73.4159 285.418C95.8298 285.418 114 281.075 114 275.717C114 270.359 95.8298 266.015 73.4159 266.015C33.4215 266.015 1 276.276 1 288.934C1 301.591 33.4215 311.852 73.4159 311.852C95.8298 311.852 114 307.508 114 302.151C114 296.792 95.8298 292.449 73.4159 292.449C33.4215 292.449 1 302.71 1 315.367C1 328.024 33.4215 338.285 73.4159 338.285C95.8298 338.285 114 333.942 114 328.583C114 323.226 95.8298 318.882 73.4159 318.882C33.4215 318.882 1 329.206 1 341.941C1 354.676 33.4215 365 73.4159 365"
+              stroke="#A1A6B4" stroke-linecap="round" />
+          </svg>
+        </div>
+      </nav>
+
     </div>
   </div>
   <script defer src="./scripts/choices.min.js"></script>

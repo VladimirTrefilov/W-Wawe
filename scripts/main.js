@@ -31,6 +31,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // podcasts article more podcasts
 
+  podcastsArticle = document.querySelectorAll('.podcasts__article');
+  podcastsArticle.forEach(function (n, index) {
+    if (document.body.clientWidth <= 320) {
+      if (index > 3) {
+        n.classList.add('more-podcasts-toggle');
+        n.classList.add('more-podcasts');
+      } else {
+        n.style.display = 'inline';
+      }
+    }
+  })
+
   morePodcasts = document.querySelectorAll('.more-podcasts-toggle');
 
   document.querySelector('.podcasts__btn').addEventListener('click', function () {
@@ -121,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
         this.querySelectorAll('.playlists__cards').forEach(d => {
           d.classList.add('closed');
         });
-        const cadrID = cardOpen(event);
+        cardOpen(event);
       };
     });
   });
@@ -140,24 +152,19 @@ document.addEventListener('DOMContentLoaded', function () {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
-    slidesPerView: 4,
+    slidesPerView: 2,
     spaceBetween: 30,
 
     breakpoints: {
-      // when window width is >= 320px
-      320: {
+      // when window width is >= 1024px
+      769: {
         slidesPerView: 2,
-        spaceBetween: 20
-      },
-      // when window width is >= 480px
-      480: {
-        slidesPerView: 3,
         spaceBetween: 30
       },
-      // when window width is >= 640px
-      1024: {
-        slidesPerView: 2,
-        spaceBetween: 40
+      // when window width is >= 1024px
+      1025: {
+        slidesPerView: 4,
+        spaceBetween: 30
       }
     },
 
@@ -236,6 +243,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function openModal() {
     modal.style.display = 'flex';
+    modal.classList.remove('Out');
+
     modal.querySelector(FOCUSABLE_SELECTORS).focus();
     const focusableElements = main.querySelectorAll(FOCUSABLE_SELECTORS);
     focusableElements.forEach(el => el.setAttribute('tabindex', '-1'));
@@ -245,7 +254,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function closeModal() {
-    modal.style.display = 'none';
+    modal.classList.add('Out');
+    // modal.style.display = 'none';
+
     const focusableElements = main.querySelectorAll(FOCUSABLE_SELECTORS);
     focusableElements.forEach(el => el.removeAttribute('tabindex'));
     modal.setAttribute('aria-hidden', 'true');
@@ -287,4 +298,41 @@ document.addEventListener('DOMContentLoaded', function () {
         errorMessage: 'Максимум 30 символов',
       },
     ]);
+
+  const openBurgerBtn = document.querySelector('.burger-open');
+  const closeBurgerBtn = document.querySelectorAll('.burger-close');
+  const burgerModal = document.querySelector('.burger-modal');
+
+  function openBurger() {
+    burgerModal.style.display = 'flex';
+    burgerModal.classList.remove('scaleOut');
+
+    burgerModal.querySelector("li").focus();
+    const focusableElements = main.querySelectorAll(FOCUSABLE_SELECTORS);
+    focusableElements.forEach(el => el.setAttribute('tabindex', '-1'));
+    // Trap the screen reader focus as well with aria roles. This is much easier as our main and burgerModal elements are siblings, otherwise you'd have to set aria-hidden on every screen reader focusable element not in the burgerModal.
+    burgerModal.removeAttribute('aria-hidden');
+    main.setAttribute('aria-hidden', 'true');
+  }
+
+  function closeBurger() {
+    // burgerModal.style.display = 'none';
+    burgerModal.classList.add('scaleOut');
+    const focusableElements = main.querySelectorAll(FOCUSABLE_SELECTORS);
+    focusableElements.forEach(el => el.removeAttribute('tabindex'));
+    burgerModal.setAttribute('aria-hidden', 'true');
+    main.removeAttribute('aria-hidden');
+    openBurgerBtn.focus();
+  }
+
+
+  openBurgerBtn.addEventListener('click', openBurger);
+  closeBurgerBtn.forEach(el => el.addEventListener('click', closeBurger));
+  burgerModal.addEventListener('keydown', function (e) {
+    if (e.key === "Escape") {
+      closeBurger()
+    }
+  });
+
+
 })
