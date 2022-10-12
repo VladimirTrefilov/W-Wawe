@@ -1,0 +1,186 @@
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 823px;
+  }
+
+  .header__rowThree__logo {
+    display: flex;
+  }
+
+  .header__rowOne__logo {
+    display: none;
+  }
+
+  .header__rowThree {
+    /* height: 60px; */
+    background-color: var(--color-dark-white);
+  }
+
+  .header__rowThree__logo {
+    height: 60px;
+  }
+
+  .header__rowTwo__container {
+    height: 100%;
+  }
+
+  .header__rowTwo__list {
+    width: 520px;
+    padding-right: 30px;
+  }
+
+  .header__rowTwo__play {
+    width: 150px;
+    padding-left: 16px;
+  }
+
+  .header__rowTwo__ageLimit {
+    display: none;
+  }
+
+  .hero {
+    margin-top: 90px;
+    margin-bottom: 90px;
+    background-size: contain;
+  }
+
+  .hero__title {
+    padding-top: 0;
+  }
+
+  .hero__descr {
+    width: 539px;
+    margin-bottom: 17px;
+  }
+
+  .hero__btn {
+    margin-bottom: 0;
+  }
+
+  .broadcasts {
+    min-height: 750px;
+  }
+
+  .broadcasts__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .broadcasts__aside {
+    top: 430px;
+    bottom: 0;
+  }
+
+  .guests__text {
+    width: 536px;
+  }
+
+  .guests__container {
+    margin-top: 47px;
+  }
+
+  .guests__cards__default {
+    width: 255px;
+  }
+
+  .guests__accordion {
+    width: calc(100% - 280px);
+  }
+
+  .accordion__body {
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 29px;
+  }
+
+  .accordion__body__item {
+    line-height: 18px;
+  }
+
+  .playlists {
+    flex-wrap: wrap;
+    padding-bottom: 89px;
+  }
+
+  .playlists__radio {
+    display: grid;
+    margin-top: 6px;
+    grid-template-columns: 168px 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-auto-flow: column;
+  }
+
+  .playlists__cards__article {
+    display: flex;
+    width: 100%;
+    min-height: 0;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .playlists__cards__article__content {
+    padding-left: 9px;
+  }
+
+  .playlists__cards__article__flag {
+    left: 0;
+  }
+
+  .playlists__descr-tablet {
+    display: block;
+    width: 100%;
+    margin-top: 28px;
+  }
+
+  .playlists__descr {
+    display: none;
+  }
+
+  .playlists__text {
+    width: 100%;
+  }
+
+  .playlists__cards__article__play {
+    right: 70%;
+  }
+
+  .playlists__cards__article:active .playlists__cards__article__play {
+    right: 70%;
+  }
+
+  .product__content {
+    padding-left: 52%;
+    padding-bottom: 95px;
+    background-size: 48%;
+  }
+
+  .product__icon_new {
+    top: 26%;
+    zoom: 60%;
+  }
+
+  .about__spiral {
+    display: none;
+  }
+
+  .about__dawn {
+    margin-left: 0;
+  }
+
+  .about__swiperPrev {
+    top: 44%;
+    left: -66px;
+  }
+
+  .about__swiperNext {
+    top: 44%;
+    right: -66px;
+  }
+
+  .about__form {
+    margin-top: 37px;
+  }
+
+  .footer__copy {
+    border-image: url(../img/footer-border.svg) 450 round;
+  }
+}
