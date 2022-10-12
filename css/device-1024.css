@@ -179,4 +179,8 @@
   .about__form {
     margin-top: 37px;
   }
+
+  .footer__copy {
+    border-image: url(../img/footer-border.svg) 450 round;
+  }
 }

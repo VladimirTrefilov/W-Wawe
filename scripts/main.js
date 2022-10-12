@@ -48,6 +48,9 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelector('.podcasts__btn').addEventListener('click', function () {
     morePodcasts.forEach(n => {
       n.classList.toggle('more-podcasts')
+      if (document.body.clientWidth <= 320) {
+        n.style.display = n.style.display === 'inline' ? '' : 'inline';
+      }
     })
   });
 
@@ -127,6 +130,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const playlistsRadio = this.querySelectorAll('.playlists__radio__input');
 
+  if (document.body.clientWidth <= 320) {
+    this.querySelector('.playlists__radio').classList.add('swiper-wrapper')
+  }
+
   playlistsRadio.forEach(n => {
     n.addEventListener("keydown", (event) => {
       if (event.key === 'Enter') {
@@ -143,8 +150,27 @@ document.addEventListener('DOMContentLoaded', function () {
         d.classList.add('closed');
       });
       cardOpen(event);
+      if (document.body.clientWidth <= 320) {
+        playlistsRadio.forEach(d => {
+          d.style.backgroundColor = 'inherit';
+          d.style.color = '#6D31EE';
+        })
+        n.style.backgroundColor = '#6D31EE';
+        n.style.color = '#FFFFFF';
+      }
     });
   });
+
+  // playlists swiper
+
+  const swiperPlaylists = new Swiper('.swiper-playlists', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 2,
+    // spaceBetween: 10,
+  });
+
 
   // about swiper
 
@@ -156,13 +182,13 @@ document.addEventListener('DOMContentLoaded', function () {
     spaceBetween: 30,
 
     breakpoints: {
-      // when window width is >= 1024px
+      // when window width is >= 769px
       769: {
         slidesPerView: 2,
         spaceBetween: 30
       },
-      // when window width is >= 1024px
-      1025: {
+      // when window width is >= 1280px
+      1280: {
         slidesPerView: 4,
         spaceBetween: 30
       }
@@ -248,7 +274,6 @@ document.addEventListener('DOMContentLoaded', function () {
     modal.querySelector(FOCUSABLE_SELECTORS).focus();
     const focusableElements = main.querySelectorAll(FOCUSABLE_SELECTORS);
     focusableElements.forEach(el => el.setAttribute('tabindex', '-1'));
-    // Trap the screen reader focus as well with aria roles. This is much easier as our main and modal elements are siblings, otherwise you'd have to set aria-hidden on every screen reader focusable element not in the modal.
     modal.removeAttribute('aria-hidden');
     main.setAttribute('aria-hidden', 'true');
   }
@@ -310,7 +335,6 @@ document.addEventListener('DOMContentLoaded', function () {
     burgerModal.querySelector("li").focus();
     const focusableElements = main.querySelectorAll(FOCUSABLE_SELECTORS);
     focusableElements.forEach(el => el.setAttribute('tabindex', '-1'));
-    // Trap the screen reader focus as well with aria roles. This is much easier as our main and burgerModal elements are siblings, otherwise you'd have to set aria-hidden on every screen reader focusable element not in the burgerModal.
     burgerModal.removeAttribute('aria-hidden');
     main.setAttribute('aria-hidden', 'true');
   }
@@ -334,5 +358,36 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  const openEtherBtn = document.querySelector('.header__rowFour');
+  const closeEtherBtn = document.querySelectorAll('.ether__inner');
+  const etherModal = document.querySelector('.ether-modal');
 
-})
+  function openether() {
+    etherModal.style.display = 'inline';
+    etherModal.classList.remove('scaleOut');
+
+    etherModal.querySelector("li").focus();
+    const focusableElements = main.querySelectorAll(FOCUSABLE_SELECTORS);
+    focusableElements.forEach(el => el.setAttribute('tabindex', '-1'));
+    etherModal.removeAttribute('aria-hidden');
+    main.setAttribute('aria-hidden', 'true');
+  }
+
+  function closeether() {
+    // etherModal.style.display = 'none';
+    etherModal.classList.add('scaleOut');
+    const focusableElements = main.querySelectorAll(FOCUSABLE_SELECTORS);
+    focusableElements.forEach(el => el.removeAttribute('tabindex'));
+    etherModal.setAttribute('aria-hidden', 'true');
+    main.removeAttribute('aria-hidden');
+    openEtherBtn.focus();
+  }
+
+  openEtherBtn.addEventListener('click', openether);
+  closeEtherBtn.forEach(el => el.addEventListener('click', closeether));
+  etherModal.addEventListener('keydown', function (e) {
+    if (e.key === "Escape") {
+      closeether()
+    }
+  });
+});
