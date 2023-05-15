@@ -1,6 +1,7 @@
 @media (max-width: 768px) {
   .container {
     max-width: 540px;
+    padding: 0;
   }
 
   .burger {
@@ -31,14 +32,9 @@
     width: 100%;
   }
 
-  .podcasts__article:nth-child(2n) {
-    margin-left: 0;
-  }
-
   .broadcasts {
     display: block;
     position: relative;
-    margin-bottom: 25px;
   }
 
   .broadcasts::before {
@@ -64,16 +60,17 @@
   .broadcasts__aside {
     position: relative;
     width: 450px;
-    /* margin-left: 34%; */
-    padding-left: 35%;
+    margin-bottom: 30px;
+    padding-left: 33%;
     padding-top: 90px;
     top: 0;
-    background-position-x: 100px;
-    background-position-y: 100px;
-  }
+    background-position-x: 88px;
+    background-position-y: 91px;
+    background-size: 16%;
+}
 
   .broadcasts__aside__btn {
-    margin: 0;
+    margin-bottom: 10px;
   }
 
   .guests__container {
@@ -82,6 +79,8 @@
 
   .guests__accordion {
     width: 100%;
+    margin-right: 0;
+    margin-bottom: 50px;
   }
 
   .accordion__body {
@@ -99,17 +98,14 @@
 
   .guests__cards__default {
     width: 100%;
-    margin-top: 50px;
   }
 
   .guests__cards {
     width: 100%;
-    margin-top: 50px;
     margin-left: 0;
   }
 
   .guests__cards__title {
-    margin-top: 9px;
   }
 
   .guests__cards__descr {
@@ -122,11 +118,14 @@
 
   .playlists__radio {
     gap: 14px;
+    margin-right: 0;
   }
 
   .playlists__cards {
+    width: 100%;
     grid-template-columns: repeat(2, 1fr);
-    padding-top: 40px;
+    padding-top: 27px;
+    column-gap: 30px;
   }
 
   .product__content {
@@ -134,6 +133,11 @@
     padding-top: 484px;
     background-position-y: 55px;
     background-size: 100%;
+  }
+
+  .playlists__cards__article__title {
+    font-size: 16px;
+    line-height: 16px;
   }
 
   .product__icon_new {
@@ -146,35 +150,25 @@
   }
 
   .about__container {
-    display: inline;
+    padding-bottom: 145px;
+    background-image: url(/img/about-img-med.png);
+    background-position-y: 94%;
   }
 
   .about__content {
     width: 100%;
   }
 
-  .about__pic {
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-
-  .about__spiral_long {
-    position: absolute;
-    left: -115px;
-    display: inline;
-  }
-
-  .about__dawn {
-    width: 112px;
-    margin-left: auto;
-  }
-
-  .about__form {
-    margin-top: 30px;
+  .about__swiperPrev, .about__swiperNext {
+    top: 45%;
   }
 
   .about__form__row {
     display: block;
+  }
+
+  .about__form__text {
+    margin-top: 30px;
   }
 
   .about__form__name {

@@ -1,4 +1,9 @@
 @media (max-width:540px) {
+
+  .container {
+    padding: 0 32px;
+  }
+
   .header__rowTwo {
     display: none;
   }
@@ -15,23 +20,41 @@
     color: var(--color-purple);
   }
 
+  .hero {
+    margin-bottom: 40px;
+  }
+
+  .podcasts__article {
+    display: inline;
+  }
+
+  .podcasts__article_mobile {
+    display: none;
+  }
+
+  .podcasts__article__img {
+    width: -webkit-fill-available;
+  }
+
+  .podcasts__article__date {
+    top: 0;
+  }
+
   .broadcasts__article {
     min-height: 150px;
   }
 
   .broadcasts__article_descr {
-    margin-left: 30px;
+    margin-left: 15px;
   }
 
   .broadcasts__article__title {
-    margin-right: 12px;
     font-weight: 500;
     font-size: 12px;
     line-height: 12px;
   }
 
   .broadcasts__article_text {
-    margin-right: 12px;
     font-weight: 400;
     font-size: 9px;
     line-height: 9px;

@@ -1,11 +1,12 @@
-@media (max-width:320px) {
-  .container {
-    max-width: 256px;
+@media (max-width:405px) {
+  .header {
+    margin-bottom: 40px;
   }
 
   .section-title {
     font-size: 24px;
-    padding-top: 56px;
+    padding-top: 55px;
+    margin-bottom: 20px;
   }
 
   .header__rowThree__logo {
@@ -28,7 +29,7 @@
   .header__rowOne__btn {
     position: absolute;
     top: -46px;
-    right: 0px;
+    right: 31px;
     width: 87px;
     height: 35px;
   }
@@ -39,12 +40,12 @@
   }
 
   .hero {
-    margin-top: 40px;
     margin-bottom: 40px;
   }
 
   .hero__title {
     margin-bottom: 8px;
+    padding-top: 0;
     font-size: 32px;
     line-height: 100%;
   }
@@ -65,20 +66,24 @@
     padding-bottom: 53px;
   }
 
-  .podcasts__article {
-    /* display: inline; */
-    margin-top: 29px;
-  }
+  .podcasts__title {
+    margin-bottom: 20px;
+}
 
-  .podcasts__article:first-child {
-    margin-top: 20px;
+  .podcasts__article {
+    display: inline;
   }
 
   .podcasts__article:nth-child(2n) {
     margin-left: 0;
   }
 
+  .podcasts__article_mobile {
+    display: none;
+  }
+
   .podcasts__article__descr {
+    margin-bottom: 17px;
     padding-left: 16px;
   }
 
@@ -100,13 +105,12 @@
   .podcasts__article__btn-play {
     width: 36px;
     height: 36px;
-    margin-top: 25px;
     margin-right: 15px;
   }
 
   .podcasts__article__actions {
-    margin-top: 16px;
     padding-top: 7px;
+    padding-bottom: 2px;
   }
 
   .podcasts__article__icon {
@@ -120,16 +124,16 @@
   .podcasts__btn {
     width: 170px;
     height: 50px;
-    margin-top: 27px;
+    margin-top: 0;
     font-size: 16px;
   }
 
   .broadcasts {
     min-height: 0;
+    margin-bottom: 25px;
   }
 
   .broadcasts__autor {
-    margin-top: 20px;
     font-size: 12px;
     line-height: 12px;
   }
@@ -141,13 +145,12 @@
 
   .broadcasts__article_descr {
     height: 47px;
-    margin-left: 9px;
-    margin-top: 9px;
-    margin-bottom: 15px;
+    margin: 9px 12px 15px 9px;
+    padding: 0;
   }
 
-  .broadcasts__article_text {
-    margin-top: 5px;
+  .broadcasts__article__title {
+    margin-bottom: 5px;
   }
 
   .broadcasts__article__btn {
@@ -159,28 +162,21 @@
   }
 
   .broadcasts__aside {
-    background-position-x: 0px;
+    margin-bottom: 0;
+    padding-top: 60px;
+    padding-left: 32%;
+    background-position-x: -10px;
     background-position-y: 60px;
     background-size: 30%;
   }
 
+  .broadcasts__aside__btn {
+    bottom: -5px;
+  }
+
   .broadcasts::before {
-    left: -10vw;
-    bottom: 139px;
-  }
-
-  .guests__descr {
-    font-size: 14px;
-  }
-
-  .guests__text {
-    width: 100%;
-    margin-top: 0;
-    font-size: 14px;
-  }
-
-  .guests__container {
-    margin-top: 28px;
+    left: -5vw;
+    bottom: 140px;
   }
 
   .accordion__header {
@@ -193,7 +189,7 @@
 
   .accordion__body {
     padding-top: 20px;
-    padding-bottom: 33px;
+    padding-bottom: 7px;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 31px;
     column-gap: 31px;
@@ -205,12 +201,31 @@
     line-height: 110%;
   }
 
+  .accordion__item:last-of-type {
+    display: none;
+  }
+
   .guests {
     padding-bottom: 52px;
   }
 
-  .guests__cards {
-    margin-top: 30px;
+  .guests__title {
+    margin-bottom: 11px;
+  }
+
+  .guests__descr {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+
+  .guests__text {
+    width: 100%;
+    margin-bottom: 27px;
+    font-size: 14px;
+  }
+
+  .guests__accordion {
+    margin-bottom: 30px;
   }
 
   .guests__cards__icon {
@@ -219,8 +234,12 @@
     margin-right: 20px;
   }
 
-  .guests__cards__title {
-    margin-top: 6px;
+  .guests__cards img {
+    margin-bottom: 12px;
+  }
+
+  .guests__cards__descr {
+    margin-bottom: 33px;
   }
 
   .guests__cards__btn {
@@ -231,6 +250,10 @@
   .playlists {
     overflow: hidden;
     padding-bottom: 50px;
+  }
+
+  .swiper-wrapper {
+    transform: translate3d(0px, 0px, 0px);
   }
 
   .playlists__radio__title {
@@ -255,7 +278,6 @@
     align-items: center;
     text-align: center;
     height: 35px;
-    margin-top: 5px;
     /* padding: 8px 19px; */
     padding: 0 10px;
     font-size: 16px;
@@ -267,12 +289,10 @@
 
 
   .playlists__descr-tablet {
-    margin-top: 7px;
-    font-size: 12px;
+   font-size: 12px;
   }
 
   .playlists__text {
-    margin-top: 24px;
     padding-top: 28px;
     line-height: 16px;
   }
@@ -299,13 +319,11 @@
   }
 
   .product__content__descr {
-    margin-top: 10px;
     font-size: 14px;
     line-height: 160%;
   }
 
   .product__content__price {
-    margin-top: 10px;
     margin-bottom: 19px;
     font-size: 24px;
     line-height: 24px;
@@ -342,14 +360,12 @@
   }
 
   .about__swiper__title {
-    margin-top: 13px;
     padding-right: 5px;
     font-size: 14px;
     line-height: 18px;
   }
 
   .about__swiper__descr {
-    margin-top: 4px;
     font-size: 12px;
     line-height: 16px;
   }
@@ -367,7 +383,6 @@
 
   .about__form__name,
   .about__form__email {
-    width: 256px;
     height: 50px;
   }
 
@@ -379,7 +394,6 @@
   }
 
   .about__form__checkbox {
-    margin-top: 18px;
     font-size: 9px;
     line-height: 9px;
   }
@@ -407,7 +421,6 @@
   }
 
   .footer__copy {
-    margin-top: 10px;
     font-size: 12px;
     line-height: 103.34%;
     border-image: url(../img/footer-border.svg) 800 round;
@@ -417,7 +430,6 @@
     position: relative;
     width: 256px;
     height: 442px;
-    margin-top: 80px;
     padding: 40px 20px;
     background: var(--color-black);
   }
@@ -433,7 +445,6 @@
   }
 
   .modal__text {
-    margin-top: 8px;
     font-size: 12px;
     line-height: 18px;
     color: #A1A6B4;
@@ -442,13 +453,11 @@
   .modal__form {
     width: 216px;
     height: 40px;
-    margin-top: 20px;
   }
 
   .modal__btn {
     width: 160px;
     height: 40px;
-    margin-top: 20px;
   }
 
   .modal__text__help {
@@ -459,7 +468,6 @@
   }
 
   .modal__social {
-    margin-top: 10px;
   }
 
   .just-validate-error-label {
@@ -467,7 +475,6 @@
   }
 
   .burger__content {
-    margin-top: 55px;
     padding: 10px 0 0 0;
   }
 
@@ -560,7 +567,6 @@
 
   .ether__item_title {
     margin: 0;
-    margin-top: 6px;
     font-size: 10px;
     line-height: 10px;
     color: #A1A6B4;
@@ -568,7 +574,6 @@
 
   .ether__item_text {
     margin: 0;
-    margin-top: 4px;
     font-size: 14px;
     line-height: 14px;
     color: #121723;
