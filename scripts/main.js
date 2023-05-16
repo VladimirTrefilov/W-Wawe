@@ -177,9 +177,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const swiperPlaylists = new Swiper(".swiper-playlists", {
     // Optional parameters
     direction: "horizontal",
-    loop: true,
+    // loop: true,
     slidesPerView: 2,
-    // spaceBetween: 10,
+    spaceBetween: 10,
   });
 
   // about swiper
@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
     direction: "horizontal",
     loop: true,
     slidesPerView: 2,
-    spaceBetween: 30,
+    spaceBetween: 20,
 
     breakpoints: {
       // when window width is >= 769px

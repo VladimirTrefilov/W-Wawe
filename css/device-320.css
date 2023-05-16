@@ -162,10 +162,11 @@
   }
 
   .broadcasts__aside {
+    left: 0;
     margin-bottom: 0;
     padding-top: 60px;
-    padding-left: 32%;
-    background-position-x: -10px;
+    padding-left: 35%;
+    background-position-x: 0px;
     background-position-y: 60px;
     background-size: 30%;
   }
@@ -257,12 +258,14 @@
   }
 
   .playlists__radio__title {
-    padding-top: 14px;
+    margin-bottom: 5px;
+    padding-top: 0;
     font-size: 12px;
     line-height: 12px;
   }
 
   .playlists__radio {
+    margin-bottom: 0;
     grid-template-rows: 1fr;
     gap: 0;
   }
@@ -285,6 +288,10 @@
     border: 1px solid #6D31EE;
     color: #6D31EE;
     border-radius: 77px;
+  }
+
+  .playlists__cards {
+    margin-bottom: 30px;
   }
 
 
@@ -325,6 +332,7 @@
 
   .product__content__price {
     margin-bottom: 19px;
+    padding-top: 0;
     font-size: 24px;
     line-height: 24px;
   }
@@ -334,6 +342,15 @@
     height: 50px;
     font-size: 16px;
     line-height: 100%;
+  }
+
+  .about__container {
+    padding-bottom: 0;
+    background-image: none;
+  }
+
+  .about__title {
+    margin-bottom: 10px;
   }
 
   .about__descr_title {
@@ -346,20 +363,18 @@
     line-height: 155%;
   }
 
+  .about__pic {
+    margin: 0;
+  }
+
   .about__swiperPrev,
   .about__swiperNext {
     display: none;
   }
 
-  .about__pic {
-    margin: 0;
-  }
-
-  .about__swiper {
-    margin-right: 20px;
-  }
-
   .about__swiper__title {
+    margin-bottom: 3px;
+    padding-top: 10px;
     padding-right: 5px;
     font-size: 14px;
     line-height: 18px;
@@ -389,6 +404,7 @@
   .about__form__btn {
     width: 172px;
     height: 50px;
+    margin-bottom: 20px;
     font-size: 16px;
     line-height: 16px;
   }
@@ -408,7 +424,7 @@
   }
 
   .footer__pic {
-    padding: 53px 0;
+    padding: 52px 0;
   }
 
   .footer__nav {
@@ -418,6 +434,10 @@
     font-size: 12px;
     line-height: 12px;
     background: var(--color-black);
+  }
+
+  .footer__copy-container {
+    padding: 10px 0;
   }
 
   .footer__copy {
@@ -465,9 +485,6 @@
     font-size: 12px;
     line-height: 24px;
     color: #A1A6B4;
-  }
-
-  .modal__social {
   }
 
   .just-validate-error-label {
