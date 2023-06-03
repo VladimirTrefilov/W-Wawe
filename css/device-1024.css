@@ -81,7 +81,7 @@
   }
 
   .guests {
-    padding-bottom: 90px;
+    padding-bottom: 100px;
   }
 
   .guests__text {
@@ -103,6 +103,10 @@
 
   .accordion__body__item {
     line-height: 18px;
+  }
+
+  .accordion__header {
+    padding: 34px 0;
   }
 
   .playlists {
@@ -173,6 +177,10 @@
     zoom: 60%;
   }
 
+  .containers {
+    max-width: 988px;
+  }
+
   .about__container {
     background-image: url(/img/about-img.png);
   }
@@ -182,13 +190,11 @@
   }
 
   .about__swiperPrev {
-    top: 44%;
-    left: -66px;
+    left: 20px;
   }
 
   .about__swiperNext {
-    top: 44%;
-    right: -66px;
+    right: 20px;
   }
 
   .about__form__text {

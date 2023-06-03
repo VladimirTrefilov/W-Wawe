@@ -146,6 +146,10 @@
     padding-right: 50px;
   }
 
+  .containers {
+    max-width: 700px;
+  }
+
   .about__container {
     padding-bottom: 145px;
     background-image: url(/img/about-img-med.png);
@@ -154,10 +158,6 @@
 
   .about__content {
     width: 100%;
-  }
-
-  .about__swiperPrev, .about__swiperNext {
-    top: 45%;
   }
 
   .about__form__row {

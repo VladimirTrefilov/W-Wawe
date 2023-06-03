@@ -32,10 +32,6 @@
     display: none;
   }
 
-  .podcasts__article__img {
-    width: -webkit-fill-available;
-  }
-
   .podcasts__article__date {
     top: 0;
   }
@@ -99,7 +95,6 @@
 
   .playlists__cards__article {
     display: inline-block;
-    width: min-content;
   }
 
   .playlists__cards__article__content {
@@ -135,6 +130,18 @@
     height: 56px;
     top: 25%;
     right: 30%;
+  }
+
+  .playlists__cards__article__pic {
+    width: 100%;
+  }
+
+  .about__container {
+    background-image: none;
+  }
+
+  .containers {
+    padding: 0 32px;
   }
 
   .about__swiperPrev,
